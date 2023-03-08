@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "nuxt": "^3.2.3",
+    "nuxt-icon": "^0.3.2",
+    "nuxt-windicss": "^2.6.0"
+  },
+  "dependencies": {
+    "flowbite": "^1.6.3",
+    "flowbite-windicss-plugin": "^0.1.3"
+  }
+}
