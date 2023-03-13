@@ -71,10 +71,10 @@
 
 <script setup lang="ts">
 import { onMounted } from 'vue'
-import { initModals } from 'flowbite'
+import { initFlowbite } from 'flowbite/lib/esm/components'
 
 // initialize components based on data attribute selectors
 onMounted(() => {
-  initModals();
+  initFlowbite();
 })
 </script>
