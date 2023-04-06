@@ -8,7 +8,8 @@
           <h5 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
             แบบฟอร์มประมาณการเบิกเงินสดย่อย | ...
           </h5>
-          <p>เลขที่ใบเบิก: 125544783</p>
+
+          <p class="text-gray-900 dark:text-white">เลขที่ใบเบิก: 125544783</p>
           <div class="grid grid-cols-4 gap-4 mt-3">
             <div>
               <div class="mb-6">
@@ -221,3 +222,17 @@
     </div>
   </section>
 </template>
+
+<script lang="ts">
+if (process.client) {
+  if (
+    localStorage.getItem("color-theme") === "dark" ||
+    (!("color-theme" in localStorage) &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches)
+  ) {
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+  }
+}
+</script>
