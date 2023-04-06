@@ -1,51 +1,52 @@
 <template>
-    <div
-        class="mx-auto max-w-8xl mt-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-        <section class="bg-white dark:bg-gray-900">
-            <div class="max-w-10xl px-4 py-4 mx-auto lg:py-4">
+    <section class="bg-gray-100 dark:bg-gray-900 p-3 sm:p-5 mb-10">
+        <div
+            class="mx-auto max-w-screen-xl mt-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <!-- <section class="bg-white dark:bg-gray-900"> -->
+            <div class=" px-4 py-4 mx-auto lg:py-4">
                 <h2 class="mb-4 text-4xl font-bold text-gray-900 dark:text-white">ข้อมูลลูกทัวร์ | อุบล</h2>
                 <form action="#">
                     <div class="grid gap-4 mb-4 sm:grid-cols-6 sm:gap-6 sm:mb-5">
                         <div class="w-full">
-                            <label for="brand"
+                            <label for="firstname"
                                 class="block mb-2 text-sm font-small text-gray-900 dark:text-white">ชื่อ</label>
                             <input type="text" name="firstname" id="firstname"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                 value="" placeholder="" required>
                         </div>
                         <div class="w-full">
-                            <label for="price"
+                            <label for="lastname"
                                 class="block mb-2 text-sm font-small text-gray-900 dark:text-white">สกุล</label>
-                            <input type="number" name="lastname" id="lastname"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                            <input type="text" name="lastname" id="lastname"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                 value="" placeholder="" required>
                         </div>
                         <div class="w-full">
-                            <label for="brand"
+                            <label for="firstname2"
                                 class="block mb-2 text-sm font-small text-gray-900 dark:text-white">firstname</label>
                             <input type="text" name="firstname2" id="firstname2"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                 value="" placeholder="" required>
                         </div>
                         <div class="w-full">
-                            <label for="price"
+                            <label for="Lastname2"
                                 class="block mb-2 text-sm font-small text-gray-900 dark:text-white">Lastname</label>
-                            <input type="number" name="Lastname2" id="Lastname2"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                            <input type="text" name="Lastname2" id="Lastname2"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                 value="" placeholder="" required>
                         </div>
                         <div class="w-full">
-                            <label for="price"
+                            <label for="nationality"
                                 class="block mb-2 text-sm font-small text-gray-900 dark:text-white">สัญชาติ</label>
                             <input type="number" name="nationality" id="nationality"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                 value="" placeholder="" required>
                         </div>
                         <div>
-                            <label for="category"
+                            <label for="gender"
                                 class="block mb-2 text-sm font-small text-gray-900 dark:text-white">เพศ</label>
-                            <select id="category"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                            <select id="gender"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                                 <option selected></option>
                                 <option value="ชาย">ชาย</option>
                                 <option value="หญิง">หญิง</option>
@@ -55,14 +56,14 @@
                     </div>
                     <div class="grid gap-4 mb-4 sm:grid-cols-4 sm:gap-6 sm:mb-5">
                         <div class="w-full">
-                            <label for="brand"
+                            <label for="identification"
                                 class="block mb-2 text-sm font-small text-gray-900 dark:text-white">หมายเลขบัตรประชาชน</label>
                             <input type="text" name="identification" id="identification"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                 value="" placeholder="" required>
                         </div>
                         <div class="w-full">
-                            <label for="brand" class="block mb-2 text-sm font-small text-gray-900 dark:text-white">วัน เดือน
+                            <label for="birthdate" class="block mb-2 text-sm font-small text-gray-900 dark:text-white">วัน เดือน
                                 ปี เกิด</label>
                             <div class="relative max-w-sm">
                                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -74,23 +75,23 @@
                                     </svg>
                                 </div>
                                 <input datepicker datepicker-autohide type="text"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     placeholder="Select date">
                             </div>
 
                         </div>
                         <div class="w-full">
-                            <label for="brand"
+                            <label for="phone"
                                 class="block mb-2 text-sm font-small text-gray-900 dark:text-white">เบอร์โทรศัพท์</label>
                             <input type="text" name="phone" id="phone"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                 value="" placeholder="" required>
                         </div>
                         <div>
                             <label for="category"
                                 class="block mb-2 text-sm font-small text-gray-900 dark:text-white">ประเภทเตียง</label>
                             <select id="category"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                                 <option selected></option>
                                 <option value="ชาย">เดี่ยว</option>
                                 <option value="หญิง">คู่</option>
@@ -99,23 +100,22 @@
                     </div>
                     <div class="grid gap-4 mb-4 sm:grid-cols-3 sm:gap-6 sm:mb-5">
                         <div class="w-full">
-                            <label for="brand"
+                            <label for="passport"
                                 class="block mb-2 text-sm font-small text-gray-900 dark:text-white">หมายเลขพาสปอร์ต</label>
                             <input type="text" name="passport" id="passport"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                 value="" placeholder="" required>
                         </div>
                         <div class="w-full">
-                            <label for="brand"
+                            <label for="check"
                                 class="block mb-2 text-sm font-small text-gray-900 dark:text-white">ตรวจลงตราเลขที่</label>
                             <input type="text" name="check" id="check"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                 value="" placeholder="" required>
                         </div>
                         <div class="w-full">
-                            <label for="brand" class="block mb-2 text-sm font-small text-gray-900 dark:text-white">วันที่ออก
+                            <label for="startenddate" class="block mb-2 text-sm font-small text-gray-900 dark:text-white">วันที่ออก
                                 - วันที่หมด</label>
-
                             <div date-rangepicker class="flex items-center">
                                 <div class="relative">
                                     <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -127,7 +127,7 @@
                                         </svg>
                                     </div>
                                     <input name="start" type="text"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-1.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                         placeholder="Select date start">
                                 </div>
                                 <span class="mx-4 text-gray-500">to</span>
@@ -141,7 +141,7 @@
                                         </svg>
                                     </div>
                                     <input name="end" type="text"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-1.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                         placeholder="Select date end">
                                 </div>
                             </div>
@@ -153,14 +153,14 @@
                             <label for="brand"
                                 class="block mb-2 text-sm font-small text-gray-900 dark:text-white">ที่อยู่ตามบัตรประชาชน</label>
                             <input type="text" name="passport" id="passport"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                 value="" placeholder="" required>
                         </div>
                         <div class="sm:col-span-2">
                             <label for="brand"
                                 class="block mb-2 text-sm font-small text-gray-900 dark:text-white">หมายเหตุ</label>
                             <input type="text" name="check" id="check"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                 value="" placeholder="" required>
                         </div>
                         <div class="flex items-center space-x-4">
@@ -177,80 +177,80 @@
                                     <thead
                                         class="text-xs text-gray-900 uppercase bg-green-400 dark:bg-gray-700 dark:text-gray-400">
                                         <tr>
-                                            <th scope="col" class="px-3 py-3">
+                                            <th scope="col" class="px-2 py-2">
                                                 ลำดับ
                                             </th>
-                                            <th scope="col" class="px-3 py-3">
+                                            <th scope="col" class="px-2 py-2">
                                                 ชื่อ-นามสกุลภาษาไทย
                                             </th>
-                                            <th scope="col" class="px-3 py-3">
+                                            <th scope="col" class="px-2 py-2">
                                                 ชื่อ-นามสกุลภาษาอังกฤษ
                                             </th>
-                                            <th scope="col" class="px-3 py-3">
+                                            <th scope="col" class="px-2 py-2">
                                                 หมายเลขบัตรประชาชน
                                             </th>
-                                            <th scope="col" class="px-3 py-3">
+                                            <th scope="col" class="px-2 py-2">
                                                 หมายเลขพาสปอร์ต
                                             </th>
-                                            <th scope="col" class="px-3 py-3">
+                                            <th scope="col" class="px-2 py-2">
                                                 วันที่ออก
                                             </th>
-                                            <th scope="col" class="px-3 py-3">
+                                            <th scope="col" class="px-2 py-2">
                                                 วันที่หมด
                                             </th>
-                                            <th scope="col" class="px-3 py-3">
+                                            <th scope="col" class="px-2 py-2">
                                                 ว/ด/ป เกิด
                                             </th>
-                                            <th scope="col" class="px-3 py-3">
+                                            <th scope="col" class="px-2 py-2">
                                                 สัญชาติ
                                             </th>
-                                            <th scope="col" class="px-3 py-3">
+                                            <th scope="col" class="px-2 py-2">
                                                 เพศ
                                             </th>
-                                            <th scope="col" class="px-3 py-3">
+                                            <th scope="col" class="px-2 py-2">
                                                 ประเภทเตียง
                                             </th>
-                                            <th scope="col" class="px-3 py-3">
+                                            <th scope="col" class="px-2 py-2">
                                                 ตรวจลงตราเลขที
                                             </th>
                                         </tr>
                                     </thead>
                                     <tbody class="text-xs text-gray-700 uppercase bg-green-50 hover:bg-green-100">
                                         <tr data-modal-target="popup-modal" data-modal-toggle="popup-modal">
-                                            <th scope="col" class="px-3 py-3">
+                                            <th scope="col" class="px-2 py-2">
                                                 1
                                             </th>
-                                            <th scope="col" class="px-3 py-3">
+                                            <th scope="col" class="px-2 py-2">
                                                 เหนือ การตลาด
                                             </th>
-                                            <th scope="col" class="px-3 py-3">
+                                            <th scope="col" class="px-2 py-2">
                                                 1234527890123
                                             </th>
-                                            <th scope="col" class="px-3 py-3">
+                                            <th scope="col" class="px-2 py-2">
                                                 north dsad
                                             </th>
-                                            <th scope="col" class="px-3 py-3">
+                                            <th scope="col" class="px-2 py-2">
                                                 1234
                                             </th>
-                                            <th scope="col" class="px-3 py-3">
+                                            <th scope="col" class="px-2 py-2">
                                                 12/04/2522
                                             </th>
-                                            <th scope="col" class="px-3 py-3">
+                                            <th scope="col" class="px-2 py-2">
                                                 13/04/2522
                                             </th>
-                                            <th scope="col" class="px-3 py-3">
+                                            <th scope="col" class="px-2 py-2">
                                                 13/04/2552
                                             </th>
-                                            <th scope="col" class="px-3 py-3">
+                                            <th scope="col" class="px-2 py-2">
                                                 ไทย
                                             </th>
-                                            <th scope="col" class="px-3 py-3">
+                                            <th scope="col" class="px-2 py-2">
                                                 ชาย
                                             </th>
-                                            <th scope="col" class="px-3 py-3">
+                                            <th scope="col" class="px-2 py-2">
                                                 เดี่ยว
                                             </th>
-                                            <th scope="col" class="px-3 py-3">
+                                            <th scope="col" class="px-2 py-2">
                                                 ผ่าน
                                             </th>
                                         </tr>
@@ -261,6 +261,7 @@
                     </div>
                 </form>
             </div>
-        </section>
-    </div>
+            <!-- </section> -->
+        </div>
+    </section>
 </template>
