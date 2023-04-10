@@ -108,10 +108,11 @@
                         </div>
                     </div>
                     
+                    <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700">
                     <h5 class=" text-2xl tracking-tight text-gray-900 dark:text-white mt-10 ">
                         ข้อมูลไกด์
                     </h5>
-                    <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700">
+                    
                     <div class="grid gap-4 mb-4 grid-cols-5 mt-5">
                         <div class="col-span-2">
                             <label for="small-input"
