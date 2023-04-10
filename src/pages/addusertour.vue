@@ -5,6 +5,7 @@
             <!-- <section class="bg-white dark:bg-gray-900"> -->
             <div class=" px-4 py-4 mx-auto lg:py-4">
                 <h2 class="mb-4 text-4xl font-bold text-gray-900 dark:text-white">ข้อมูลลูกทัวร์ | อุบล</h2>
+                <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
                 <form action="#">
                     <div class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5">
                         <div class="w-full">
@@ -59,7 +60,7 @@
                         </div>
                         <div class="w-full">
                             <label for="birthdate" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">วัน
-                                เดือน ปี เกิด</label>
+                                เดือน ปีเกิด</label>
                             <div class="w-full relative">
                                 <div class="w-full absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                                     <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400"
@@ -120,7 +121,7 @@
                             </select>
                         </div>
 
-                    
+
                         <div class="w-full">
                             <label for="startenddate"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">วันที่ออก -
@@ -173,18 +174,20 @@
                                 value="" placeholder="" required>
                         </div>
                         <div class="w-full flex items-center space-x-4">
-                            <button type="submit"
-                                class="w-full mt-6 text-primary-500 bg-primary-100 hover:bg-primary-200 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium  rounded-sm text-sm px-2 py-2 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                            <button type="button"
+                                class="w-full  mt-7 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">เพิ่มลูกทัวร์</button>
+                            <!-- <button type="submit"
+                                class="w-full mt-6 text-white bg-blue-600 hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium  rounded-sm text-sm px-2 py-2 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                                 เพิ่มลูกทัวร์
-                            </button>
+                            </button> -->
                         </div>
                     </div>
                     <div class="grid gap-4 mb-4 sm:grid-cols-4 sm:gap-6 sm:mb-5">
                         <div class="sm:col-span-4">
-                            <div class="relative overflow-x-auto">
-                                <table class="w-full text-center text-sm text-left text-gray-500 dark:text-gray-400">
+                            <div class="relative overflow-x-auto rounded-lg">
+                                <table class="w-full text-center text-sm text-left text-gray-500 dark:text-gray-400 ">
                                     <thead
-                                        class="text-xs text-gray-700 uppercase bg-primary-200 dark:bg-gray-700 dark:text-gray-400">
+                                        class="text-xs text-gray-700 uppercase bg-primary-100 dark:bg-gray-700 dark:text-gray-400">
                                         <tr>
                                             <th scope="col" class="px-1 py-3">
                                                 ลำดับ
@@ -272,4 +275,5 @@
             </div>
             <!-- </section> -->
         </div>
-</section></template>
+    </section>
+</template>
