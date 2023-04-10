@@ -93,7 +93,7 @@
         <div
           class="mt-3 w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700"
         >
-          <h5 class="mb-2 text-2xl font-bold text-gray-900 dark:text-white">
+          <h5 class="mb-2 text-2xl text-gray-900 dark:text-white">
             รายละเอียด
           </h5>
           <div class="grid grid-cols-3 gap-4">
