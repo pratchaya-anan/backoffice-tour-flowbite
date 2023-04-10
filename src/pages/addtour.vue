@@ -10,7 +10,7 @@
 
                 <form>
                     <h1 class="mb-2 text-2xl  tracking-tight text-gray-900 dark:text-white mt-5">
-                        ข้อมูลทัวร์ ?
+                        ข้อมูลทัวร์
                     </h1>
                     <div class="grid gap-4 mb-4 sm:grid-cols-2">
                         <div>
