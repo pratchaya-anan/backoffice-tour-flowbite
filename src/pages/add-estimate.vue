@@ -5,14 +5,15 @@
         <div
           class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700"
         >
-          <h5 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
+          <h5 class="text-3xl font-bold text-gray-900 dark:text-white">
             แบบฟอร์มประมาณการเบิกเงินสดย่อย | ...
           </h5>
+          <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
 
           <p class="text-gray-900 dark:text-white">เลขที่ใบเบิก: 125544783</p>
-          <div class="grid grid-cols-4 gap-4 mt-3">
+          <div class="grid grid-cols-2 gap-4 mt-2">
             <div>
-              <div class="mb-6">
+              <div class="mb-4">
                 <label
                   for="base-input"
                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -26,7 +27,7 @@
               </div>
             </div>
             <div>
-              <div class="mb-6">
+              <div class="mb-4">
                 <label
                   for="base-input"
                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -45,7 +46,7 @@
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >วันที่ต้องการใช้เงิน</label
               >
-              <div class="relative max-w-sm">
+              <div class="relative">
                 <div
                   class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
                 >
@@ -92,10 +93,31 @@
         <div
           class="mt-3 w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700"
         >
-          <h5 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
+          <h5 class="mb-2 text-2xl font-bold text-gray-900 dark:text-white">
             รายละเอียด
           </h5>
           <div class="grid grid-cols-3 gap-4">
+            <div>
+              <label
+                for="countries"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >ประเภทค่าใช้จ่าย</label
+              >
+              <select
+                id="countries"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              >
+                <option selected>เลือกประเภท</option>
+                <option value="allowance">เบี้ยเลี้ยง</option>
+                <option value="accommodation">ค่าที่พัก</option>
+                <option value="vehicle_fee">ค่ายานพาหนะ</option>
+                <option value="fuel_cost">ค่าน้ำมัน</option>
+                <option value="insurance">ค่าประกัน</option>
+                <option value="guide_fee">ค่าไกด์</option>
+                <option value="staff_fee">ค่า staff</option>
+                <option value="other">อื่นๆ</option>
+              </select>
+            </div>
             <div>
               <div class="mb-6">
                 <label
@@ -111,58 +133,36 @@
                 />
               </div>
             </div>
+
             <div>
-              <label
-                for="countries"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >ประเภทค่าใช้จ่าย</label
-              >
-              <select
-                id="countries"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              >
-                <option selected>---เลือกประเภท---</option>
-                <option value="allowance">เบี้ยเลี้ยง</option>
-                <option value="accommodation">ค่าที่พัก</option>
-                <option value="vehicle_fee">ค่ายานพาหนะ</option>
-                <option value="fuel_cost">ค่าน้ำมัน</option>
-                <option value="insurance">ค่าประกัน</option>
-                <option value="guide_fee">ค่าไกด์</option>
-                <option value="staff_fee">ค่า staff</option>
-                <option value="other">อื่นๆ</option>
-              </select>
-            </div>
-            <div>
-              <div>
-                <div class="mb-6">
-                  <label
-                    for="base-input"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >จำนวน</label
-                  >
-                  <input
-                    type="number"
-                    id="base-input"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="0"
-                  />
-                </div>
+              <div class="mb-6">
+                <label
+                  for="base-input"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >จำนวน</label
+                >
+                <input
+                  type="number"
+                  id="base-input"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="0"
+                />
               </div>
             </div>
           </div>
-          <div class="grid grid-cols-4 gap-4">
-            <div class="col-span-3">
+          <div class="grid grid-cols-5 gap-4">
+            <div class="mb-6 col-span-4">
               <label
-                for="message"
+                for="base-input"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >รายละเอียดค่าใช้จ่าย</label
               >
-              <textarea
-                id="message"
-                rows="1"
-                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              <input
+                type="text"
+                id="base-input"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder=" "
-              ></textarea>
+              />
             </div>
             <div class="mt-7">
               <button
@@ -174,12 +174,12 @@
             </div>
           </div>
 
-          <div class="relative overflow-x-auto mt-4">
+          <div class="relative overflow-x-auto mt-4 rounded-lg">
             <table
               class="w-full text-sm text-gray-500 dark:text-gray-400 text-center"
             >
               <thead
-                class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+                class="text-xs text-gray-700 uppercase bg-primary-100 dark:bg-gray-700 dark:text-gray-400"
               >
                 <tr>
                   <th scope="col" class="px-2 py-3">ลำดับ</th>
@@ -214,7 +214,7 @@
               type="button"
               class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 mt-2"
             >
-              สร้างใบประมาณการเบิกเงินสดย่อย
+              สร้างใบประมาณการ
             </button>
           </div>
         </div>
