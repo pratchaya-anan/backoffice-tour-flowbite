@@ -33,34 +33,34 @@
             </div>
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-4">
                 <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <thead class="text-xs text-gray-700 uppercase bg-primary-100 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
 
-                            <th scope="col" class="px-6 py-3 bg-blue-600 text-white">
+                            <th scope="col" class="px-6 py-3 ">
                                 ชื่อทริปทัวร์
                             </th>
-                            <th scope="col" class="px-6 py-3  bg-blue-600 text-white">
+                            <th scope="col" class="px-6 py-3 ">
                                 ชื่อโปรแกรมทัวร์
                             </th>
-                            <th scope="col" class="px-6 py-3  bg-blue-600 text-white">
+                            <th scope="col" class="px-6 py-3   ">
                                 วันที่เริ่มทริป
                             </th>
-                            <th scope="col" class="px-6 py-3  bg-blue-600 text-white">
+                            <th scope="col" class="px-6 py-3  ">
                                 วันที่สิ้นสุดทริป
                             </th>
-                            <th scope="col" class="px-6 py-3  bg-blue-600 text-white">
+                            <th scope="col" class="px-6 py-3   ">
                                 วัน
                             </th>
-                            <th scope="col" class="px-6 py-3  bg-blue-600 text-white">
+                            <th scope="col" class="px-6 py-3   ">
                                 คืน
                             </th>
-                            <th scope="col" class="px-6 py-3  bg-blue-600 text-white">
+                            <th scope="col" class="px-6 py-3   ">
                                 เที่ยวบินหรือพาหนะอื่นขาไป
                             </th>
-                            <th scope="col" class="px-6 py-3  bg-blue-600 text-white">
+                            <th scope="col" class="px-6 py-3   ">
                                 เที่ยวบินหรือพาหนะอื่นขากลับ
                             </th>
-                            <th scope="col" class="px-6 py-3  bg-blue-600 text-white">
+                            <th scope="col" class="px-6 py-3  ">
                                 จำนวนลูกทัวร์
                             </th>
 
@@ -106,9 +106,10 @@
                         <tr
                             class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <NuxtLink to="tourdata">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                เที่ยวเกาะ เลาะรัก
-                            </th>
+                                <th scope="row"
+                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    เที่ยวเกาะ เลาะรัก
+                                </th>
                             </NuxtLink>
                             <td class="px-6 py-4">
                                 เกาะเสม็ด เสร็จทุกราย
@@ -138,9 +139,10 @@
                         </tr>
                         <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <NuxtLink to="tourdata">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                เที่ยวเกาะ เลาะรัก
-                            </th>
+                                <th scope="row"
+                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    เที่ยวเกาะ เลาะรัก
+                                </th>
                             </NuxtLink>
                             <td class="px-6 py-4">
                                 เกาะเสม็ด เสร็จทุกราย
@@ -170,9 +172,10 @@
                         </tr>
                         <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <NuxtLink to="tourdata">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                เที่ยวเกาะ เลาะรัก
-                            </th>
+                                <th scope="row"
+                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    เที่ยวเกาะ เลาะรัก
+                                </th>
                             </NuxtLink>
                             <td class="px-6 py-4">
                                 เกาะเสม็ด เสร็จทุกราย
@@ -207,4 +210,5 @@
 
 
 
-</section></template>
+    </section>
+</template>

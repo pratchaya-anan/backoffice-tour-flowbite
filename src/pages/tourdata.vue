@@ -7,112 +7,112 @@
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 
-                <th scope="col" class="px-6 py-3 bg-blue-100 text-dark">
+                <th scope="col" class="px-6 py-3 bg-white-100 text-dark">
                     ชื่อทริปทัวร์ : เที่ยวเกาะ เลาะรัก
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-100 text-dark">
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
                     
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-100 text-dark">
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
                     
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-100 text-dark">
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
                     
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-100 text-dark">
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
                     ชื่อทริปทัวร์ : เที่ยวเกาะ เลาะรัก
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-100 text-dark">
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
                     
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-100 text-dark">
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
                     
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-100 text-dark">
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
                     เบอร์โทร : 0854125475, 0325698545
                 </th>
                 
             </tr>
             <tr>
                 
-                <th scope="col" class="px-6 py-3 bg-blue-100 text-dark">
+                <th scope="col" class="px-6 py-3 bg-white-100 text-dark">
                     โปรแกรมทัวร์ : เกาะเสม็ด เสร็จทุกราย
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-100 text-dark">
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
                     
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-100 text-dark">
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
                     จำนวน : 5 วัน 4 คืน
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-100 text-dark">
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
                     
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-100 text-dark">
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
                     วันที่เดือนปี 16/04/2566 ถึง 16/04/2566
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-100 text-dark">
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
                     
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-100 text-dark">
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
                     
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-100 text-dark">
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
                     จำนวนลูกทัวร์ : 1
                 </th>
                 
             </tr>
             <tr>
                 
-                <th scope="col" class="px-6 py-3 bg-yellow-100 text-dark">
+                <th scope="col" class="px-6 py-3 bg-white-100 text-dark">
                     ชื่อโรงแรม : ส้มหาดสวรรน์
                 </th>
-                <th scope="col" class="px-6 py-3  bg-yellow-100 text-dark">
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
                     
                 </th>
-                <th scope="col" class="px-6 py-3  bg-yellow-100 text-dark">
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
                     จำนวนห้องพัก : 15
                 </th>
-                <th scope="col" class="px-6 py-3  bg-yellow-100 text-dark">
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
                     
                 </th>
-                <th scope="col" class="px-6 py-3  bg-yellow-100 text-dark">
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
                     วันที่เช็คอินน์ : 16/04/2566
                 </th>
-                <th scope="col" class="px-6 py-3  bg-yellow-100 text-dark">
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
                     
                 </th>
-                <th scope="col" class="px-6 py-3  bg-yellow-100 text-dark">
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
                     
                 </th>
-                <th scope="col" class="px-6 py-3  bg-yellow-100 text-dark">
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
                     วันที่เช็คเอ้าท์ : 20/04/2566
                 </th>
                 
             </tr>
             <tr>
                 
-                <th scope="col" class="px-6 py-3 bg-blue-100 text-dark">
+                <th scope="col" class="px-6 py-3 bg-white-100 text-dark">
                     เที่ยวบินหรือพาหนะอื่น ๆ ขาไป : นครชัยแอร์
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-100 text-dark">
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
                     
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-100 text-dark">
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
                     จำนวนห้องพัก : 15
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-100 text-dark">
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
                     
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-100 text-dark">
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
                     เที่ยวบินหรือพาหนะอื่น ๆ ขากลับ : AirAsia
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-100 text-dark">
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
                     
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-100 text-dark">
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
                     
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-100 text-dark">
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
                     หมายเหตุ : asdd
                 </th>
                 
@@ -123,34 +123,34 @@
        
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-primary-100 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 
-                <th scope="col" class="px-6 py-3 bg-blue-600 text-white">
+                <th scope="col" class="px-6 py-3 ">
                     ลำดับ
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-600 text-white">
+                <th scope="col" class="px-6 py-3 ">
                     ชื่อ-นามสกุลภาษาไทย
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-600 text-white">
+                <th scope="col" class="px-6 py-3 ">
                     หมายเลขบัตรประชาชน
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-600 text-white">
+                <th scope="col" class="px-6 py-3 ">
                     ชื่อ-นามสกุลภาษาอังกฤษ
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-600 text-white">
+                <th scope="col" class="px-6 py-3 ">
                     หมายเลขพาสปอร์ต
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-600 text-white">
+                <th scope="col" class="px-6 py-3 ">
                     สัญชาติ
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-600 text-white">
+                <th scope="col" class="px-6 py-3 ">
                     เพศ
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-600 text-white">
+                <th scope="col" class="px-6 py-3 ">
                     ประเภทเตียง
                 </th>
-                <th scope="col" class="px-6 py-3  bg-blue-600 text-white">
+                <th scope="col" class="px-6 py-3 ">
                     เพิ่มเติม
                 </th>
 
