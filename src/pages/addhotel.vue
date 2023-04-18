@@ -14,7 +14,7 @@
         <h1
           class="mb-3 text-2xl tracking-tight text-gray-900 dark:text-white mt-5"
         >
-          ข้อมูลโรงแรมที่พัก
+          ข้อมูลที่พัก
         </h1>
 
         <form>
@@ -155,7 +155,7 @@
           </div>
           <div class="flex justify-end">
             <NuxtLink
-              to="/tourdata"
+              href="/tourdata"
               class="mt-3 px-18 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
               สร้างทัวร์
