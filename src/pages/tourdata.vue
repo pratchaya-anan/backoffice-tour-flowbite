@@ -1,278 +1,160 @@
 <template>
-  <section class="mx-auto max-w-screen-xl">
-    <!-- Start coding here -->
-    <div class="flex justify-end py-3">
-      <button
-        id="commentDefaultButton"
-        data-dropdown-toggle="comment"
-        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        type="button"
-      >
-        คอมเมนต์
-        <svg
-          class="w-4 h-4 ml-2"
-          aria-hidden="true"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M19 9l-7 7-7-7"
-          ></path>
-        </svg>
-      </button>
-      <!-- Dropdown menu -->
-      <div
-        id="comment"
-        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-      >
-        <ul
-          class="py-2 text-sm text-gray-700 dark:text-gray-200"
-          aria-labelledby="commentDefaultButton"
-        >
-          <li>
-            <a
-              href="#"
-              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-              >จัดการร้านอาหาร</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-              >จัดการสถานที่เที่ยว</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-              >จัดการเส้นทาง</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-              >คอมเมนต์โรงแรม</a
-            >
-          </li>
-        </ul>
-      </div>
-      <button
-        id="multiLevelDropdownButton"
-        data-dropdown-toggle="dropdown"
-        class="mx-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        type="button"
-      >
-        Dropdown button
-        <svg
-          class="w-4 h-4 ml-2"
-          aria-hidden="true"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M19 9l-7 7-7-7"
-          ></path>
-        </svg>
-      </button>
-      <!-- Dropdown menu -->
-      <div
-        id="dropdown"
-        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-      >
-        <ul
-          class="py-2 text-sm text-gray-700 dark:text-gray-200"
-          aria-labelledby="multiLevelDropdownButton"
-        >
-          <li>
-            <a
-              href="#"
-              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-              >Dashboard</a
-            >
-          </li>
-          <li>
-            <button
-              id="doubleDropdownButton"
-              data-dropdown-toggle="doubleDropdown"
-              data-dropdown-placement="right-start"
-              type="button"
-              class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-            >
-              Dropdown<svg
-                aria-hidden="true"
-                class="w-4 h-4"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </button>
-            <div
-              id="doubleDropdown"
-              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-            >
-              <ul
-                class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                aria-labelledby="doubleDropdownButton"
-              >
-                <li>
-                  <a
-                    href="#"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                    >Overview</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                    >My downloads</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                    >Billing</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                    >Rewards</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-              >Earnings</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-              >Sign out</a
-            >
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-      <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead
-          class="text-sm text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
-        >
-          <tr>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark">
-              ชื่อทริปทัวร์ : เที่ยวเกาะ เลาะรัก
-            </th>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark"></th>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark"></th>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark"></th>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark">
-              ชื่อทริปทัวร์ : เที่ยวเกาะ เลาะรัก
-            </th>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark"></th>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark"></th>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark">
-              เบอร์โทร : 0854125475, 0325698545
-            </th>
-          </tr>
-          <tr>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark">
-              โปรแกรมทัวร์ : เกาะเสม็ด เสร็จทุกราย
-            </th>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark"></th>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark">
-              จำนวน : 5 วัน 4 คืน
-            </th>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark"></th>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark">
-              วันที่เดือนปี 16/04/2566 ถึง 16/04/2566
-            </th>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark"></th>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark"></th>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark">
-              จำนวนลูกทัวร์ : 1
-            </th>
-          </tr>
-          <tr>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark">
-              ชื่อโรงแรม : ส้มหาดสวรรน์
-            </th>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark"></th>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark">
-              จำนวนห้องพัก : 15
-            </th>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark"></th>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark">
-              วันที่เช็คอินน์ : 16/04/2566
-            </th>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark"></th>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark"></th>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark">
-              วันที่เช็คเอ้าท์ : 20/04/2566
-            </th>
-          </tr>
-          <tr>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark">
-              เที่ยวบินหรือพาหนะอื่น ๆ ขาไป : นครชัยแอร์
-            </th>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark"></th>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark"></th>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark"></th>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark">
-              เที่ยวบินหรือพาหนะอื่น ๆ ขากลับ : AirAsia
-            </th>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark"></th>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark"></th>
-            <th scope="col" class="px-6 py-3 bg-white-100 text-dark">
-              หมายเหตุ : asdd
-            </th>
-          </tr>
+    <section class="bg-gray-100 dark:bg-gray-900 ">
+        <div class="mx-auto max-w-screen-2xl px-4 lg:px-12 p-6">
+            <!-- Start coding here -->
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                
+                <th scope="col" class="px-6 py-3 bg-white-100 text-dark">
+                    ชื่อทริปทัวร์ : เที่ยวเกาะ เลาะรัก
+                </th>
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                    
+                </th>
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                    
+                </th>
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                    
+                </th>
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                    ชื่อทริปทัวร์ : เที่ยวเกาะ เลาะรัก
+                </th>
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                    
+                </th>
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                    
+                </th>
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                    เบอร์โทร : 0854125475, 0325698545
+                </th>
+                
+            </tr>
+            <tr>
+                
+                <th scope="col" class="px-6 py-3 bg-white-100 text-dark">
+                    โปรแกรมทัวร์ : เกาะเสม็ด เสร็จทุกราย
+                </th>
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                    
+                </th>
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                    จำนวน : 5 วัน 4 คืน
+                </th>
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                    
+                </th>
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                    วันที่เดือนปี 16/04/2566 ถึง 16/04/2566
+                </th>
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                    
+                </th>
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                    
+                </th>
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                    จำนวนลูกทัวร์ : 1
+                </th>
+                
+            </tr>
+            <tr>
+                
+                <th scope="col" class="px-6 py-3 bg-white-100 text-dark">
+                    ชื่อโรงแรม : ส้มหาดสวรรน์
+                </th>
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                    
+                </th>
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                    จำนวนห้องพัก : 15
+                </th>
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                    
+                </th>
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                    วันที่เช็คอินน์ : 16/04/2566
+                </th>
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                    
+                </th>
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                    
+                </th>
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                    วันที่เช็คเอ้าท์ : 20/04/2566
+                </th>
+                
+            </tr>
+            <tr>
+                
+                <th scope="col" class="px-6 py-3 bg-white-100 text-dark">
+                    เที่ยวบินหรือพาหนะอื่น ๆ ขาไป : นครชัยแอร์
+                </th>
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                    
+                </th>
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                    จำนวนห้องพัก : 15
+                </th>
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                    
+                </th>
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                    เที่ยวบินหรือพาหนะอื่น ๆ ขากลับ : AirAsia
+                </th>
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                    
+                </th>
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                    
+                </th>
+                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                    หมายเหตุ : asdd
+                </th>
+                
+            </tr>
         </thead>
-      </table>
-    </div>
+        </table>
+        </div>
+       
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-primary-100 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                
+                <th scope="col" class="px-6 py-3 ">
+                    ลำดับ
+                </th>
+                <th scope="col" class="px-6 py-3 ">
+                    ชื่อ-นามสกุลภาษาไทย
+                </th>
+                <th scope="col" class="px-6 py-3 ">
+                    หมายเลขบัตรประชาชน
+                </th>
+                <th scope="col" class="px-6 py-3 ">
+                    ชื่อ-นามสกุลภาษาอังกฤษ
+                </th>
+                <th scope="col" class="px-6 py-3 ">
+                    หมายเลขพาสปอร์ต
+                </th>
+                <th scope="col" class="px-6 py-3 ">
+                    สัญชาติ
+                </th>
+                <th scope="col" class="px-6 py-3 ">
+                    เพศ
+                </th>
+                <th scope="col" class="px-6 py-3 ">
+                    ประเภทเตียง
+                </th>
+                <th scope="col" class="px-6 py-3 ">
+                    เพิ่มเติม
+                </th>
 
-    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-      <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead
-          class="text-center text-xs text-gray-700 uppercase bg-primary-100 dark:bg-gray-700 dark:text-gray-400"
-        >
-          <tr>
-            <th scope="col" class="px-6 py-3">ลำดับ</th>
-            <th scope="col" class="px-6 py-3">ชื่อ-นามสกุล (ลูกค้า)</th>
-            <th scope="col" class="px-6 py-3">ชื่อ-นามสกุล (ผู้เสนอขาย)</th>
-            <th scope="col" class="px-6 py-3">วันที่สร้าง</th>
-            <th scope="col" class="px-6 py-3">จำนวนคนที่มาด้วย</th>
-            <th scope="col" class="px-6 py-3">ราคาเสนอ</th>
-            <th scope="col" class="px-6 py-3">จัดการ</th>
-          </tr>
+            </tr>
         </thead>
         <tbody>
           <tr
