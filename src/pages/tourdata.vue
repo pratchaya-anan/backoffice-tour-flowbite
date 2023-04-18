@@ -1,126 +1,84 @@
 <template>
     <section class="bg-gray-100 dark:bg-gray-900 ">
         <div class="mx-auto max-w-screen-2xl px-4 lg:px-12 p-6">
-            <!-- Start coding here -->
-            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+            
+<div class="relative overflow-x-auto">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-                
-                <th scope="col" class="px-6 py-3 bg-white-100 text-dark">
+                <th scope="col" class="px-6 py-3">
                     ชื่อทริปทัวร์ : เที่ยวเกาะ เลาะรัก
                 </th>
-                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                <th scope="col" class="px-6 py-3">
                     
                 </th>
-                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
-                    
-                </th>
-                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
-                    
-                </th>
-                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                <th scope="col" class="px-6 py-3">
                     ชื่อทริปทัวร์ : เที่ยวเกาะ เลาะรัก
                 </th>
-                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                <th scope="col" class="px-6 py-3">
                     
                 </th>
-                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
-                    
-                </th>
-                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
+                <th scope="col" class="px-6 py-3">
                     เบอร์โทร : 0854125475, 0325698545
                 </th>
-                
-            </tr>
-            <tr>
-                
-                <th scope="col" class="px-6 py-3 bg-white-100 text-dark">
-                    โปรแกรมทัวร์ : เกาะเสม็ด เสร็จทุกราย
-                </th>
-                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
-                    
-                </th>
-                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
-                    จำนวน : 5 วัน 4 คืน
-                </th>
-                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
-                    
-                </th>
-                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
-                    วันที่เดือนปี 16/04/2566 ถึง 16/04/2566
-                </th>
-                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
-                    
-                </th>
-                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
-                    
-                </th>
-                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
-                    จำนวนลูกทัวร์ : 1
-                </th>
-                
-            </tr>
-            <tr>
-                
-                <th scope="col" class="px-6 py-3 bg-white-100 text-dark">
-                    ชื่อโรงแรม : ส้มหาดสวรรน์
-                </th>
-                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
-                    
-                </th>
-                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
-                    จำนวนห้องพัก : 15
-                </th>
-                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
-                    
-                </th>
-                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
-                    วันที่เช็คอินน์ : 16/04/2566
-                </th>
-                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
-                    
-                </th>
-                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
-                    
-                </th>
-                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
-                    วันที่เช็คเอ้าท์ : 20/04/2566
-                </th>
-                
-            </tr>
-            <tr>
-                
-                <th scope="col" class="px-6 py-3 bg-white-100 text-dark">
-                    เที่ยวบินหรือพาหนะอื่น ๆ ขาไป : นครชัยแอร์
-                </th>
-                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
-                    
-                </th>
-                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
-                    จำนวนห้องพัก : 15
-                </th>
-                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
-                    
-                </th>
-                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
-                    เที่ยวบินหรือพาหนะอื่น ๆ ขากลับ : AirAsia
-                </th>
-                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
-                    
-                </th>
-                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
-                    
-                </th>
-                <th scope="col" class="px-6 py-3  bg-white-100 text-dark">
-                    หมายเหตุ : asdd
-                </th>
-                
             </tr>
         </thead>
-        </table>
-        </div>
-       
+        <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    โปรแกรมทัวร์ : เกาะเสม็ด เสร็จทุกราย
+                </th>
+                <td class="px-6 py-4">
+                    จำนวน : 5 วัน 4 คืน
+                </td>
+                <td class="px-6 py-4">
+                    วันที่เดือนปี 16/04/2566 ถึง 16/04/2566
+                </td>
+                <td class="px-6 py-4">
+                    
+                </td>
+                <td class="px-6 py-4">
+                    จำนวนลูกทัวร์ : 1
+                </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    ชื่อโรงแรม : ส้มหาดสวรรน์
+                </th>
+                <td class="px-6 py-4">
+                    จำนวนห้องพัก : 15
+                </td>
+                <td class="px-6 py-4">
+                    วันที่เช็คอินน์ : 16/04/2566
+                </td>
+                <td class="px-6 py-4">
+                    
+                </td>
+                <td class="px-6 py-4">
+                    วันที่เช็คเอ้าท์ : 20/04/2566
+                </td>
+            </tr>
+            <tr class="bg-white dark:bg-gray-800">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    เที่ยวบินหรือพาหนะอื่น ๆ ขาไป : นครชัยแอร์
+                </th>
+                <td class="px-6 py-4">
+                    จำนวนห้องพัก : 15
+                </td>
+                <td class="px-6 py-4">
+                    เที่ยวบินหรือพาหนะอื่น ๆ ขากลับ : AIRASIA
+                </td>
+                <td class="px-6 py-4">
+                    
+                </td>
+                <td class="px-6 py-4">
+                    หมายเหตุ : ASDD
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+           
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-primary-100 dark:bg-gray-700 dark:text-gray-400">
