@@ -43,6 +43,9 @@
                             <input type="number" id="default-input"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         </div>
+                    </div>
+                    <div class="grid gap-4 mb-4 sm:grid-cols-2 mt-4">                        
+                       
                         <div date-rangepicker class="flex items-center col-span-2 ">
                             <div class="relative w-full">
                                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -97,8 +100,8 @@
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         </div>
                         <div>
-                            <label for="category"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ภาษี (0% 7% 9%)</label>
+                            <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ภาษี
+                                (0% 7% 9%)</label>
                             <select id="category"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                 <option select="">0%</option>
@@ -107,12 +110,9 @@
                             </select>
                         </div>
                     </div>
-                    
-                    <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700">
-                    <h5 class=" text-2xl tracking-tight text-gray-900 dark:text-white mt-10 ">
-                        ข้อมูลไกด์
-                    </h5>
-                    
+
+                    <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700">                  
+
                     <div class="grid gap-4 mb-4 grid-cols-5 mt-5">
                         <div class="col-span-2">
                             <label for="small-input"
@@ -178,15 +178,16 @@
                         </table>
                     </div>
                     <div class="flex justify-end ">
-                        <NuxtLink to="/addhotel" class="mt-3 px-18 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        <NuxtLink to="/addhotel"
+                            class="mt-3 px-18 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                             สร้างทัวร์
                         </NuxtLink>
 
                     </div>
                 </form>
-                
+
             </div>
-            
+
         </div>
     </section>
 </template>
