@@ -3,16 +3,16 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 
 export default defineComponent({
   methods: {
     to_tour() {
-      this.$router.push('/tour_ls')
-    }
+      this.$router.push("/tour_ls");
+    },
   },
   mounted() {
-    this.to_tour()
-  }
-})
+    this.to_tour();
+  },
+});
 </script>
