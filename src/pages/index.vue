@@ -8,7 +8,7 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   methods: {
     to_tour() {
-      this.$router.push('/tour_Is')
+      this.$router.push('/tour_ls')
     }
   },
   mounted() {
