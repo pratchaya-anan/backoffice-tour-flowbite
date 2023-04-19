@@ -2,7 +2,7 @@
     <section class="bg-gray-100 dark:bg-gray-900 p-3 sm:p-5">
         <div class="max-w-screen-lg mx-auto">
             <!-- ข้อมูลทัวร์ -->
-            <div class="block w-full p-6 bg-white border border-gray-200 rounded-lg shadow">              
+            <div class="block w-full p-6 bg-white border border-gray-200 rounded-lg shadow">
                 <ol class="items-center w-full space-y-4 sm:flex sm:space-x-8 sm:space-y-0">
                     <li class="flex items-center text-gray-500 dark:text-gray-400 space-x-2.5">
                         <span
@@ -20,7 +20,7 @@
                             2
                         </span>
                         <span>
-                            <h3 class="font-medium leading-tight">ข้อมูลไกด์</h3>                            
+                            <h3 class="font-medium leading-tight">ข้อมูลไกด์</h3>
                         </span>
                     </li>
                     <li class="flex items-center text-gray-500 dark:text-gray-400 space-x-2.5">
@@ -49,7 +49,7 @@
                     ข้อมูลไกด์
                 </h5>
 
-                <form>                   
+                <form>
                     <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700">
 
                     <div class="grid gap-4 mb-4 grid-cols-5 mt-5">
@@ -65,9 +65,13 @@
                             <input type="text" id="small-input"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         </div>
-                        <div>
+                        <div>   
                             <button type="button"
-                                class="w-full  mt-7 px-3 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                class="w-full flex justify-center mt-7 px-3 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
+                                </svg>
                                 เพิ่มไกด์
                             </button>
                         </div>
@@ -116,11 +120,11 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="flex justify-between"> 
+                    <div class="flex justify-between">
                         <NuxtLink to="/addtour"
                             class="mt-6 px-18 py-2.5 text-sm font-medium text-center  bg-gray-300 rounded-lg hover:bg-gray-400 hover:text-white focus:ring-4 focus:outline-none focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
                             ย้อนกลับ
-                        </NuxtLink>                      
+                        </NuxtLink>
                         <NuxtLink to="/addhotel"
                             class="ml-3 mt-6 px-18 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                             ถัดไป
@@ -133,4 +137,5 @@
 
         </div>
 
-</section></template>
+    </section>
+</template>
