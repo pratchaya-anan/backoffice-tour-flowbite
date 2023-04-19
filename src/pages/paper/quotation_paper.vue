@@ -1,8 +1,19 @@
 <template>
   <section class="bg-gray-100 dark:bg-gray-900 p-3 sm:p-5">
-    <div style="width: 210mm; min-height: 297mm; padding: 5mm; margin: 0 auto; border: 1px #d3d3d3 solid; border-radius: 5px; background: white; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);">
+    <div
+      style="
+        width: 210mm;
+        min-height: 297mm;
+        padding: 5mm;
+        margin: 0 auto;
+        border: 1px #d3d3d3 solid;
+        border-radius: 5px;
+        background: white;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      "
+    >
       <div class="grid grid-rows-2 m-5">
-        <img class="w-25" src="../../assets/images/ll-01.png" alt="Logo">
+        <img class="w-25" src="../../assets/images/ll-01.png" alt="Logo" />
         <div class="grid grid-cols-3 text-sm">
           <div class="col-span-2">
             <div>ห้างหุ้นส่วนจำกัด นิลผกา</div>
@@ -11,7 +22,9 @@
             <div class="text-blue-400">www.facebook.com/Jampahomtour</div>
           </div>
           <div class="grid grid-cols-3">
-            <div class="col-span-3 font-bold text-center text-base">ใบเสนอราคา/ยืนยันการสั่งซื้อ</div>
+            <div class="col-span-3 font-bold text-center text-base">
+              ใบเสนอราคา/ยืนยันการสั่งซื้อ
+            </div>
             <div class="col-span-3 text-center">Quatation</div>
             <div class="font-bold">เลขที่:</div>
             <div class="col-span-2 text-right">0841142174178</div>
@@ -20,22 +33,24 @@
           </div>
         </div>
       </div>
-      <hr class="col-span-3 mx-5">
-      <div class="col-span-2 grid grid-cols-3 m-5  text-xs">
+      <hr class="col-span-3 mx-5" />
+      <div class="col-span-2 grid grid-cols-3 m-5 text-xs">
         <div class="col-span-2">
           <div class="grid grid-cols-3">
             <div class="col-span-1 font-bold">ชื่อลูกค้า:</div>
-            <div class="col-span-2 ">ศศิศ วิรัตน์จินดา</div>
+            <div class="col-span-2">ศศิศ วิรัตน์จินดา</div>
             <div class="col-span-1 font-bold">ชื่อผู้ติดต่อ:</div>
-            <div class="col-span-2 ">มะนาว หวานจังเลย</div>
+            <div class="col-span-2">มะนาว หวานจังเลย</div>
             <div class="col-span-1 font-bold">ที่อยู่:</div>
-            <div class="col-span-2 ">111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100</div>
+            <div class="col-span-2">
+              111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100
+            </div>
             <div class="col-span-1 font-bold">ID TAX:</div>
-            <div class="col-span-2 ">4585695214526</div>
+            <div class="col-span-2">4585695214526</div>
             <div class="col-span-1 font-bold">โทร:</div>
-            <div class="col-span-2 ">0254875858</div>
+            <div class="col-span-2">0254875858</div>
             <div class="col-span-1 font-bold">Email:</div>
-            <div class="col-span-2 ">somchai@gmail.com</div>
+            <div class="col-span-2">somchai@gmail.com</div>
           </div>
         </div>
         <div class="border-l px-5">
@@ -81,22 +96,30 @@
       <div class="grid grid-cols-3 text-xs p-2 border-b-1 border-black">
         <div class="col-span-2">
           <div class="font-bold">หมายเหตุ:</div>
-          <div> กำหนดยืนราคา 15 วัน <br> จึงเรียนมาเพื่อโปรดพิจารณาและหวังเป็นอย่างยิ่งว่าจะได้รับการพิจารณาสั่งซื้อจากท่าน ขอขอบพระคุณมา ณ ที่นี้</div>
+          <div>
+            กำหนดยืนราคา 15 วัน <br />
+            จึงเรียนมาเพื่อโปรดพิจารณาและหวังเป็นอย่างยิ่งว่าจะได้รับการพิจารณาสั่งซื้อจากท่าน
+            ขอขอบพระคุณมา ณ ที่นี้
+          </div>
           <div class="font-bold">ดังรายละเอียดธนาคารดังต่อไปนี้ :</div>
-          <div>1.กรุณาชำระเงิน ค่ามัดจำเบื้องต้นไม่ต่ำกว่า 40% ของราคาที่เสนอ โดยชำระเงินก่อนการติดตั้งอย่างน้อย 7 วัน <br> 2.หลังติดตั้งและใช้งานได้เรียบร้อยแล้วให้ชำระเงินส่วนที่เหลือ</div>
+          <div>
+            1.กรุณาชำระเงิน ค่ามัดจำเบื้องต้นไม่ต่ำกว่า 40% ของราคาที่เสนอ
+            โดยชำระเงินก่อนการติดตั้งอย่างน้อย 7 วัน <br />
+            2.หลังติดตั้งและใช้งานได้เรียบร้อยแล้วให้ชำระเงินส่วนที่เหลือ
+          </div>
         </div>
 
         <div>
           <div class="grid grid-cols-2 p-2">
-            <div >มัดจำ</div>
+            <div>มัดจำ</div>
             <div class="text-right">5000 บาท</div>
-            <div >รวมเงิน</div>
+            <div>รวมเงิน</div>
             <div class="text-right">59920 บาท</div>
-            <div >ส่วนลดสินค้า</div>
+            <div>ส่วนลดสินค้า</div>
             <div class="text-right">0 บาท</div>
-            <div >มูลค่าสินค้า</div>
+            <div>มูลค่าสินค้า</div>
             <div class="text-right">56000 บาท</div>
-            <div >ภาษีมูลค่าเพิ่ม 7 %</div>
+            <div>ภาษีมูลค่าเพิ่ม 7 %</div>
             <div class="text-right">3920 บาท</div>
             <div class="font-bold">จำนวนเงินทั้งสิ้น</div>
             <div class="text-right">59920 บาท</div>
@@ -106,7 +129,8 @@
 
       <div class="px-5 flex justify-end">
         <div class="px-5 text-center text-xs">
-          ข้าพเจ้าเห็นชอบตามรายการที่เสนอและ <br> ขอสั่งซื้อตามรายละเอียดนี้ทุกประการ
+          ข้าพเจ้าเห็นชอบตามรายการที่เสนอและ <br />
+          ขอสั่งซื้อตามรายละเอียดนี้ทุกประการ
         </div>
       </div>
 
@@ -128,7 +152,6 @@
           <div class="mb-5">วันที่</div>
         </div>
       </div>
-
     </div>
   </section>
   <!-- <div class="flex bg-gray-900"></div> -->
