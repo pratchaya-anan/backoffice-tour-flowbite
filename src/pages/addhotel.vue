@@ -16,7 +16,7 @@
           </li>
           <li class="flex items-center text-gray-500 dark:text-gray-400 space-x-2.5">
             <span
-              class="flex items-center justify-center w-8 h-8 border border-blue-600 rounded-full shrink-0 dark:border-blue-500">
+              class="flex items-center justify-center w-8 h-8 border border-gray-500 rounded-full shrink-0 dark:border-gray-400">
               2
             </span>
             <span>
@@ -135,13 +135,21 @@
           </div>
           <div class="flex justify-between">
             <NuxtLink to="/addguide"
-              class="mt-6 px-18 py-2.5 text-sm font-medium text-center  bg-gray-300 rounded-lg hover:bg-gray-400 hover:text-white focus:ring-4 focus:outline-none focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+              class="mt-6 px-10 py-2.5 inline-flex text-sm font-medium text-center  bg-gray-200 rounded-lg hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+              <svg class="h-5 w-auto" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+              </svg>
               ย้อนกลับ
             </NuxtLink>
             <NuxtLink to="/addvehicle"
-              class="ml-3 mt-6 px-18 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+              class="ml- mt-6 px-10 py-2.5 inline-flex text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
               ถัดไป
-            </NuxtLink>
+              <svg class="h-5 w-auto" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+              </svg>
+            </NuxtLink>           
 
           </div>
         </form>
