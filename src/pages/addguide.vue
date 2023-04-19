@@ -21,7 +21,6 @@
                         </span>
                         <span>
                             <h3 class="font-medium leading-tight">ข้อมูลไกด์</h3>
-                            <h3 class="font-medium leading-tight">ข้อมูลไกด์</h3>
                         </span>
                     </li>
                     <li class="flex items-center text-gray-500 dark:text-gray-400 space-x-2.5">
