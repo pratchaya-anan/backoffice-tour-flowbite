@@ -331,57 +331,6 @@
               </button>
             </div>
           </div>
-          <div class="grid gap-4 mb-4 sm:grid-cols-4 sm:gap-6 sm:mb-5">
-            <div class="sm:col-span-4">
-              <div class="relative overflow-x-auto">
-                <table
-                  class="w-full text-center text-sm text-left text-gray-500 dark:text-gray-400"
-                >
-                  <thead
-                    class="text-xs text-gray-700 uppercase bg-primary-200 dark:bg-gray-700 dark:text-gray-400"
-                  >
-                    <tr>
-                      <th scope="col" class="px-1 py-3">ลำดับ</th>
-                      <th scope="col" class="px-1 py-3">ชื่อ-นามสกุลภาษาไทย</th>
-                      <th scope="col" class="px-1 py-3">
-                        ชื่อ-นามสกุลภาษาอังกฤษ
-                      </th>
-                      <th scope="col" class="px-1 py-3">หมายเลขบัตรประชาชน</th>
-                      <th scope="col" class="px-1 py-3">หมายเลขพาสปอร์ต</th>
-                      <th scope="col" class="px-1 py-3">วันที่ออก</th>
-                      <th scope="col" class="px-1 py-3">วันที่หมด</th>
-                      <th scope="col" class="px-1 py-3">ว/ด/ป เกิด</th>
-                      <th scope="col" class="px-1 py-3">สัญชาติ</th>
-                      <th scope="col" class="px-1 py-3">เพศ</th>
-                      <th scope="col" class="px-1 py-3">ประเภทเตียง</th>
-                      <th scope="col" class="px-1 py-3">ตรวจลงตราเลขที่</th>
-                    </tr>
-                  </thead>
-                  <tbody
-                    class="text-xs text-gray-700 uppercase bg-white hover:bg-primary-50"
-                  >
-                    <tr
-                      data-modal-target="popup-modal"
-                      data-modal-toggle="popup-modal"
-                    >
-                      <th scope="col" class="px-1 py-3">1</th>
-                      <th scope="col" class="px-1 py-3">เหนือ การตลาด</th>
-                      <th scope="col" class="px-1 py-3">1234527890123</th>
-                      <th scope="col" class="px-1 py-3">north dsad</th>
-                      <th scope="col" class="px-1 py-3">1234</th>
-                      <th scope="col" class="px-1 py-3">12/04/2522</th>
-                      <th scope="col" class="px-1 py-3">13/04/2522</th>
-                      <th scope="col" class="px-1 py-3">13/04/2552</th>
-                      <th scope="col" class="px-1 py-3">ไทย</th>
-                      <th scope="col" class="px-1 py-3">ชาย</th>
-                      <th scope="col" class="px-1 py-3">เดี่ยว</th>
-                      <th scope="col" class="px-1 py-3">ผ่าน</th>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
         </form>
       </div>
       <!-- </section> -->
