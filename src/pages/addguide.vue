@@ -1,7 +1,6 @@
 <template>
     <section class="bg-gray-100 dark:bg-gray-900 p-3 sm:p-5">
         <div class="max-w-screen-lg mx-auto">
-            ข้อมูลทัวร์
             <div class="block w-full p-6 bg-white border border-gray-200 rounded-lg shadow">
                 <ol class="items-center w-full space-y-4 sm:flex sm:space-x-8 sm:space-y-0">
                     <li class="flex items-center text-gray-500 dark:text-gray-400 space-x-2.5">
@@ -76,7 +75,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-10">
+                    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                             <thead
                                 class="text-xs text-gray-700 uppercase bg-primary-100 dark:bg-gray-700 dark:text-gray-400">
