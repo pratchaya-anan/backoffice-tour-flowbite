@@ -1,407 +1,657 @@
 <template>
-  <section class="bg-gray-100 dark:bg-gray-900 p-3 sm:p-5 h-170">
+  <section class="bg-gray-100 dark:bg-gray-900 p-3 sm:p-5 h-175">
     <div class="mx-auto max-w-screen-xl">
-      <div class="flex justify-end">
-        <div class="px-2 mb-2">
-          <!-- Modal toggle -->
-          <button>
-            <NuxtLink
-              data-modal-target="authentication-modal"
-              data-modal-toggle="authentication-modal"
-              type="button"
-              class="flex text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-            >
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-                class="w-5 h-5 mr-2"
+      <div class="grid grid-cols-2">
+        <div>
+          <h1 class="mb-4 text-4xl font-bold text-gray-900 dark:text-white">
+            จัดการข้อมูลทัวร์
+          </h1>
+        </div>
+        <div class="flex justify-end">
+          <div class="px-2 mb-2">
+            <!-- Modal toggle -->
+            <button>
+              <NuxtLink
+                data-modal-target="authentication-modal"
+                data-modal-toggle="authentication-modal"
+                type="button"
+                class="flex text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12 6v12m6-6H6"
-                ></path>
-              </svg>
-              จัดการข้อมูลลูกทัวร์
-            </NuxtLink>
-          </button>
-
-          <!-- Main modal -->
-          <div
-            id="authentication-modal"
-            tabindex="-1"
-            aria-hidden="true"
-            class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
-          >
-            <div class="relative w-full max-w-md max-h-full">
-              <!-- Modal content -->
-              <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                <button
-                  type="button"
-                  class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-                  data-modal-hide="authentication-modal"
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  class="w-5 h-5 mr-2"
                 >
-                  <svg
-                    aria-hidden="true"
-                    class="w-5 h-5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 6v12m6-6H6"
+                  ></path>
+                </svg>
+                เพิ่มลูกทัวร์
+              </NuxtLink>
+            </button>
+
+            <!-- Main modal -->
+            <div
+              id="authentication-modal"
+              tabindex="-1"
+              aria-hidden="true"
+              class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+            >
+              <div class="relative w-full max-w-2xl max-h-full">
+                <!-- Modal content -->
+                <div
+                  class="relative bg-white rounded-lg shadow dark:bg-gray-700"
+                >
+                  <button
+                    type="button"
+                    class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                    data-modal-hide="authentication-modal"
                   >
-                    <path
-                      fill-rule="evenodd"
-                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                  <span class="sr-only">Close modal</span>
-                </button>
-                <div class="px-6 py-6 lg:px-8">
-                  <h3
-                    class="mb-4 text-xl font-medium text-gray-900 dark:text-white"
-                  >
-                    Sign in to our platform
-                  </h3>
-                  <form class="space-y-6" action="#">
-                    <div>
-                      <label
-                        for="email"
-                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >Your email</label
+                    <svg
+                      aria-hidden="true"
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                  </button>
+                  <div class="px-6 py-6 lg:px-8">
+                    <h3
+                      class="mb-4 text-xl font-medium text-gray-900 dark:text-white"
+                    >
+                      เพิ่มลูกทัวร์
+                    </h3>
+                    <form action="#">
+                      <div
+                        class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5"
                       >
-                      <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="name@company.com"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label
-                        for="password"
-                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >Your password</label
-                      >
-                      <input
-                        type="password"
-                        name="password"
-                        id="password"
-                        placeholder="••••••••"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        required
-                      />
-                    </div>
-                    <div class="flex justify-between">
-                      <div class="flex items-start">
-                        <div class="flex items-center h-5">
+                        <div class="w-full">
+                          <label
+                            for="firstname"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            >ชื่อ</label
+                          >
                           <input
-                            id="remember"
-                            type="checkbox"
+                            type="text"
+                            name="firstname"
+                            id="firstname"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                             value=""
-                            class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+                            placeholder=""
                             required
                           />
                         </div>
-                        <label
-                          for="remember"
-                          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                          >Remember me</label
-                        >
+                        <div class="w-full">
+                          <label
+                            for="lastname"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            >สกุล</label
+                          >
+                          <input
+                            type="text"
+                            name="lastname"
+                            id="lastname"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                            value=""
+                            placeholder=""
+                            required
+                          />
+                        </div>
                       </div>
-                      <a
-                        href="#"
-                        class="text-sm text-blue-700 hover:underline dark:text-blue-500"
-                        >Lost Password?</a
+                      <div
+                        class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5"
                       >
-                    </div>
-                    <button
-                      type="submit"
-                      class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                    >
-                      Login to your account
-                    </button>
-                    <div
-                      class="text-sm font-medium text-gray-500 dark:text-gray-300"
-                    >
-                      Not registered?
-                      <a
-                        href="#"
-                        class="text-blue-700 hover:underline dark:text-blue-500"
-                        >Create account</a
+                        <div class="w-full">
+                          <label
+                            for="firstname2"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            >Firstname</label
+                          >
+                          <input
+                            type="text"
+                            name="firstname2"
+                            id="firstname2"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                            value=""
+                            placeholder=""
+                            required
+                          />
+                        </div>
+                        <div class="w-full">
+                          <label
+                            for="Lastname2"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            >Lastname</label
+                          >
+                          <input
+                            type="text"
+                            name="Lastname2"
+                            id="Lastname2"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                            value=""
+                            placeholder=""
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="grid gap-4 mb-4 sm:grid-cols-4 sm:gap-6 sm:mb-5"
                       >
-                    </div>
-                  </form>
+                        <div class="sm:col-span-2">
+                          <label
+                            for="nationality"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            >สัญชาติ</label
+                          >
+                          <input
+                            type="text"
+                            name="nationality"
+                            id="nationality"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                            value=""
+                            placeholder=""
+                            required
+                          />
+                        </div>
+                        <div>
+                          <label
+                            for="gender"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            >เพศ</label
+                          >
+                          <select
+                            id="gender"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                          >
+                            <option selected></option>
+                            <option value="ชาย">ชาย</option>
+                            <option value="หญิง">หญิง</option>
+                            <option value="อื่นๆ">อื่นๆ</option>
+                          </select>
+                        </div>
+                        <div class="w-full">
+                          <label
+                            for="birthdate"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            >วัน เดือน ปี เกิด</label
+                          >
+                          <div class="w-full relative">
+                            <div
+                              class="w-full absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                  clip-rule="evenodd"
+                                ></path>
+                              </svg>
+                            </div>
+                            <input
+                              datepicker
+                              datepicker-autohide
+                              type="text"
+                              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                              placeholder="เลือกวันเกิด"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="grid gap-4 mb-4 sm:grid-cols-4 sm:gap-6 sm:mb-5"
+                      >
+                        <div class="w-full">
+                          <label
+                            for="identification"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            >หมายเลขบัตรประชาชน</label
+                          >
+                          <input
+                            type="text"
+                            name="identification"
+                            id="identification"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                            value=""
+                            placeholder=""
+                            required
+                          />
+                        </div>
+
+                        <div class="w-full">
+                          <label
+                            for="phone"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            >เบอร์โทรศัพท์</label
+                          >
+                          <input
+                            type="text"
+                            name="phone"
+                            id="phone"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                            value=""
+                            placeholder=""
+                            required
+                          />
+                        </div>
+                        <div class="w-full">
+                          <label
+                            for="passport"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            >หมายเลขพาสปอร์ต</label
+                          >
+                          <input
+                            type="text"
+                            name="passport"
+                            id="passport"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                            value=""
+                            placeholder=""
+                            required
+                          />
+                        </div>
+                        <div class="w-full">
+                          <label
+                            for="check"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            >ตรวจลงตราเลขที่</label
+                          >
+                          <input
+                            type="text"
+                            name="check"
+                            id="check"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                            value=""
+                            placeholder=""
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="grid gap-4 mb-4 sm:grid-cols-4 sm:gap-6 sm:mb-5"
+                      >
+                        <div class="col-span-2">
+                          <label
+                            for="category"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            >ประเภทเตียง</label
+                          >
+                          <select
+                            id="category"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                          >
+                            <option selected></option>
+                            <option value="ชาย">เดี่ยว</option>
+                            <option value="หญิง">คู่</option>
+                          </select>
+                        </div>
+
+                        <div class="w-full">
+                          <label
+                            for="startenddate"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            >วันออกบัตร</label
+                          >
+                          <div date-rangepicker class="flex items-center">
+                            <div class="w-full relative">
+                              <div
+                                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                                  fill="currentColor"
+                                  viewBox="0 0 20 20"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    fill-rule="evenodd"
+                                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                    clip-rule="evenodd"
+                                  ></path>
+                                </svg>
+                              </div>
+                              <input
+                                name="start"
+                                type="text"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="เลือกวันที่"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="w-full">
+                          <label
+                            for="startenddate"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            >วันหมดอายุ</label
+                          >
+                          <div date-rangepicker class="flex items-center">
+                            <div class="w-full relative">
+                              <div
+                                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                                  fill="currentColor"
+                                  viewBox="0 0 20 20"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    fill-rule="evenodd"
+                                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                    clip-rule="evenodd"
+                                  ></path>
+                                </svg>
+                              </div>
+                              <input
+                                name="end"
+                                type="text"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="เลือกวันที่"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5"
+                      >
+                        <div>
+                          <label
+                            for="brand"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            >ที่อยู่ตามบัตรประชาชน</label
+                          >
+                          <input
+                            type="text"
+                            name="passport"
+                            id="passport"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                            value=""
+                            required
+                          />
+                        </div>
+                        <div class="w-full">
+                          <label
+                            for="brand"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            >หมายเหตุ</label
+                          >
+                          <input
+                            type="text"
+                            name="check"
+                            id="check"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                            value=""
+                            placeholder=""
+                            required
+                          />
+                        </div>
+                      </div>
+                    </form>
+                    <form class="space-y-6 flex justify-center" action="#">
+                      <button
+                        type="submit"
+                        class="w-50 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                      >
+                        เพิ่ม
+                      </button>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="px-2 mb-2">
-          <button
-            id="dropdowncommentButton"
-            data-dropdown-toggle="comment"
-            class="font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex text-gray-900 bg-white border border-gray-200 rounded-lg md:w-auto focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-            type="button"
-          >
-            จัดการคอมเมนต์
-            <svg
-              class="w-5 h-5 ml-2"
-              aria-hidden="true"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
+          <div class="px-2 mb-2">
+            <button
+              id="dropdowncommentButton"
+              data-dropdown-toggle="comment"
+              class="font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex text-gray-900 bg-white border border-gray-200 rounded-lg md:w-auto focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              type="button"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 9l-7 7-7-7"
-              ></path>
-            </svg>
-          </button>
-          <!-- Dropdown menu -->
-          <div
-            id="comment"
-            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-          >
-            <ul
-              class="py-2 text-sm text-gray-700 dark:text-gray-200"
-              aria-labelledby="dropdowncommentButton"
+              จัดการคอมเมนต์
+              <svg
+                class="w-5 h-5 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div
+              id="comment"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
             >
-              <li>
-                <a
-                  href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >จัดการร้านอาหาร</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >จัดการสถานที่เที่ยว</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >จัดการเส้นทาง</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >คอมเมนต์โรงแรม</a
-                >
-              </li>
-            </ul>
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="dropdowncommentButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >จัดการร้านอาหาร</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >จัดการสถานที่เที่ยว</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >จัดการเส้นทาง</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >คอมเมนต์โรงแรม</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="px-2 mb-2">
+            <button
+              id="multiLevelDropdownButton"
+              data-dropdown-toggle="dropdown"
+              class="font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex text-gray-900 bg-white border border-gray-200 rounded-lg md:w-auto focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              type="button"
+            >
+              จัดการข้อมูลเอกสาร
+              <svg
+                class="w-5 h-5 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div
+              id="dropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="multiLevelDropdownButton"
+              >
+                <li>
+                  <button
+                    id="doubleDropdownButton"
+                    data-dropdown-toggle="doubleDropdown"
+                    data-dropdown-placement="right-start"
+                    type="button"
+                    class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >
+                    ใบเบิกค่าใช้จ่าย<svg
+                      aria-hidden="true"
+                      class="w-4 h-4"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </button>
+                  <div
+                    id="doubleDropdown"
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                  >
+                    <ul
+                      class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                      aria-labelledby="doubleDropdownButton"
+                    >
+                      <li>
+                        <a
+                          href="/add-estimate"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >สร้างใบเบิกค่าใช้จ่าย</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >จัดการใบเบิกค่าใช้จ่าย</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <button
+                    id="quotationDropdownButton"
+                    data-dropdown-toggle="quotationDropdown"
+                    data-dropdown-placement="right-start"
+                    type="button"
+                    class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >
+                    ใบเสนอราคา<svg
+                      aria-hidden="true"
+                      class="w-4 h-4"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </button>
+                  <div
+                    id="quotationDropdown"
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                  >
+                    <ul
+                      class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                      aria-labelledby="quotationDropdownButton"
+                    >
+                      <li>
+                        <a
+                          href="/quotationForm"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >สร้างใบเสนอราคา</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >จัดการใบเสนอราคา</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="px-2 mb-2">
-          <button
-            id="multiLevelDropdownButton"
-            data-dropdown-toggle="dropdown"
-            class="font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex text-gray-900 bg-white border border-gray-200 rounded-lg md:w-auto focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-            type="button"
-          >
-            จัดการข้อมูลเอกสาร
-            <svg
-              class="w-5 h-5 ml-2"
-              aria-hidden="true"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 9l-7 7-7-7"
-              ></path>
-            </svg>
-          </button>
-          <!-- Dropdown menu -->
-          <div
-            id="dropdown"
-            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-          >
-            <ul
-              class="py-2 text-sm text-gray-700 dark:text-gray-200"
-              aria-labelledby="multiLevelDropdownButton"
-            >
-              <li>
-                <button
-                  id="doubleDropdownButton"
-                  data-dropdown-toggle="doubleDropdown"
-                  data-dropdown-placement="right-start"
-                  type="button"
-                  class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >
-                  ใบเบิกค่าใช้จ่าย<svg
-                    aria-hidden="true"
-                    class="w-4 h-4"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                </button>
-                <div
-                  id="doubleDropdown"
-                  class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-                >
-                  <ul
-                    class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                    aria-labelledby="doubleDropdownButton"
-                  >
-                    <li>
-                      <a
-                        href="/add-estimate"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                        >สร้างใบเบิกค่าใช้จ่าย</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                        >จัดการใบเบิกค่าใช้จ่าย</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <button
-                  id="quotationDropdownButton"
-                  data-dropdown-toggle="quotationDropdown"
-                  data-dropdown-placement="right-start"
-                  type="button"
-                  class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >
-                  ใบเสนอราคา<svg
-                    aria-hidden="true"
-                    class="w-4 h-4"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                </button>
-                <div
-                  id="quotationDropdown"
-                  class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-                >
-                  <ul
-                    class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                    aria-labelledby="quotationDropdownButton"
-                  >
-                    <li>
-                      <a
-                        href="/quotationForm"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                        >สร้างใบเสนอราคา</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                        >จัดการใบเสนอราคา</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="relative overflow-x-auto">
-        <table
-          class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
-        >
-          <thead
-            class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
-          >
-            <tr>
-              <th scope="col" class="px-6 py-3">
-                ชื่อทริปทัวร์ : เที่ยวเกาะ เลาะรัก
-              </th>
-              <th scope="col" class="px-6 py-3"></th>
-              <th scope="col" class="px-6 py-3">
-                ชื่อทริปทัวร์ : เที่ยวเกาะ เลาะรัก
-              </th>
-              <th scope="col" class="px-6 py-3"></th>
-              <th scope="col" class="px-6 py-3">
-                เบอร์โทร : 0854125475, 0325698545
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-              <th
-                scope="row"
-                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-              >
-                โปรแกรมทัวร์ : เกาะเสม็ด เสร็จทุกราย
-              </th>
-              <td class="px-6 py-4">จำนวน : 5 วัน 4 คืน</td>
-              <td class="px-6 py-4">วันที่เดือนปี 16/04/2566 ถึง 16/04/2566</td>
-              <td class="px-6 py-4"></td>
-              <td class="px-6 py-4">จำนวนลูกทัวร์ : 1</td>
-            </tr>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-              <th
-                scope="row"
-                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-              >
-                ชื่อโรงแรม : ส้มหาดสวรรน์
-              </th>
-              <td class="px-6 py-4">จำนวนห้องพัก : 15</td>
-              <td class="px-6 py-4">วันที่เช็คอินน์ : 16/04/2566</td>
-              <td class="px-6 py-4"></td>
-              <td class="px-6 py-4">วันที่เช็คเอ้าท์ : 20/04/2566</td>
-            </tr>
-            <tr class="bg-white dark:bg-gray-800">
-              <th
-                scope="row"
-                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-              >
-                เที่ยวบินหรือพาหนะอื่น ๆ ขาไป : นครชัยแอร์
-              </th>
-              <td class="px-6 py-4">&#32;</td>
-              <td class="px-6 py-4">
-                เที่ยวบินหรือพาหนะอื่น ๆ ขากลับ : AIRASIA
-              </td>
-              <td class="px-6 py-4"></td>
-              <td class="px-6 py-4">หมายเหตุ : ASDD</td>
-            </tr>
-          </tbody>
-        </table>
       </div>
 
-      <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+      <div
+        class="p-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      >
+        <div href="#">
+          <h5
+            class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white"
+          >
+            ข้อมูลทัวร์
+          </h5>
+        </div>
+        <div class="grid grid-cols-7 flex">
+          <div>ชื่อทริปทัวร์ :</div>
+          <div class="col-span-6">องค์การบริหารส่วนตำบลโพนงาม</div>
+          <div>โปรแกรมทัวร์ :</div>
+          <div class="col-span-6">กาญจนบุรี-เพชรบุรี</div>
+          <div>วันที่เดือนปี</div>
+          <div class="col-span-6">29/03/2566 ถึง 29/03/2566</div>
+          <div>จำนวน :</div>
+          <div class="col-span-6">4 วัน 2 คืน</div>
+          <div>จำนวนลูกทัวร์ :</div>
+          <div class="col-span-6">3</div>
+        </div>
+        <div class="flex justify-end">
+          <a
+            href="#"
+            class="inline-flex items-center text-blue-600 hover:underline"
+          >
+            ข้อมูลทัวร์ทั้งหมด
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-5 relative overflow-x-auto shadow-md sm:rounded-lg">
         <table
           class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
         >
@@ -410,9 +660,8 @@
           >
             <tr>
               <th scope="col" class="px-6 py-3">ลำดับ</th>
-              <th scope="col" class="px-6 py-3">ชื่อ-นามสกุลภาษาไทย</th>
+              <th scope="col" class="px-6 py-3">ชื่อ-นามสกุล</th>
               <th scope="col" class="px-6 py-3">หมายเลขบัตรประชาชน</th>
-              <th scope="col" class="px-6 py-3">ชื่อ-นามสกุลภาษาอังกฤษ</th>
               <th scope="col" class="px-6 py-3">หมายเลขพาสปอร์ต</th>
               <th scope="col" class="px-6 py-3">สัญชาติ</th>
               <th scope="col" class="px-6 py-3">เพศ</th>
@@ -430,9 +679,11 @@
               >
                 1
               </th>
-              <td class="px-6 py-4">มะยม ขมจัง</td>
+              <td class="px-6 py-4">
+                <div>มะยม ขมจัง</div>
+                <div>Mayom Khomjung</div>
+              </td>
               <td class="px-6 py-4">1245865475854</td>
-              <td class="px-6 py-4">Mayom Khomjung</td>
               <td class="px-6 py-4">A251368</td>
               <td class="px-6 py-4">ไทย</td>
               <td class="px-6 py-4">หญิง</td>
@@ -449,15 +700,35 @@
                     aria-hidden="true"
                     data-modal-target="staticModal"
                     data-modal-toggle="staticModal"
+                    class="w-5 h-5 text-gray-500 hover:text-gray-800"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+                    ></path>
+                  </svg>
+
+                  <div class="mx-2">|</div>
+
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
                     class="w-5 h-5 text-blue-500 hover:text-blue-800"
                   >
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+                      d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"
                     ></path>
                   </svg>
+
                   <div class="mx-2">|</div>
+
                   <svg
                     fill="none"
                     stroke="currentColor"
@@ -470,7 +741,7 @@
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"
+                      d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
                     ></path>
                   </svg>
                 </div>
