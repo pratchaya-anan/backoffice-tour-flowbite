@@ -10,6 +10,8 @@
             <div>เลขประจำตัวผู้เสียภาษี: 413558001156 | โทร.098-1047644</div>
             <div class="text-blue-400">www.facebook.com/Jampahomtour</div>
           </div>
+
+          <!-- ชื่อใบ/ข้อมูลใบ -->
           <div class="grid grid-cols-3">
             <div class="col-span-3 font-bold text-center text-base">ใบเสนอราคา/ยืนยันการสั่งซื้อ</div>
             <div class="col-span-3 text-center">Quatation</div>
@@ -21,6 +23,8 @@
         </div>
       </div>
       <hr class="col-span-3 mx-5">
+
+      <!-- ข้อมูลฝั่งซ้าย -->
       <div class="col-span-2 grid grid-cols-3 m-5  text-xs">
         <div class="col-span-2">
           <div class="grid grid-cols-3">
@@ -38,6 +42,8 @@
             <div class="col-span-2 ">somchai@gmail.com</div>
           </div>
         </div>
+
+        <!-- ข้อมูลฝั่งขวา -->
         <div class="border-l px-5">
           <div class="grid grid-cols-3">
             <div class="col-span-1 font-bold">รหัสลูกค้า:</div>
@@ -53,6 +59,8 @@
           </div>
         </div>
       </div>
+
+      <!-- ตาราง -->
       <div class="min-h-100 border-b-1 border-black">
         <table class="w-full text-center">
           <tr class="h-8 border-y-1 border-black text-center text-sm">
@@ -78,6 +86,7 @@
         </table>
       </div>
 
+      <!-- รายละเอียดข้อตกลง(ด้านซ้าย) -->
       <div class="grid grid-cols-3 text-xs p-2 border-b-1 border-black">
         <div class="col-span-2">
           <div class="font-bold">หมายเหตุ:</div>
@@ -86,6 +95,7 @@
           <div>1.กรุณาชำระเงิน ค่ามัดจำเบื้องต้นไม่ต่ำกว่า 40% ของราคาที่เสนอ โดยชำระเงินก่อนการติดตั้งอย่างน้อย 7 วัน <br> 2.หลังติดตั้งและใช้งานได้เรียบร้อยแล้วให้ชำระเงินส่วนที่เหลือ</div>
         </div>
 
+        <!-- สรุปรายการ(ด้านขวา) -->
         <div>
           <div class="grid grid-cols-2 p-2">
             <div >มัดจำ</div>
