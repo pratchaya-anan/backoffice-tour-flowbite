@@ -104,8 +104,8 @@
         </div>
       </div>
 
-      <div class="px-5 flex justify-end">
-        <div class="px-5 text-center text-xs">
+      <div class="flex justify-end">
+        <div class="text-center text-xs">
           ข้าพเจ้าเห็นชอบตามรายการที่เสนอและ <br> ขอสั่งซื้อตามรายละเอียดนี้ทุกประการ
         </div>
       </div>
