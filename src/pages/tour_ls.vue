@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-gray-100 dark:bg-gray-900">
+  <section class="h-min-160 bg-gray-100 dark:bg-gray-900">
     <div class="mx-auto max-w-screen-2xl px-4 lg:px-12 p-6">
       <!-- Start coding here -->
       <div class="flex justify-between">
