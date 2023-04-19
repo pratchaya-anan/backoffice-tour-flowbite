@@ -10,7 +10,7 @@
               1
             </span>
             <span>
-              <h3 class="font-medium leading-tight">ข้อมูลไกด์</h3>
+              <h3 class="font-medium leading-tight">ข้อมูลทัวร์</h3>
               <p class="text-sm"></p>
             </span>
           </li>
@@ -121,6 +121,7 @@
                     <th scope="col" class="px-6 py-3">จำนวนห้องพัก</th>
                     <th scope="col" class="px-6 py-3">วันเช็คอิน</th>
                     <th scope="col" class="px-6 py-3">วันเช็คเอ้าท์</th>
+                    <th scope="col" class="px-6 py-3">แก้ไข</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -153,8 +154,7 @@
                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
               </svg>
-            </NuxtLink>           
-
+            </NuxtLink>
           </div>
         </form>
       </div>

@@ -10,7 +10,7 @@
                 1
               </span>
               <span>
-                <h3 class="font-medium leading-tight">ข้อมูลไกด์</h3>
+                <h3 class="font-medium leading-tight">ข้อมูลทัวร์</h3>
                 <p class="text-sm"></p>
               </span>
             </li>
@@ -90,10 +90,10 @@
                 <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                   <thead class="text-xs text-gray-700 uppercase bg-primary-100 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
-                      <th scope="col" class="px-6 py-3">ชื่อโรงแรม</th>
-                      <th scope="col" class="px-6 py-3">จำนวนห้องพัก</th>
-                      <th scope="col" class="px-6 py-3">วันเช็คอิน</th>
-                      <th scope="col" class="px-6 py-3">วันเช็คเอ้าท์</th>
+                      <th scope="col" class="px-6 py-3">พาหนะ</th>
+                      <th scope="col" class="px-6 py-3">จำนวนพาหนะ</th>
+                      <th scope="col" class="px-6 py-3">เดินทาง</th>
+                      <th scope="col" class="px-6 py-3">แก้ไข</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -104,7 +104,6 @@
                       </th>
                       <td class="px-6 py-4">3</td>
                       <td class="px-6 py-4">12/05/23</td>
-                      <td class="px-6 py-4">15/05/23</td>
                     </tr>
                   </tbody>
                 </table>
@@ -112,14 +111,17 @@
             </div>
             <div class="flex justify-between">
               <NuxtLink to="/addhotel"
-                class="mt-6 px-18 py-2.5 text-sm font-medium text-center  bg-gray-300 rounded-lg hover:bg-gray-400 hover:text-white focus:ring-4 focus:outline-none focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+                class="mt-6 px-10 py-2.5 inline-flex text-sm font-medium text-center  bg-gray-200 rounded-lg hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+                <svg class="h-5 w-auto" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+                </svg>
                 ย้อนกลับ
               </NuxtLink>
               <NuxtLink to="/tourdata"
                 class="ml-3 mt-6 px-18 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 บันทึก
               </NuxtLink>
-  
             </div>
           </form>
         </div>

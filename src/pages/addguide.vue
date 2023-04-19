@@ -10,7 +10,7 @@
                             1
                         </span>
                         <span>
-                            <h3 class="font-medium leading-tight">ข้อมูลไกด์</h3>
+                            <h3 class="font-medium leading-tight">ข้อมูลทัวร์</h3>
                             <p class="text-sm"></p>
                         </span>
                     </li>
@@ -87,7 +87,9 @@
                                     <th scope="col" class="px-6 py-3">
                                         เบอร์โทร
                                     </th>
-                                    <th></th>
+                                    <th scope="col" class="px-6 py-3">
+                                        แก้ไข
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -139,10 +141,7 @@
                         </NuxtLink>
                     </div>
                 </form>
-
             </div>
-
         </div>
-
     </section>
 </template>
