@@ -1,220 +1,203 @@
 <template>
-  <section class="bg-gray-100 dark:bg-gray-900">
-    <div class="mx-auto max-w-screen-2xl px-4 lg:px-12 p-6">
-      <div class="relative overflow-x-auto">
-        <table
-          class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
-        >
-          <thead
-            class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
-          >
-            <tr>
-              <th scope="col" class="px-6 py-3">
-                ชื่อทริปทัวร์ : เที่ยวเกาะ เลาะรัก
-              </th>
-              <th scope="col" class="px-6 py-3"></th>
-              <th scope="col" class="px-6 py-3">
-                ชื่อทริปทัวร์ : เที่ยวเกาะ เลาะรัก
-              </th>
-              <th scope="col" class="px-6 py-3"></th>
-              <th scope="col" class="px-6 py-3">
-                เบอร์โทร : 0854125475, 0325698545
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-              <th
-                scope="row"
-                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-              >
-                โปรแกรมทัวร์ : เกาะเสม็ด เสร็จทุกราย
-              </th>
-              <td class="px-6 py-4">จำนวน : 5 วัน 4 คืน</td>
-              <td class="px-6 py-4">วันที่เดือนปี 16/04/2566 ถึง 16/04/2566</td>
-              <td class="px-6 py-4"></td>
-              <td class="px-6 py-4">จำนวนลูกทัวร์ : 1</td>
-            </tr>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-              <th
-                scope="row"
-                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-              >
-                ชื่อโรงแรม : ส้มหาดสวรรน์
-              </th>
-              <td class="px-6 py-4">จำนวนห้องพัก : 15</td>
-              <td class="px-6 py-4">วันที่เช็คอินน์ : 16/04/2566</td>
-              <td class="px-6 py-4"></td>
-              <td class="px-6 py-4">วันที่เช็คเอ้าท์ : 20/04/2566</td>
-            </tr>
-            <tr class="bg-white dark:bg-gray-800">
-              <th
-                scope="row"
-                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-              >
-                เที่ยวบินหรือพาหนะอื่น ๆ ขาไป : นครชัยแอร์
-              </th>
-              <td class="px-6 py-4">จำนวนห้องพัก : 15</td>
-              <td class="px-6 py-4">
-                เที่ยวบินหรือพาหนะอื่น ๆ ขากลับ : AIRASIA
-              </td>
-              <td class="px-6 py-4"></td>
-              <td class="px-6 py-4">หมายเหตุ : ASDD</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-        <table
-          class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
-        >
-          <thead
-            class="text-xs text-gray-700 uppercase bg-primary-100 dark:bg-gray-700 dark:text-gray-400"
-          >
-            <tr>
-              <th scope="col" class="px-6 py-3">ลำดับ</th>
-              <th scope="col" class="px-6 py-3">ชื่อ-นามสกุลภาษาไทย</th>
-              <th scope="col" class="px-6 py-3">หมายเลขบัตรประชาชน</th>
-              <th scope="col" class="px-6 py-3">ชื่อ-นามสกุลภาษาอังกฤษ</th>
-              <th scope="col" class="px-6 py-3">หมายเลขพาสปอร์ต</th>
-              <th scope="col" class="px-6 py-3">สัญชาติ</th>
-              <th scope="col" class="px-6 py-3">เพศ</th>
-              <th scope="col" class="px-6 py-3">ประเภทเตียง</th>
-              <th scope="col" class="px-6 py-3">เพิ่มเติม</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr
-              class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-            >
-              <th
-                scope="row"
-                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-              >
-                1
-              </th>
-              <td class="px-6 py-4">มะยม ขมจัง</td>
-              <td class="px-6 py-4">1245865475854</td>
-              <td class="px-6 py-4">Mayom Khomjung</td>
-              <td class="px-6 py-4">A251368</td>
-              <td class="px-6 py-4">ไทย</td>
-              <td class="px-6 py-4">หญิง</td>
-              <td class="px-6 py-4">คู่</td>
-              <td class="px-6 py-4">
-                <!-- Modal toggle -->
-                <button
-                  data-modal-target="staticModal"
-                  data-modal-toggle="staticModal"
-                  class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                  type="button"
-                >
-                  รายละเอียดเพิ่มเติม
-                </button>
-
-                <!-- Main modal -->
-                <div
-                  id="staticModal"
-                  data-modal-backdrop="static"
-                  tabindex="-1"
-                  aria-hidden="true"
-                  class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full"
-                >
-                  <div class="relative w-full h-full max-w-2xl md:h-auto">
-                    <!-- Modal content -->
-                    <div
-                      class="relative bg-white rounded-lg shadow dark:bg-gray-700"
-                    >
-                      <!-- Modal header -->
-                      <div
-                        class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
-                      >
-                        <h3
-                          class="text-xl font-semibold text-gray-900 dark:text-white"
-                        >
-                          รายละเอียดลูกทัวร์ | มะยม ขมจัง
-                        </h3>
-                        <button
-                          type="button"
-                          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                          data-modal-hide="staticModal"
-                        >
-                          <svg
-                            class="w-5 h-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                        </button>
-                      </div>
-                      <!-- Modal body -->
-                      <div class="p-6 space-y-6">
-                        <p
-                          class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
-                        >
-                          วันที่ออกพาสปอร์ต: 01/03/2566
-                        </p>
-                        <p
-                          class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
-                        >
-                          วันหมดอายุพาสปอร์ต: 07/04/2570
-                        </p>
-                        <p
-                          class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
-                        >
-                          วันเดือนปีเกิด: 18/10/2538
-                        </p>
-                        <p
-                          class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
-                        >
-                          ตรวจลงตราเลขที: 455/55
-                        </p>
-                        <p
-                          class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
-                        >
-                          หมายเหตุ: asddds
-                        </p>
-                      </div>
-                      <!-- Modal footer -->
-                      <div
-                        class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600"
-                      >
-                        <div>
-                          <input
-                            type="text"
-                            id="small-input"
-                            class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                          />
+    <section class="h-min-160 bg-gray-100 dark:bg-gray-900">
+        <div class="mx-auto max-w-screen-2xl px-4 lg:px-12 p-6">
+            <!-- Start coding here -->
+            <div class="flex justify-between">
+                <form>
+                    <label for="default-search"
+                        class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                            <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
                         </div>
-                        <button
-                          data-modal-hide="staticModal"
-                          type="button"
-                          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                        >
-                          คอมเมนต์
-                        </button>
-                        <button
-                          data-modal-hide="staticModal"
-                          type="button"
-                          class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
-                        >
-                          ปิด
-                        </button>
-                      </div>
+                        <input type="search" id="default-search"
+                            class="py-2.5 block w-100 p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="ค้นหาทัวร์, วันที่, ชื่อทัวร์" required />
                     </div>
-                  </div>
+                </form>
+                <NuxtLink to="/addtour">
+                    <button type="button"
+                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 mt-1">
+                        สร้างทัวร์
+                    </button>
+                </NuxtLink>
+            </div>
+
+                    <a href="#"
+                        class=" grid grid-cols-2 md:grid-cols-3 gap-1 block max-w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">เที่ยวเกาะ เลาะรัก
+                        </h5>
+                        <p class="font-normal text-gray-700 dark:text-gray-400"></p>
+                            <div></div>
+                            <div>วันที่เริ่มทริป 16/04/2566 วันที่สิ้นสุดทริป 20/04/2566</div>
+                            <div ></div>
+                            <div></div>
+                            <div>เที่ยวบินหรือพาหนะอื่นขาไป - นครชัยแอร์</div>
+                            <div></div>
+                            <div>จำนวนลูกทัวร์ 0/10  <span
+                                                class="bg-gray-200 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">กำลังรอ</span></div>
+                            <div>เที่ยวบินหรือพาหนะอื่นขากลับ - AirAsia</div>
+                            <div></div>
+                            <div></div>
+                            <div>วัน 5 คืน 4</div>
+                    </a>
+
+                    <a href="#"
+                        class=" grid grid-cols-2 md:grid-cols-3 gap-1 block max-w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">เที่ยวเกาะ เลาะรัก
+                        </h5>
+                        <p class="font-normal text-gray-700 dark:text-gray-400"></p>
+                            <div></div>
+                            <div>วันที่เริ่มทริป 16/04/2566 วันที่สิ้นสุดทริป 20/04/2566</div>
+                            <div ></div>
+                            <div></div>
+                            <div>เที่ยวบินหรือพาหนะอื่นขาไป - นครชัยแอร์</div>
+                            <div></div>
+                            <div>จำนวนลูกทัวร์ 0/10  <span
+                                                class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">พร้อม</span></div>
+                            <div>เที่ยวบินหรือพาหนะอื่นขากลับ - AirAsia</div>
+                            <div></div>
+                            <div></div>
+                            <div>วัน 5 คืน 4</div>
+                    </a>
+                    <a href="#"
+                        class=" grid grid-cols-2 md:grid-cols-3 gap-1 block max-w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">เที่ยวเกาะ เลาะรัก
+                        </h5>
+                        <p class="font-normal text-gray-700 dark:text-gray-400"></p>
+                            <div></div>
+                            <div>วันที่เริ่มทริป 16/04/2566 วันที่สิ้นสุดทริป 20/04/2566</div>
+                            <div ></div>
+                            <div></div>
+                            <div>เที่ยวบินหรือพาหนะอื่นขาไป - นครชัยแอร์</div>
+                            <div></div>
+                            <div>จำนวนลูกทัวร์ 10/10  <span
+                                                class="bg-green-100 text-green-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">เสร็จสิ้น</span></div>
+                            <div>เที่ยวบินหรือพาหนะอื่นขากลับ - AirAsia</div>
+                            <div></div>
+                            <div></div>
+                            <div>วัน 5 คืน 4</div>
+                    </a>
+
+
+
+                    <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-4">
+                        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                            <thead
+                                class="text-xs text-gray-700 uppercase bg-primary-100 dark:bg-gray-700 dark:text-gray-400">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3">ชื่อทริปทัวร์</th>
+                                    <th scope="col" class="px-6 py-3">ชื่อโปรแกรมทัวร์</th>
+                                    <th scope="col" class="px-6 py-3">วันที่เริ่มทริป</th>
+                                    <th scope="col" class="px-6 py-3">วันที่สิ้นสุดทริป</th>
+                                    <th scope="col" class="px-6 py-3">วัน</th>
+                                    <th scope="col" class="px-6 py-3">คืน</th>
+                                    <th scope="col" class="px-6 py-3">เที่ยวบินหรือพาหนะอื่นขาไป</th>
+                                    <th scope="col" class="px-6 py-3">
+                                        เที่ยวบินหรือพาหนะอื่นขากลับ
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">จำนวนลูกทัวร์</th>
+                                    <th scope="col" class="px-6 py-3">
+                                        <center>สถานะ</center>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr
+                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <NuxtLink to="tourdata">
+                                        <th scope="row"
+                                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            เที่ยวเกาะ เลาะรัก
+                                        </th>
+                                    </NuxtLink>
+                                    <td class="px-6 py-4">เกาะเสม็ด เสร็จทุกราย</td>
+                                    <td class="px-6 py-4">16/04/2566</td>
+                                    <td class="px-6 py-4">20/04/2566</td>
+                                    <td class="px-6 py-4">5</td>
+                                    <td class="px-6 py-4">4</td>
+                                    <td class="px-6 py-4">นครชัยแอร์</td>
+                                    <td class="px-6 py-4">AirAsia</td>
+                                    <td class="px-6 py-4">1</td>
+                                    <td class="px-6 py-4">
+                                        <center><span class="bg-gray-100 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">กำลังรอ</span>
+                                        </center>
+                                    </td>
+                                </tr>
+
+                                <tr
+                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <NuxtLink to="tourdata">
+                                        <th scope="row"
+                                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            เที่ยวเกาะ เลาะรัก
+                                        </th>
+                                    </NuxtLink>
+                                    <td class="px-6 py-4">เกาะเสม็ด เสร็จทุกราย</td>
+                                    <td class="px-6 py-4">16/04/2566</td>
+                                    <td class="px-6 py-4">20/04/2566</td>
+                                    <td class="px-6 py-4">5</td>
+                                    <td class="px-6 py-4">4</td>
+                                    <td class="px-6 py-4">นครชัยแอร์</td>
+                                    <td class="px-6 py-4">AirAsia</td>
+                                    <td class="px-6 py-4">1</td>
+                                    <td class="px-6 py-4">
+                                        <center><span
+                                                class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">พร้อม</span>
+                                        </center>
+                                    </td>
+                                </tr>
+                                <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <NuxtLink to="tourdata">
+                                        <th scope="row"
+                                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            เที่ยวเกาะ เลาะรัก
+                                        </th>
+                                    </NuxtLink>
+                                    <td class="px-6 py-4">เกาะเสม็ด เสร็จทุกราย</td>
+                                    <td class="px-6 py-4">16/04/2566</td>
+                                    <td class="px-6 py-4">20/04/2566</td>
+                                    <td class="px-6 py-4">5</td>
+                                    <td class="px-6 py-4">4</td>
+                                    <td class="px-6 py-4">นครชัยแอร์</td>
+                                    <td class="px-6 py-4">AirAsia</td>
+                                    <td class="px-6 py-4">1</td>
+                                    <td class="px-6 py-4">
+                                        <center><span
+                                                class="bg-green-100 text-green-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">เสร็จสิ้น</span>
+                                        </center>
+                                    </td>
+                                </tr>
+                                <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <NuxtLink to="tourdata">
+                                        <th scope="row"
+                                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            เที่ยวเกาะ เลาะรัก
+                                        </th>
+                                    </NuxtLink>
+                                    <td class="px-6 py-4">เกาะเสม็ด เสร็จทุกราย</td>
+                                    <td class="px-6 py-4">16/04/2566</td>
+                                    <td class="px-6 py-4">20/04/2566</td>
+                                    <td class="px-6 py-4">5</td>
+                                    <td class="px-6 py-4">4</td>
+                                    <td class="px-6 py-4">นครชัยแอร์</td>
+                                    <td class="px-6 py-4">AirAsia</td>
+                                    <td class="px-6 py-4">1</td>
+                                    <td class="px-6 py-4">
+                                        <center><span
+                                                class="bg-green-100 text-green-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">เสร็จสิ้น</span>
+                                        </center>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
+                
+    </section>
 </template>
+  

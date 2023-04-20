@@ -66,6 +66,7 @@
                 เที่ยวบินหรือพาหนะอื่นขากลับ
               </th>
               <th scope="col" class="px-6 py-3">จำนวนลูกทัวร์</th>
+              <th scope="col" class="px-6 py-3"><center>สถานะ</center></th>
             </tr>
           </thead>
           <tbody>
@@ -88,6 +89,7 @@
               <td class="px-6 py-4">นครชัยแอร์</td>
               <td class="px-6 py-4">AirAsia</td>
               <td class="px-6 py-4">1</td>
+              <td class="px-6 py-4"><center><span class="bg-gray-200 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">กำลังรอ</span></center></td>
             </tr>
 
             <tr
@@ -109,6 +111,7 @@
               <td class="px-6 py-4">นครชัยแอร์</td>
               <td class="px-6 py-4">AirAsia</td>
               <td class="px-6 py-4">1</td>
+              <td class="px-6 py-4"><center><span class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">พร้อม</span></center></td>
             </tr>
             <tr
               class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600"
@@ -129,6 +132,7 @@
               <td class="px-6 py-4">นครชัยแอร์</td>
               <td class="px-6 py-4">AirAsia</td>
               <td class="px-6 py-4">1</td>
+              <td class="px-6 py-4"><center><span class="bg-green-100 text-green-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">เสร็จสิ้น</span></center></td>
             </tr>
             <tr
               class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600"
@@ -149,6 +153,7 @@
               <td class="px-6 py-4">นครชัยแอร์</td>
               <td class="px-6 py-4">AirAsia</td>
               <td class="px-6 py-4">1</td>
+              <td class="px-6 py-4"><center><span class="bg-green-100 text-green-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">เสร็จสิ้น</span></center></td>
             </tr>
           </tbody>
         </table>
