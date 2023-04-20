@@ -1,6 +1,6 @@
 <template>
   <!-- ข้อมูลโรงแรมที่พัก -->
-  <section class="bg-gray-100 dark:bg-gray-900 p-3 sm:p-5">
+  <section class="bg-gray-100 dark:bg-gray-900 p-3 sm:p-5 min-h-175">
     <div class="max-w-screen-lg mx-auto">
       <div
         class="block w-full p-6 bg-white border border-gray-200 rounded-lg shadow"
