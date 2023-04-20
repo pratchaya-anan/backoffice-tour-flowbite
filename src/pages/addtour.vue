@@ -3,15 +3,15 @@
         <div class="max-w-screen-lg mx-auto">
             <!-- ข้อมูลทัวร์ -->
             <div class="block w-full p-6 bg-white border border-gray-200 rounded-lg shadow">
-                <ol class="flex justify-between items-center w-full space-y-4 sm:flex sm:space-x-8 sm:space-y-0">
+                <ol class="flex justify-center items-center w-full space-y-4 sm:flex sm:space-x-8 sm:space-y-0">
                     <li class="flex items-center text-blue-600 dark:text-blue-500 space-x-2.5">
                         <span class="flex items-center justify-center w-8 h-8 text-white bg-blue-600 rounded-full shrink-0 dark:border-blue-500">
                             1
                         </span>
                         <span>
                             <h3 class="font-medium leading-tight">ข้อมูลทัวร์</h3>
-                            <p class="text-sm"></p>
                         </span>
+                        <svg aria-hidden="true" class="w-4 h-4 ml-2 sm:ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
                     </li>
                     <li class="flex items-center text-gray-500 dark:text-gray-400 space-x-2.5">
                         <span class="flex items-center justify-center w-8 h-8 border border-gray-500 rounded-full shrink-0 dark:border-gray-400">
@@ -20,6 +20,7 @@
                         <span>
                             <h3 class="font-medium leading-tight">ข้อมูลไกด์</h3>
                         </span>
+                        <svg aria-hidden="true" class="w-4 h-4 ml-2 sm:ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
                     </li>
                     <li class="flex items-center text-gray-500 dark:text-gray-400 space-x-2.5">
                         <span class="flex items-center justify-center w-8 h-8 border border-gray-500 rounded-full shrink-0 dark:border-gray-400">
@@ -28,6 +29,7 @@
                         <span>
                             <h3 class="font-medium leading-tight">ข้อมูลโรงแรม</h3>
                         </span>
+                        <svg aria-hidden="true" class="w-4 h-4 ml-2 sm:ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
                     </li>
                     <li class="flex items-center text-gray-500 dark:text-gray-400 space-x-2.5">
                         <span class="flex items-center justify-center w-8 h-8 border border-gray-500 rounded-full shrink-0 dark:border-gray-400">
