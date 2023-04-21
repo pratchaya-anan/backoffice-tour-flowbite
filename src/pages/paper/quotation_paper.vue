@@ -1,17 +1,6 @@
 <template>
   <section class="bg-gray-100 dark:bg-gray-900 p-3 sm:p-5">
-    <div
-      style="
-        width: 210mm;
-        min-height: 297mm;
-        padding: 5mm;
-        margin: 0 auto;
-        border: 1px #d3d3d3 solid;
-        border-radius: 5px;
-        background: white;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-      "
-    >
+    <div class="w-[210mm] h-min-[297mm] p-[5mm] my-1 mx-auto border-1 solid rounded bg-white drop-shadow">
       <div class="grid grid-rows-2 m-5">
         <img class="w-25" src="../../assets/images/ll-01.png" alt="Logo" />
         <div class="grid grid-cols-3 text-sm">
