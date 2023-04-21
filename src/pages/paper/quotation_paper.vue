@@ -122,7 +122,7 @@
             <div>ภาษีมูลค่าเพิ่ม 7 %</div>
             <div class="text-right">3920 บาท</div>
             <div class="font-bold">จำนวนเงินทั้งสิ้น</div>
-            <div class="text-right">59920 บาท</div>
+            <div class="text-right font-bold">59920 บาท</div>
           </div>
         </div>
       </div>

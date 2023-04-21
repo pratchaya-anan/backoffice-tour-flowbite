@@ -13,8 +13,8 @@
 
           <!-- ชื่อใบ/ข้อมูลใบ -->
           <div class="grid grid-cols-3">
-            <div class="col-span-3 font-bold text-center text-base">ใบเสนอราคา/ยืนยันการสั่งซื้อ</div>
-            <div class="col-span-3 text-center">Quatation</div>
+            <div class="col-span-3 font-bold text-center text-base">ใบวางบิล/ใบแจ้งหนี้</div>
+            <div class="col-span-3 text-center">Billing Note/Invoice</div>
             <div class="font-bold">เลขที่:</div>
             <div class="col-span-2 text-right">0841142174178</div>
             <div class="font-bold">วันที่:</div>
@@ -36,10 +36,10 @@
             <div class="col-span-2 ">111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100</div>
             <div class="col-span-1 font-bold">ID TAX:</div>
             <div class="col-span-2 ">4585695214526</div>
+            <div class="col-span-1 font-bold">FAX:</div>
+            <div class="col-span-2 ">025684587</div>
             <div class="col-span-1 font-bold">โทร:</div>
             <div class="col-span-2 ">0254875858</div>
-            <div class="col-span-1 font-bold">Email:</div>
-            <div class="col-span-2 ">somchai@gmail.com</div>
           </div>
         </div>
 
@@ -52,10 +52,8 @@
             <div class="col-span-2 text-right">สมชัย ใจเกินร้อย</div>
             <div class="col-span-1 font-bold">ฝ่าย:</div>
             <div class="col-span-2 text-right">การตลาด</div>
-            <div class="col-span-1 font-bold">ยืนยันราคาภายใน:</div>
-            <div class="col-span-2 text-right">31/03/2566</div>
-            <div class="col-span-1 font-bold">วันส่งของ:</div>
-            <div class="col-span-2 text-right">02/04/2566</div>
+            <div class="col-span-2 font-bold">ยืนยันราคาวันที่:</div>
+            <div class="col-span-1 text-right">31/03/2566</div>
           </div>
         </div>
       </div>
@@ -90,37 +88,32 @@
       <div class="grid grid-cols-3 text-xs p-2 border-b-1 border-black">
         <div class="col-span-2">
           <div class="font-bold">หมายเหตุ:</div>
-          <div> กำหนดยืนราคา 15 วัน <br> จึงเรียนมาเพื่อโปรดพิจารณาและหวังเป็นอย่างยิ่งว่าจะได้รับการพิจารณาสั่งซื้อจากท่าน ขอขอบพระคุณมา ณ ที่นี้</div>
-          <div class="font-bold">ดังรายละเอียดธนาคารดังต่อไปนี้ :</div>
-          <div>1.กรุณาชำระเงิน ค่ามัดจำเบื้องต้นไม่ต่ำกว่า 40% ของราคาที่เสนอ โดยชำระเงินก่อนการติดตั้งอย่างน้อย 7 วัน <br> 2.หลังติดตั้งและใช้งานได้เรียบร้อยแล้วให้ชำระเงินส่วนที่เหลือ</div>
+          1.สินค้าตามรายการข้างต้นแม้จะได้รับมอบแก่ผู้ซื้อแล้วก็ยังคงเป็นสินทรัพย์ของผู้ขายจนกว่าผู้ซื้อจะชำระเงินเรียบร้อย
+          <div>2.หากชำระเงินด้วยเช็คโปรดขีดคร่อมในนาม “บริษัทศรีดาราทัวร์จำกัด” และขีดฆ่าหรือผู้ถือออก <br> 3.การชำระเงินด้วยเช็คจะสมบูรณ์เมื่อ บริษัทฯได้รับเงินตามเช็คเรียบร้อย</div>
+          <div class="flex">
+            <div class="font-black w-30">ตัวอักษร:</div>
+            <div class="font-black">ห้าหมื่นเก้าพันเก้าร้อยยี่สิบบาทถ้วน</div>
+          </div>
         </div>
 
         <!-- สรุปรายการ(ด้านขวา) -->
         <div>
           <div class="grid grid-cols-2 p-2">
-            <div >มัดจำ</div>
-            <div class="text-right">5000 บาท</div>
             <div >รวมเงิน</div>
             <div class="text-right">59920 บาท</div>
-            <div >ส่วนลดสินค้า</div>
-            <div class="text-right">0 บาท</div>
-            <div >มูลค่าสินค้า</div>
+            <div >มัดจำ 100%</div>
+            <div class="text-right">5000 บาท</div>
+            <div >มูลค่าคิดภาษี</div>
             <div class="text-right">56000 บาท</div>
-            <div >ภาษีมูลค่าเพิ่ม 7 %</div>
+            <div >ภาษีมูลค่าเพิ่ม</div>
             <div class="text-right">3920 บาท</div>
-            <div class="font-bold">จำนวนเงินทั้งสิ้น</div>
-            <div class="text-right">59920 บาท</div>
+            <div class="font-bold">ยอดสุทธิ</div>
+            <div class="text-right font-bold">59920 บาท</div>
           </div>
         </div>
       </div>
 
-      <div class="flex justify-end">
-        <div class="text-center text-xs">
-          ข้าพเจ้าเห็นชอบตามรายการที่เสนอและ <br> ขอสั่งซื้อตามรายละเอียดนี้ทุกประการ
-        </div>
-      </div>
-
-      <div class="grid grid-cols-4 mt-25 text-xs">
+      <div class="grid grid-cols-4 mt-35 text-xs">
         <div class="text-center border-b-1 border-black mx-5">
           <div>ผู้เสนอราคา</div>
           <div class="mb-5">วันที่</div>
