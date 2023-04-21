@@ -44,19 +44,17 @@
         </div>
 
         <!-- ข้อมูลฝั่งขวา -->
-        <div class="border-l px-5">
-          <div class="grid grid-cols-3">
-            <div class="col-span-1 font-bold">รหัสลูกค้า:</div>
-            <div class="col-span-2 text-right">C-58015259</div>
-            <div class="col-span-1 font-bold">ผู้เสนอขาย:</div>
-            <div class="col-span-2 text-right">สมชัย ใจเกินร้อย</div>
-            <div class="col-span-1 font-bold">ฝ่าย:</div>
-            <div class="col-span-2 text-right">การตลาด</div>
-            <div class="col-span-1 font-bold">ยืนยันราคาภายใน:</div>
-            <div class="col-span-2 text-right">31/03/2566</div>
-            <div class="col-span-1 font-bold">วันส่งของ:</div>
-            <div class="col-span-2 text-right">02/04/2566</div>
-          </div>
+        <div class="grid grid-cols-3">
+          <div class="col-span-1 font-bold">รหัสลูกค้า:</div>
+          <div class="col-span-2 text-right">C-58015259</div>
+          <div class="col-span-1 font-bold">ผู้เสนอขาย:</div>
+          <div class="col-span-2 text-right">สมชัย ใจเกินร้อย</div>
+          <div class="col-span-1 font-bold">ฝ่าย:</div>
+          <div class="col-span-2 text-right">การตลาด</div>
+          <div class="col-span-2 font-bold">ยืนยันราคาภายใน:</div>
+          <div class="col-span-1 text-right">31/03/2566</div>
+          <div class="col-span-1 font-bold">วันส่งของ:</div>
+          <div class="col-span-2 text-right">02/04/2566</div>
         </div>
       </div>
 

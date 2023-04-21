@@ -13,8 +13,9 @@
 
           <!-- ชื่อใบ/ข้อมูลใบ -->
           <div class="grid grid-cols-3">
-            <div class="col-span-3 font-bold text-center text-base">ใบวางบิล/ใบแจ้งหนี้</div>
-            <div class="col-span-3 text-center">Billing Note/Invoice</div>
+            <div class="col-span-3 font-bold text-center text-base">ใบกำกับภาษี/ใบส่งของ</div>
+            <div class="col-span-3 text-center">Tax Invoice/Delivery Order</div>
+            <div class="col-span-3 text-center text-[11px]">ต้นฉบับ/Original (เอกสารออกเป็นชุด)</div>
             <div class="font-bold">เลขที่:</div>
             <div class="col-span-2 text-right">0841142174178</div>
             <div class="font-bold">วันที่:</div>
@@ -30,16 +31,19 @@
           <div class="grid grid-cols-3">
             <div class="col-span-1 font-bold">ชื่อลูกค้า:</div>
             <div class="col-span-2 ">ศศิศ วิรัตน์จินดา</div>
-            <div class="col-span-1 font-bold">ชื่อผู้ติดต่อ:</div>
-            <div class="col-span-2 ">มะนาว หวานจังเลย</div>
             <div class="col-span-1 font-bold">ที่อยู่:</div>
             <div class="col-span-2 ">111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100</div>
-            <div class="col-span-1 font-bold">ID TAX:</div>
+            <div class="col-span-1 font-bold">เลขประจำตัวผู้เสียภาษี:</div>
             <div class="col-span-2 ">4585695214526</div>
-            <div class="col-span-1 font-bold">FAX:</div>
-            <div class="col-span-2 ">025684587</div>
-            <div class="col-span-1 font-bold">โทร:</div>
-            <div class="col-span-2 ">0254875858</div>
+            <div class="flex items-center">
+                <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                <label for="default-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">สำนักงานใหญ่</label>
+            </div>
+            <div class="flex items-center">
+                <input checked id="checked-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                <label for="checked-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">สาขาที่: บ้านใหญ่</label>
+            </div>
+
           </div>
         </div>
 
@@ -48,11 +52,13 @@
           <div class="grid grid-cols-3">
             <div class="col-span-1 font-bold">รหัสลูกค้า:</div>
             <div class="col-span-2 text-right">C-58015259</div>
-            <div class="col-span-1 font-bold">ผู้เสนอขาย:</div>
+            <div class="col-span-1 font-bold">ผู้ขาย:</div>
             <div class="col-span-2 text-right">สมชัย ใจเกินร้อย</div>
             <div class="col-span-1 font-bold">ฝ่าย:</div>
             <div class="col-span-2 text-right">การตลาด</div>
             <div class="col-span-2 font-bold">ยืนยันราคาวันที่:</div>
+            <div class="col-span-1 text-right">31/03/2566</div>
+            <div class="col-span-2 font-bold">กำหนดชำระ:</div>
             <div class="col-span-1 text-right">31/03/2566</div>
           </div>
         </div>
@@ -88,8 +94,11 @@
       <div class="grid grid-cols-3 text-xs p-2 border-b-1 border-black">
         <div class="col-span-2">
           <div class="font-bold">หมายเหตุ:</div>
-          1.สินค้าตามรายการข้างต้นแม้จะได้รับมอบแก่ผู้ซื้อแล้วก็ยังคงเป็นสินทรัพย์ของผู้ขายจนกว่าผู้ซื้อจะชำระเงินเรียบร้อย
-          <div>2.หากชำระเงินด้วยเช็คโปรดขีดคร่อมในนาม “บริษัทศรีดาราทัวร์จำกัด” และขีดฆ่าหรือผู้ถือออก <br> 3.การชำระเงินด้วยเช็คจะสมบูรณ์เมื่อ บริษัทฯได้รับเงินตามเช็คเรียบร้อย</div>
+          <div class="text-xs"> 
+            - หากสินค้าไม่ครบถ้วนกรุณาแจ้งกลับบริษัทฯ ภายใน 7 วัน หลังจากได้รับสินค้าแล้ว มิฉะนั้นบริษัทฯ จะไม่รับผิดชอบใด ๆ ทั้งสิ้น <br>
+            - กรรมสิทธิ์สินค้าตามใบส่งของนี้ยังถือว่าเป็นของผู้ขายอยู่จนกว่าผู้ซื้อจะได้ชำระเงินหรือเช็คขึ้นเงินเรียบร้อย <br>
+            - หากชำระเงินด้วยเช็คโปรดขีดคร่อมในนาม “บริษัทนิลผกาทัวร์จำกัด” และขีดฆ่าหรือผู้ถือออก
+          </div>
           <div class="flex">
             <div class="font-black w-30">ตัวอักษร:</div>
             <div class="font-black">ห้าหมื่นเก้าพันเก้าร้อยยี่สิบบาทถ้วน</div>
@@ -100,18 +109,20 @@
         <div class="grid grid-cols-2 p-2">
           <div >รวมเงิน</div>
           <div class="text-right">59920 บาท</div>
-          <div >มัดจำ 100%</div>
+          <div >หักส่วนลดพิเศษ</div>
           <div class="text-right">5000 บาท</div>
+          <div >มูลค่ายกเว้นภาษี</div>
+          <div class="text-right">0 บาท</div>
           <div >มูลค่าคิดภาษี</div>
-          <div class="text-right">56000 บาท</div>
+          <div class="text-right">5600 บาท</div>
           <div >ภาษีมูลค่าเพิ่ม</div>
           <div class="text-right">3920 บาท</div>
-          <div class="font-bold">ยอดสุทธิ</div>
+          <div class="font-bold">จำนวนเงินทั้งสิ้น</div>
           <div class="text-right font-bold">59920 บาท</div>
         </div>
       </div>
 
-      <div class="grid grid-cols-4 mt-35 text-xs">
+      <div class="grid grid-cols-4 mt-30 text-xs">
         <div class="text-center border-b-1 border-black mx-5">
           <div>ผู้เสนอราคา</div>
           <div class="mb-5">วันที่</div>

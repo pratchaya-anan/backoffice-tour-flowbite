@@ -61,8 +61,8 @@
             <div class="col-span-2 text-right">สมชัย ใจเกินร้อย</div>
             <div class="col-span-1 font-bold">ฝ่าย:</div>
             <div class="col-span-2 text-right">การตลาด</div>
-            <div class="col-span-1 font-bold">ยืนยันราคาภายใน:</div>
-            <div class="col-span-2 text-right">31/03/2566</div>
+            <div class="col-span-2 font-bold">ยืนยันราคาภายใน:</div>
+            <div class="col-span-1 text-right">31/03/2566</div>
             <div class="col-span-1 font-bold">วันส่งของ:</div>
             <div class="col-span-2 text-right">02/04/2566</div>
           </div>
@@ -109,21 +109,19 @@
           </div>
         </div>
 
-        <div>
-          <div class="grid grid-cols-2 p-2">
-            <div>มัดจำ</div>
-            <div class="text-right">5000 บาท</div>
-            <div>รวมเงิน</div>
-            <div class="text-right">59920 บาท</div>
-            <div>ส่วนลดสินค้า</div>
-            <div class="text-right">0 บาท</div>
-            <div>มูลค่าสินค้า</div>
-            <div class="text-right">56000 บาท</div>
-            <div>ภาษีมูลค่าเพิ่ม 7 %</div>
-            <div class="text-right">3920 บาท</div>
-            <div class="font-bold">จำนวนเงินทั้งสิ้น</div>
-            <div class="text-right font-bold">59920 บาท</div>
-          </div>
+        <div class="grid grid-cols-2 p-2">
+          <div>มัดจำ</div>
+          <div class="text-right">5000 บาท</div>
+          <div>รวมเงิน</div>
+          <div class="text-right">59920 บาท</div>
+          <div>ส่วนลดสินค้า</div>
+          <div class="text-right">0 บาท</div>
+          <div>มูลค่าสินค้า</div>
+          <div class="text-right">56000 บาท</div>
+          <div>ภาษีมูลค่าเพิ่ม 7 %</div>
+          <div class="text-right">3920 บาท</div>
+          <div class="font-bold">จำนวนเงินทั้งสิ้น</div>
+          <div class="text-right font-bold">59920 บาท</div>
         </div>
       </div>
 
