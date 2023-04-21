@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-gray-100 dark:bg-gray-900 p-3 sm:p-5 min-h-1">
+  <section class="bg-gray-100 dark:bg-gray-900 p-3 sm:p-5 min-h-175">
     <div class="mx-auto max-w-screen-xl">
       <div>
         <div class="grid grid-cols-2">
@@ -250,7 +250,7 @@
             <div class="px-3">
               <div href="#">
                 <h5
-                  class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white"
+                  class="mb-2 text-lg font-semibold tracking-tight text-gray-900 dark:text-white"
                 >
                   ข้อมูลโรงแรม
                 </h5>
@@ -266,7 +266,7 @@
             <div class="border-l-1 px-3">
               <div href="#">
                 <h5
-                  class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white"
+                  class="mb-2 text-lg font-semibold tracking-tight text-gray-900 dark:text-white"
                 >
                   ข้อมูลไกด์
                 </h5>
@@ -281,7 +281,7 @@
             <div class="border-l-1 px-3">
               <div href="#">
                 <h5
-                  class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white"
+                  class="mb-2 text-lg font-semibold tracking-tight text-gray-900 dark:text-white"
                 >
                   ข้อมูลพาหนะ
                 </h5>
@@ -314,7 +314,7 @@
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
-                class="w-5 h-5 mr-2"
+                class="w-5 h-5"
               >
                 <path
                   stroke-linecap="round"
@@ -324,6 +324,13 @@
               </svg>
               เพิ่มลูกทัวร์
             </NuxtLink>
+          </button>
+
+          <button
+            type="button"
+            class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm ml-2 px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+          >
+            พิมพ์รายชื่อติด Tag
           </button>
 
           <!-- Main modal -->
@@ -354,7 +361,6 @@
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  <span class="sr-only">Close modal</span>
                 </button>
                 <div class="px-6 py-6 lg:px-8">
                   <h3
@@ -780,6 +786,8 @@
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
                       aria-hidden="true"
+                      data-modal-target="editModal"
+                      data-modal-toggle="editModal"
                       class="w-5 h-5 text-blue-500 hover:text-blue-800"
                     >
                       <path
@@ -798,6 +806,8 @@
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
                       aria-hidden="true"
+                      data-modal-target="delete-modal"
+                      data-modal-toggle="delete-modal"
                       class="w-5 h-5 text-red-500 hover:text-red-800"
                     >
                       <path
@@ -908,357 +918,457 @@
                       </div>
                     </div>
                   </div>
-                </td>
-              </tr>
-              <tr
-                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-              >
-                <th
-                  scope="row"
-                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
-                  2
-                </th>
-                <td class="px-6 py-4">
-                  <div>มะยม ขมจัง</div>
-                  <div>Mayom Khomjung</div>
-                </td>
-                <td class="px-6 py-4">1245865475854</td>
-                <td class="px-6 py-4">A251368</td>
-                <td class="px-6 py-4">ไทย</td>
-                <td class="px-6 py-4">หญิง</td>
-                <td class="px-6 py-4">คู่</td>
-                <td class="px-6 py-4 text-center">
-                  <!-- Modal toggle -->
-                  <div class="flex justify-between">
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      data-modal-target="staticModal"
-                      data-modal-toggle="staticModal"
-                      class="w-5 h-5 text-gray-500 hover:text-gray-800"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
-                      ></path>
-                    </svg>
 
-                    <div class="mx-2">|</div>
-
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      class="w-5 h-5 text-blue-500 hover:text-blue-800"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"
-                      ></path>
-                    </svg>
-
-                    <div class="mx-2">|</div>
-
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      class="w-5 h-5 text-red-500 hover:text-red-800"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
-                      ></path>
-                    </svg>
-                  </div>
-
-                  <!-- Main modal -->
                   <div
-                    id="staticModal"
-                    data-modal-backdrop="static"
+                    id="editModal"
                     tabindex="-1"
                     aria-hidden="true"
-                    class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full"
+                    class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
                   >
-                    <div class="relative w-full h-full max-w-2xl md:h-auto">
+                    <div class="relative w-full max-w-2xl max-h-full">
                       <!-- Modal content -->
                       <div
                         class="relative bg-white rounded-lg shadow dark:bg-gray-700"
                       >
-                        <!-- Modal header -->
-                        <div
-                          class="flex items-start justify-center p-4 border-b rounded-t dark:border-gray-600"
+                        <button
+                          type="button"
+                          class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                          data-modal-hide="editModal"
                         >
+                          <svg
+                            aria-hidden="true"
+                            class="w-5 h-5"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                              clip-rule="evenodd"
+                            ></path>
+                          </svg>
+                        </button>
+                        <div class="px-6 py-6 lg:px-8">
                           <h3
-                            class="text-xl font-semibold text-gray-900 dark:text-white"
+                            class="mb-4 text-xl font-medium text-gray-900 dark:text-white"
                           >
-                            รายละเอียดลูกทัวร์ | มะยม ขมจัง
+                            เพิ่มลูกทัวร์
                           </h3>
-                          <button
-                            type="button"
-                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                            data-modal-hide="staticModal"
-                          >
-                            <svg
-                              class="w-5 h-5"
-                              fill="currentColor"
-                              viewBox="0 0 20 20"
-                              xmlns="http://www.w3.org/2000/svg"
+                          <form action="#">
+                            <div
+                              class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5"
                             >
-                              <path
-                                fill-rule="evenodd"
-                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                clip-rule="evenodd"
-                              ></path>
-                            </svg>
-                          </button>
-                        </div>
-                        <!-- Modal body -->
-                        <div class="p-6 space-y-6 text-left">
-                          <p
-                            class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
-                          >
-                            วันที่ออกพาสปอร์ต: 01/03/2566
-                          </p>
-                          <p
-                            class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
-                          >
-                            วันหมดอายุพาสปอร์ต: 07/04/2570
-                          </p>
-                          <p
-                            class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
-                          >
-                            วันเดือนปีเกิด: 18/10/2538
-                          </p>
-                          <p
-                            class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
-                          >
-                            ตรวจลงตราเลขที: 455/55
-                          </p>
-                          <p
-                            class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
-                          >
-                            หมายเหตุ: asddds
-                          </p>
-                        </div>
-                        <!-- Modal footer -->
-                        <div
-                          class="flex items-center justify-between p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600"
-                        >
-                          <div class="flex justify-between">
-                            <div>
-                              <input
-                                type="text"
-                                id="small-input"
-                                class="mr-2 w-70 block w-full py-2.5 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                              />
+                              <div class="w-full">
+                                <label
+                                  for="firstname"
+                                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                  >ชื่อ</label
+                                >
+                                <input
+                                  type="text"
+                                  name="firstname"
+                                  id="firstname"
+                                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                  value=""
+                                  placeholder=""
+                                  required
+                                />
+                              </div>
+                              <div class="w-full">
+                                <label
+                                  for="lastname"
+                                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                  >สกุล</label
+                                >
+                                <input
+                                  type="text"
+                                  name="lastname"
+                                  id="lastname"
+                                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                  value=""
+                                  placeholder=""
+                                  required
+                                />
+                              </div>
                             </div>
-                            <button
-                              data-modal-hide="staticModal"
-                              type="button"
-                              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                            <div
+                              class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5"
                             >
-                              คอมเมนต์
-                            </button>
-                          </div>
-                          <button
-                            data-modal-hide="staticModal"
-                            type="button"
-                            class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+                              <div class="w-full">
+                                <label
+                                  for="firstname2"
+                                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                  >ชื่อภาษาอังกฤษ</label
+                                >
+                                <input
+                                  type="text"
+                                  name="firstname2"
+                                  id="firstname2"
+                                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                  value=""
+                                  placeholder=""
+                                  required
+                                />
+                              </div>
+                              <div class="w-full">
+                                <label
+                                  for="Lastname2"
+                                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                  >นามสกุลภาษาอังกฤษ</label
+                                >
+                                <input
+                                  type="text"
+                                  name="Lastname2"
+                                  id="Lastname2"
+                                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                  value=""
+                                  placeholder=""
+                                  required
+                                />
+                              </div>
+                            </div>
+                            <div
+                              class="grid gap-4 mb-4 sm:grid-cols-4 sm:gap-6 sm:mb-5"
+                            >
+                              <div class="sm:col-span-2">
+                                <label
+                                  for="nationality"
+                                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                  >สัญชาติ</label
+                                >
+                                <input
+                                  type="text"
+                                  name="nationality"
+                                  id="nationality"
+                                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                  value=""
+                                  placeholder=""
+                                  required
+                                />
+                              </div>
+                              <div>
+                                <label
+                                  for="gender"
+                                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                  >เพศ</label
+                                >
+                                <select
+                                  id="gender"
+                                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                >
+                                  <option selected></option>
+                                  <option value="ชาย">ชาย</option>
+                                  <option value="หญิง">หญิง</option>
+                                  <option value="อื่นๆ">อื่นๆ</option>
+                                </select>
+                              </div>
+                              <div class="w-full">
+                                <label
+                                  for="birthdate"
+                                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                  >วัน เดือน ปี เกิด</label
+                                >
+                                <div class="w-full relative">
+                                  <div
+                                    class="w-full absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                                      fill="currentColor"
+                                      viewBox="0 0 20 20"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                        fill-rule="evenodd"
+                                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                        clip-rule="evenodd"
+                                      ></path>
+                                    </svg>
+                                  </div>
+                                  <input
+                                    datepicker
+                                    datepicker-autohide
+                                    type="text"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    placeholder="เลือกวันเกิด"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="grid gap-4 mb-4 sm:grid-cols-4 sm:gap-6 sm:mb-5"
+                            >
+                              <div class="w-full">
+                                <label
+                                  for="identification"
+                                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                  >หมายเลขบัตรประชาชน</label
+                                >
+                                <input
+                                  type="text"
+                                  name="identification"
+                                  id="identification"
+                                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                  value=""
+                                  placeholder=""
+                                  required
+                                />
+                              </div>
+
+                              <div class="w-full">
+                                <label
+                                  for="phone"
+                                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                  >เบอร์โทรศัพท์</label
+                                >
+                                <input
+                                  type="text"
+                                  name="phone"
+                                  id="phone"
+                                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                  value=""
+                                  placeholder=""
+                                  required
+                                />
+                              </div>
+                              <div class="sm:col-span-2">
+                                <label
+                                  for="category"
+                                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                  >ประเภทเตียง</label
+                                >
+                                <select
+                                  id="category"
+                                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                >
+                                  <option selected></option>
+                                  <option value="ชาย">เดี่ยว</option>
+                                  <option value="หญิง">คู่</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div
+                              class="grid gap-4 mb-4 sm:grid-cols-4 sm:gap-6 sm:mb-5"
+                            >
+                              <div class="w-full">
+                                <label
+                                  for="passport"
+                                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                  >หมายเลขพาสปอร์ต</label
+                                >
+                                <input
+                                  type="text"
+                                  name="passport"
+                                  id="passport"
+                                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                  value=""
+                                  placeholder=""
+                                  required
+                                />
+                              </div>
+                              <div class="w-full">
+                                <label
+                                  for="check"
+                                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                  >ตรวจลงตราเลขที่</label
+                                >
+                                <input
+                                  type="text"
+                                  name="check"
+                                  id="check"
+                                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                  value=""
+                                  placeholder=""
+                                  required
+                                />
+                              </div>
+
+                              <div class="w-full">
+                                <label
+                                  for="startenddate"
+                                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                  >วันออกบัตร</label
+                                >
+                                <div date-rangepicker class="flex items-center">
+                                  <div class="w-full relative">
+                                    <div
+                                      class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                                    >
+                                      <svg
+                                        aria-hidden="true"
+                                        class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          fill-rule="evenodd"
+                                          d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                          clip-rule="evenodd"
+                                        ></path>
+                                      </svg>
+                                    </div>
+                                    <input
+                                      name="start"
+                                      type="text"
+                                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                      placeholder="เลือกวันที่"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="w-full">
+                                <label
+                                  for="startenddate"
+                                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                  >วันหมดอายุ</label
+                                >
+                                <div date-rangepicker class="flex items-center">
+                                  <div class="w-full relative">
+                                    <div
+                                      class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                                    >
+                                      <svg
+                                        aria-hidden="true"
+                                        class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          fill-rule="evenodd"
+                                          d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                          clip-rule="evenodd"
+                                        ></path>
+                                      </svg>
+                                    </div>
+                                    <input
+                                      name="end"
+                                      type="text"
+                                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                      placeholder="เลือกวันที่"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5"
+                            >
+                              <div>
+                                <label
+                                  for="brand"
+                                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                  >ที่อยู่ตามบัตรประชาชน</label
+                                >
+                                <input
+                                  type="text"
+                                  name="passport"
+                                  id="passport"
+                                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                  value=""
+                                  required
+                                />
+                              </div>
+                              <div class="w-full">
+                                <label
+                                  for="brand"
+                                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                  >หมายเหตุ</label
+                                >
+                                <input
+                                  type="text"
+                                  name="check"
+                                  id="check"
+                                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                  value=""
+                                  placeholder=""
+                                  required
+                                />
+                              </div>
+                            </div>
+                          </form>
+                          <form
+                            class="space-y-6 flex justify-center"
+                            action="#"
                           >
-                            ปิด
-                          </button>
+                            <button
+                              type="submit"
+                              class="w-50 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                            >
+                              เพิ่ม
+                            </button>
+                          </form>
                         </div>
                       </div>
                     </div>
                   </div>
-                </td>
-              </tr>
-              <tr
-                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-              >
-                <th
-                  scope="row"
-                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
-                  3
-                </th>
-                <td class="px-6 py-4">
-                  <div>มะยม ขมจัง</div>
-                  <div>Mayom Khomjung</div>
-                </td>
-                <td class="px-6 py-4">1245865475854</td>
-                <td class="px-6 py-4">A251368</td>
-                <td class="px-6 py-4">ไทย</td>
-                <td class="px-6 py-4">หญิง</td>
-                <td class="px-6 py-4">คู่</td>
-                <td class="px-6 py-4 text-center">
-                  <!-- Modal toggle -->
-                  <div class="flex justify-between">
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      data-modal-target="staticModal"
-                      data-modal-toggle="staticModal"
-                      class="w-5 h-5 text-gray-500 hover:text-gray-800"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
-                      ></path>
-                    </svg>
 
-                    <div class="mx-2">|</div>
-
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      class="w-5 h-5 text-blue-500 hover:text-blue-800"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"
-                      ></path>
-                    </svg>
-
-                    <div class="mx-2">|</div>
-
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      class="w-5 h-5 text-red-500 hover:text-red-800"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
-                      ></path>
-                    </svg>
-                  </div>
-
-                  <!-- Main modal -->
                   <div
-                    id="staticModal"
-                    data-modal-backdrop="static"
+                    id="delete-modal"
                     tabindex="-1"
-                    aria-hidden="true"
-                    class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full"
+                    class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
                   >
-                    <div class="relative w-full h-full max-w-2xl md:h-auto">
-                      <!-- Modal content -->
+                    <div class="relative w-full max-w-md max-h-full">
                       <div
                         class="relative bg-white rounded-lg shadow dark:bg-gray-700"
                       >
-                        <!-- Modal header -->
-                        <div
-                          class="flex items-start justify-center p-4 border-b rounded-t dark:border-gray-600"
+                        <button
+                          type="button"
+                          class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                          data-modal-hide="delete-modal"
                         >
-                          <h3
-                            class="text-xl font-semibold text-gray-900 dark:text-white"
+                          <svg
+                            aria-hidden="true"
+                            class="w-5 h-5"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
                           >
-                            รายละเอียดลูกทัวร์ | มะยม ขมจัง
+                            <path
+                              fill-rule="evenodd"
+                              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                              clip-rule="evenodd"
+                            ></path>
+                          </svg>
+                        </button>
+                        <div class="p-6 text-center">
+                          <svg
+                            aria-hidden="true"
+                            class="mx-auto mb-4 text-gray-400 w-14 h-14 dark:text-gray-200"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                            ></path>
+                          </svg>
+                          <h3
+                            class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400"
+                          >
+                            ต้องการลบรายชื่อ
+                            <p class="text-black underline">มะยม ขมจัง</p>
                           </h3>
                           <button
+                            data-modal-hide="delete-modal"
                             type="button"
-                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                            data-modal-hide="staticModal"
+                            class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-10 py-2.5 text-center mr-2"
                           >
-                            <svg
-                              class="w-5 h-5"
-                              fill="currentColor"
-                              viewBox="0 0 20 20"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                fill-rule="evenodd"
-                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                clip-rule="evenodd"
-                              ></path>
-                            </svg>
+                            ลบ
                           </button>
-                        </div>
-                        <!-- Modal body -->
-                        <div class="p-6 space-y-6 text-left">
-                          <p
-                            class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
-                          >
-                            วันที่ออกพาสปอร์ต: 01/03/2566
-                          </p>
-                          <p
-                            class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
-                          >
-                            วันหมดอายุพาสปอร์ต: 07/04/2570
-                          </p>
-                          <p
-                            class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
-                          >
-                            วันเดือนปีเกิด: 18/10/2538
-                          </p>
-                          <p
-                            class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
-                          >
-                            ตรวจลงตราเลขที: 455/55
-                          </p>
-                          <p
-                            class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
-                          >
-                            หมายเหตุ: asddds
-                          </p>
-                        </div>
-                        <!-- Modal footer -->
-                        <div
-                          class="flex items-center justify-between p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600"
-                        >
-                          <div class="flex justify-between">
-                            <div>
-                              <input
-                                type="text"
-                                id="small-input"
-                                class="mr-2 w-70 block w-full py-2.5 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                              />
-                            </div>
-                            <button
-                              data-modal-hide="staticModal"
-                              type="button"
-                              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                            >
-                              คอมเมนต์
-                            </button>
-                          </div>
                           <button
-                            data-modal-hide="staticModal"
+                            data-modal-hide="delete-modal"
                             type="button"
-                            class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+                            class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-8 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
                           >
-                            ปิด
+                            ยกเลิก
                           </button>
                         </div>
                       </div>
@@ -1276,37 +1386,6 @@
           id="speed-dial-menu-default"
           class="flex flex-col items-center hidden mb-4 space-y-2"
         >
-          <button
-            type="button"
-            data-tooltip-target="tooltip-print"
-            data-tooltip-placement="left"
-            class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-gray-900 bg-white rounded-full border border-gray-200 dark:border-gray-600 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400"
-          >
-            <svg
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.5"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-              class="w-5 h-5"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0110.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0l.229 2.523a1.125 1.125 0 01-1.12 1.227H7.231c-.662 0-1.18-.568-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0021 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a48.055 48.055 0 00-1.913-.247M6.34 18H5.25A2.25 2.25 0 013 15.75V9.456c0-1.081.768-2.015 1.837-2.175a48.041 48.041 0 011.913-.247m10.5 0a48.536 48.536 0 00-10.5 0m10.5 0V3.375c0-.621-.504-1.125-1.125-1.125h-8.25c-.621 0-1.125.504-1.125 1.125v3.659M18 10.5h.008v.008H18V10.5zm-3 0h.008v.008H15V10.5z"
-              ></path>
-            </svg>
-            <span class="sr-only">Print</span>
-          </button>
-          <div
-            id="tooltip-print"
-            role="tooltip"
-            class="absolute z-10 invisible inline-block w-30 px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
-          >
-            พิมพ์รายชื่อ Tag
-            <div class="tooltip-arrow" data-popper-arrow></div>
-          </div>
           <button
             type="button"
             data-tooltip-target="tooltip-download"
@@ -1328,17 +1407,17 @@
                 d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"
               ></path>
             </svg>
-            <span class="sr-only">Download</span>
           </button>
           <div
             id="tooltip-download"
             role="tooltip"
             class="absolute z-10 invisible inline-block w-31 px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
           >
-            อัพเดทคอมเมนต์
+            อัพเดทหมายเหตุ
             <div class="tooltip-arrow" data-popper-arrow></div>
           </div>
-          <button
+          <NuxtLink
+            href="/edit-tour"
             type="button"
             data-tooltip-target="tooltip-copy"
             data-tooltip-placement="left"
@@ -1359,14 +1438,13 @@
                 d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125"
               ></path>
             </svg>
-            <span class="sr-only">Copy</span>
-          </button>
+          </NuxtLink>
           <div
             id="tooltip-copy"
             role="tooltip"
-            class="absolute z-10 invisible inline-block w-54 px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+            class="absolute z-10 invisible inline-block w-29 px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
           >
-            แก้ไขข้อมูลทัวร์ หรือ เพิ่มโรงแรม
+            แก้ไขข้อมูลทัวร์
             <div class="tooltip-arrow" data-popper-arrow></div>
           </div>
           <button
@@ -1374,6 +1452,8 @@
             data-tooltip-target="tooltip-delete"
             data-tooltip-placement="left"
             class="flex justify-center items-center w-[52px] h-[52px] text-red-500 hover:text-red-900 bg-white rounded-full border border-red-200 dark:border-gray-600 dark:hover:text-white shadow-sm dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400"
+            data-modal-target="deletetour"
+            data-modal-toggle="deletetour"
           >
             <svg
               fill="none"
@@ -1390,7 +1470,6 @@
                 d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
               ></path>
             </svg>
-            <span class="sr-only">Delete</span>
           </button>
           <div
             id="tooltip-delete"
@@ -1399,6 +1478,75 @@
           >
             ลบทัวร์
             <div class="tooltip-arrow" data-popper-arrow></div>
+          </div>
+
+          <div
+            id="deletetour"
+            tabindex="-1"
+            class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+          >
+            <div class="relative w-full max-w-md max-h-full">
+              <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <button
+                  type="button"
+                  class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                  data-modal-hide="deletetour"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+                <div class="p-6 text-center">
+                  <svg
+                    aria-hidden="true"
+                    class="mx-auto mb-4 text-gray-400 w-14 h-14 dark:text-gray-200"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    ></path>
+                  </svg>
+                  <h3
+                    class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    ต้องการลบทัวร์ชื่อ
+                    <p class="text-black underline">
+                      องค์การบริหารส่วนตำบลโพนงาม
+                    </p>
+                  </h3>
+                  <NuxtLink
+                    href="/tour_ls"
+                    type="button"
+                    class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-10 py-2.5 text-center mr-2"
+                  >
+                    ลบ
+                  </NuxtLink>
+                  <button
+                    data-modal-hide="deletetour"
+                    type="button"
+                    class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-8 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+                  >
+                    ยกเลิก
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <button
@@ -1423,7 +1571,6 @@
               d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z"
             ></path>
           </svg>
-          <span class="sr-only">Open actions menu</span>
         </button>
       </div>
     </div>
