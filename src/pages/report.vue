@@ -1,15 +1,17 @@
 <template>
   <div class="mx-auto max-w-screen-xl">
     <section class="">
-      <div>
-        <h1 class="my-4 text-4xl font-bold text-gray-900 dark:text-white">
-          รายงาน
-        </h1>
-      </div>
       <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-5">
+        <div>
+          <h1
+            class="my-2 mx-6 text-4xl font-bold text-gray-900 dark:text-white"
+          >
+            รายงาน
+          </h1>
+        </div>
         <table class="w-full text-sm text-left dark:text-gray-400">
           <caption
-            class="p-5 text-base text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800"
+            class="p-4 text-base text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800"
           >
             <div class="grid grid-cols-2 gap-30">
               <div>
