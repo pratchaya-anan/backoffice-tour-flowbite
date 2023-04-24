@@ -122,21 +122,16 @@
                 <div class="flex">
                   <div class="border-r-1 pr-2">
                     รายรับ
-                    <sheet class="px-2 py-1 text-white bg-green-700 rounded-sm"
-                      >897,548</sheet
-                    >
+                    <sheet class="px-2 py-1 text-green-700">897,548</sheet>
                   </div>
                   <div class="px-2">
                     รายจ่าย
-                    <sheet class="px-2 py-1 text-white bg-red-700 rounded-sm"
-                      >245,784</sheet
-                    >
+                    <sheet class="px-2 py-1 text-red-700">245,784</sheet>
                   </div>
                 </div>
                 <div class="">
                   กำไร/ขาดทุน
-                  <sheet
-                    class="px-2 py-1 bg-gray-100 ring-gray-200 text-blue-700 border border-gray-200 rounded-sm"
+                  <sheet class="px-2 py-1 text-blue-700 rounded-sm"
                     >148,420</sheet
                   >
                 </div>
@@ -164,9 +159,7 @@
               </td>
               <td class="px-6 py-4">ค่าใช้จ่ายภายในทริป อบต โพนงาม</td>
               <td class="px-6 py-4">
-                <sheet class="px-2 py-1 text-white bg-green-700 rounded-sm"
-                  >897,548</sheet
-                >
+                <sheet class="px-2 py-1 text-green-700">897,548</sheet>
               </td>
               <td class="px-6 py-4">-</td>
             </tr>
@@ -180,9 +173,7 @@
               <td class="px-6 py-4">เที่ยวเกาะ เลาะรัก</td>
               <td class="px-6 py-4">-</td>
               <td class="px-6 py-4">
-                <sheet class="px-2 py-1 text-white bg-red-700 rounded-sm"
-                  >245,784</sheet
-                >
+                <sheet class="px-2 py-1 text-red-700">245,784</sheet>
               </td>
             </tr>
           </tbody>
