@@ -145,7 +145,7 @@
                         </li>
                         <li>
                           <a
-                            href="#"
+                            href="/disbursement"
                             class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                             >จัดการใบเบิกค่าใช้จ่าย</a
                           >
