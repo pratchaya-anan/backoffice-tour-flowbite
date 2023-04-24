@@ -1703,3 +1703,21 @@
     </div>
   </section>
 </template>
+
+//
+<script>
+// import { defineComponent } from "@vue/composition-api";
+
+// export default defineComponent({
+//   setup() {},
+//   methods: {
+//     loaddata() {
+//       location.reload();
+//     },
+//   },
+//   mounted() {
+//     this.loaddata();
+//   },
+// });
+//
+</script>
