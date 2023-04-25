@@ -1,14 +1,12 @@
 <template>
     <section class="bg-gray-100 dark:bg-gray-900 p-3 sm:p-5">
         <div class="mx-auto max-w-screen-xl">
-            <div class="grid grid-cols-2">
-            </div>
             <!-- crad -->
             <div class="max-w-screen-xl px-4 mx-auto lg:px-12 w-full">
                 <!-- Start coding here -->
                 <div class="relative bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
                     <div class="mb-4 lg:mb-0 px-5 py-5">
-                        <h3 class="mb-2 text-2xl font-bold text-gray-900 dark:text-white">รายการใบเบิกค่าใช้จ่าย</h3>
+                        <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">รายการใบเคลียร์</h3>
                     </div>
                     <!-- Start coding here -->
                     <div class="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden px-5 ">
@@ -35,13 +33,11 @@
                                     </button>
                                 </form>
                             </div>
-
-
                             <div
                                 class="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
                                 <button type="button" data-modal-target="addestimate" data-modal-toggle="addestimate"
                                     class="flex items-center justify-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
-                                    <svg class="h-5 w-5 mr-2 inline-flex items-center" fill="none" stroke="currentColor"
+                                    <svg class="h-5 w-5 inline-flex items-center" fill="none" stroke="currentColor"
                                         stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                                         aria-hidden="true">
                                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -67,13 +63,13 @@
                                                 ชื่อผู้เคลียร์
                                             </th>
                                             <th scope="col" class="px-6 py-3">
-                                                ชื่อผู้ขอเบิก
+                                                รายละเอียด
                                             </th>
                                             <th scope="col" class="px-6 py-3">
-                                                วัตถุประสงค์
+                                                ยอกเงินประมาณการ
                                             </th>
                                             <th scope="col" class="px-6 py-3">
-                                                ยอดสุทธิ
+                                                รวมสุทธิ
                                             </th>
                                             <th scope="col" class="px-6 py-3">
                                                 <span class="sr-only">Edit</span>
@@ -91,7 +87,7 @@
                                                 ดวงดี ศรีสุข
                                             </td>
                                             <td class="px-6 py-4">
-                                                แตงโม โอ้โอ
+                                                ค่าอาหาร
                                             </td>
                                             <td class="px-6 py-4">
                                                 1000
@@ -101,10 +97,7 @@
                                             </td>
                                             <td class="px-6 py-4 text-right">
                                                 <a href="#"
-                                                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">ใบเบิกเงินสดย่อย</a>
-                                                <NuxtLink to="/addestimate"
-                                                    class="ml-3 font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                                                    ใบเคลียร์</NuxtLink>
+                                                    class="font-medium text-red-600 dark:text-blue-500 hover:underline font-bold font-bold">ลบ</a>
                                             </td>
                                         </tr>
                                         <tr
@@ -117,7 +110,7 @@
                                                 ดวงดี ศรีสุข
                                             </td>
                                             <td class="px-6 py-4">
-                                                แตงโม โอ้โอ
+                                                ค่าน้ำมัน
                                             </td>
                                             <td class="px-6 py-4">
                                                 500
@@ -127,10 +120,7 @@
                                             </td>
                                             <td class="px-6 py-4 text-right">
                                                 <a href="#"
-                                                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">ใบเบิกเงินสดย่อย</a>
-                                                <NuxtLink to="/addestimate"
-                                                    class="ml-3 font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                                                    ใบเคลียร์</NuxtLink>
+                                                    class="font-medium text-red-600 dark:text-blue-500 hover:underline font-bold">ลบ</a>
                                             </td>
                                         </tr>
                                         <tr
@@ -143,7 +133,7 @@
                                                 นาดี สุขใจ
                                             </td>
                                             <td class="px-6 py-4">
-                                                แตงโม โอ้โอ
+                                                ค่าน้ำมัน
                                             </td>
                                             <td class="px-6 py-4">
                                                 500
@@ -153,16 +143,13 @@
                                             </td>
                                             <td class="px-6 py-4 text-right">
                                                 <a href="#"
-                                                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">ใบเบิกเงินสดย่อย</a>
-                                                <NuxtLink to="/addestimate"
-                                                    class="ml-3 font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                                                    ใบเคลียร์</NuxtLink>
-
+                                                    class="font-medium text-red-600 dark:text-blue-500 hover:underline font-bold">ลบ</a>
                                             </td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
+
                         </div>
                         <nav class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-3 md:space-y-0 p-4"
                             aria-label="Table navigation">
@@ -420,6 +407,6 @@
                 </div>
             </div>
         </div>
-
-</section></template>
+    </section>
+</template>
   
