@@ -66,7 +66,7 @@
                                                 รายละเอียด
                                             </th>
                                             <th scope="col" class="px-6 py-3">
-                                                ยอกเงินประมาณการ
+                                                ยอดเงินประมาณการ
                                             </th>
                                             <th scope="col" class="px-6 py-3">
                                                 รวมสุทธิ
@@ -76,76 +76,31 @@
                                             </th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr
+                                    <tbody >
+                                        <tr v-for="(datadis, indexd) in dataFiter.clear" :key="indexd"
                                             class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                             <th scope="row"
                                                 class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                1
+                                                {{ indexd + 1 }}
                                             </th>
                                             <td class="px-6 py-4">
-                                                ดวงดี ศรีสุข
+                                                {{ datadis.namecle }}
                                             </td>
                                             <td class="px-6 py-4">
-                                                ค่าอาหาร
+                                                {{datadis.details }}
                                             </td>
                                             <td class="px-6 py-4">
-                                                1000
+                                                {{datadis.money1 }}
                                             </td>
                                             <td class="px-6 py-4">
-                                                750
+                                                {{datadis.money}}
                                             </td>
                                             <td class="px-6 py-4 text-right">
                                                 <a href="#"
                                                     class="font-medium text-red-600 dark:text-blue-500 hover:underline font-bold font-bold">ลบ</a>
                                             </td>
                                         </tr>
-                                        <tr
-                                            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                            <th scope="row"
-                                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                2
-                                            </th>
-                                            <td class="px-6 py-4">
-                                                ดวงดี ศรีสุข
-                                            </td>
-                                            <td class="px-6 py-4">
-                                                ค่าน้ำมัน
-                                            </td>
-                                            <td class="px-6 py-4">
-                                                500
-                                            </td>
-                                            <td class="px-6 py-4">
-                                                1000
-                                            </td>
-                                            <td class="px-6 py-4 text-right">
-                                                <a href="#"
-                                                    class="font-medium text-red-600 dark:text-blue-500 hover:underline font-bold">ลบ</a>
-                                            </td>
-                                        </tr>
-                                        <tr
-                                            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                            <th scope="row"
-                                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                3
-                                            </th>
-                                            <td class="px-6 py-4">
-                                                นาดี สุขใจ
-                                            </td>
-                                            <td class="px-6 py-4">
-                                                ค่าน้ำมัน
-                                            </td>
-                                            <td class="px-6 py-4">
-                                                500
-                                            </td>
-                                            <td class="px-6 py-4">
-                                                500
-                                            </td>
-                                            <td class="px-6 py-4 text-right">
-                                                <a href="#"
-                                                    class="font-medium text-red-600 dark:text-blue-500 hover:underline font-bold">ลบ</a>
-                                            </td>
-                                        </tr>
+                                        
                                     </tbody>
                                 </table>
                             </div>
@@ -409,4 +364,31 @@
         </div>
     </section>
 </template>
+<script setup lang="ts">
+import { storeToRefs } from 'pinia';
+import { disbursement } from '~~/stores/disbursement'
+
+const store = disbursement()
+// const data = store.datarequisition;
+// const gtourid = store.tourid;
+const { datarequisition: data, tourid: gtourid } = storeToRefs(store);
+
+//// DIRECT
+// const { datarequisition, tourid } = storeToRefs(store);
+
+const dataFiter = computed(() => data.value.find(item =>item.tourid == gtourid.value ));
+
+// console.log('id'+gtourid)
+// console.log('data'+ JSON.stringify(data))
+// console.log('datafiter'+ JSON.stringify(dataFiter))
+
+
+
+function setid(id: string) {
+    // console.log("Idtour= "+id)
+    store.settourid(id);
+    useRouter().push('/addestimate');
+}
+//console.log("use "+datatour)
+</script>
   
