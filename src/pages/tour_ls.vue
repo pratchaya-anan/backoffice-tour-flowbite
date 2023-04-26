@@ -161,3 +161,12 @@
     </div>
   </section>
 </template>
+
+<script setup lg="ts">
+import { useDatatour } from '~~/stores/tour'
+
+const store = useDatatour()
+// const name = store.value.name
+
+// console.log(name)
+</script>

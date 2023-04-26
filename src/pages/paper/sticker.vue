@@ -25,7 +25,9 @@
           </div>
         </div>
       </div>
+
     </div>
+    
   </section>
   <!-- <div class="flex bg-gray-900"></div> -->
 </template>
