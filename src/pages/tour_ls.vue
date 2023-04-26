@@ -70,90 +70,39 @@
             </tr>
           </thead>
           <tbody>
-            <tr
-              class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-            >
-              <NuxtLink to="tourdata">
-                <th
-                  scope="row"
-                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
-                  เที่ยวเกาะ เลาะรัก
-                </th>
-              </NuxtLink>
-              <td class="px-6 py-4">เกาะเสม็ด เสร็จทุกราย</td>
-              <td class="px-6 py-4">16/04/2566</td>
-              <td class="px-6 py-4">20/04/2566</td>
-              <td class="px-6 py-4">5</td>
-              <td class="px-6 py-4">4</td>
-              <td class="px-6 py-4">นครชัยแอร์</td>
-              <td class="px-6 py-4">AirAsia</td>
-              <td class="px-6 py-4">1</td>
-              <td class="px-6 py-4"><center><span class="bg-gray-200 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">กำลังรอ</span></center></td>
-            </tr>
-
-            <tr
-              class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-            >
-              <NuxtLink to="tourdata">
-                <th
-                  scope="row"
-                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
-                  เที่ยวเกาะ เลาะรัก
-                </th>
-              </NuxtLink>
-              <td class="px-6 py-4">เกาะเสม็ด เสร็จทุกราย</td>
-              <td class="px-6 py-4">16/04/2566</td>
-              <td class="px-6 py-4">20/04/2566</td>
-              <td class="px-6 py-4">5</td>
-              <td class="px-6 py-4">4</td>
-              <td class="px-6 py-4">นครชัยแอร์</td>
-              <td class="px-6 py-4">AirAsia</td>
-              <td class="px-6 py-4">1</td>
-              <td class="px-6 py-4"><center><span class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">พร้อม</span></center></td>
-            </tr>
-            <tr
-              class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600"
-            >
-              <NuxtLink to="tourdata">
-                <th
-                  scope="row"
-                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
-                  เที่ยวเกาะ เลาะรัก
-                </th>
-              </NuxtLink>
-              <td class="px-6 py-4">เกาะเสม็ด เสร็จทุกราย</td>
-              <td class="px-6 py-4">16/04/2566</td>
-              <td class="px-6 py-4">20/04/2566</td>
-              <td class="px-6 py-4">5</td>
-              <td class="px-6 py-4">4</td>
-              <td class="px-6 py-4">นครชัยแอร์</td>
-              <td class="px-6 py-4">AirAsia</td>
-              <td class="px-6 py-4">1</td>
-              <td class="px-6 py-4"><center><span class="bg-green-100 text-green-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">เสร็จสิ้น</span></center></td>
-            </tr>
-            <tr
-              class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600"
-            >
-              <NuxtLink to="tourdata">
-                <th
-                  scope="row"
-                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
-                  เที่ยวเกาะ เลาะรัก
-                </th>
-              </NuxtLink>
-              <td class="px-6 py-4">เกาะเสม็ด เสร็จทุกราย</td>
-              <td class="px-6 py-4">16/04/2566</td>
-              <td class="px-6 py-4">20/04/2566</td>
-              <td class="px-6 py-4">5</td>
-              <td class="px-6 py-4">4</td>
-              <td class="px-6 py-4">นครชัยแอร์</td>
-              <td class="px-6 py-4">AirAsia</td>
-              <td class="px-6 py-4">1</td>
-              <td class="px-6 py-4"><center><span class="bg-green-100 text-green-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">เสร็จสิ้น</span></center></td>
+            <tr v-for="(data,indexd) in datatour" :key="indexd" @click="setid(data.tourid)" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+              <td class="font-bold px-6 py-4">
+                {{ data.tourname }}
+              </td>
+              <td class="px-6 py-4">
+                {{ data.programname }}
+              </td>
+              <td class="px-6 py-4">
+                {{ data.datestart }}
+              </td>
+              <td class="px-6 py-4">
+                {{ data.dateend }}
+              </td>
+              <td class="px-6 py-4">
+                {{ data.day }}
+              </td>
+              <td class="px-6 py-4">
+                {{ data.night }}
+              </td>
+              <td class="px-6 py-4">
+                {{ data.go }}
+              </td>
+              <td class="px-6 py-4">
+                {{ data.back }}
+              </td>
+              <td class="px-6 py-4">
+                {{ data.member }}
+              </td>
+              <td class="flex justify-center px-6 py-4">
+                <span v-if="data.state == 1" class="bg-gray-200 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">กำลังรอ</span>
+                <span v-if="data.state == 2" class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">พร้อม</span>
+                <span v-if="data.state == 3" class="bg-green-100 text-green-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">เสร็จสิ้น</span>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -166,7 +115,12 @@
 import { useDatatour } from '~~/stores/tour'
 
 const store = useDatatour()
-// const name = store.value.name
+const datatour = store.datatour
 
-// console.log(name)
+function setid(id) {
+  // console.log("Idtour= "+id)
+  store.settourid(id);
+}
+
+console.log("use "+datatour)
 </script>
