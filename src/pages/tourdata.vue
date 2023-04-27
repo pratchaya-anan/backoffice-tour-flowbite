@@ -788,46 +788,46 @@
                                 <div class="w-full">
                                   <label for="firstname"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ชื่อ</label>
-                                  <input type="text" name="firstname" id="firstname"
+                                  <input type="text" name="firstname" id="firstname" v-model="tourmember.memberTH_Fname"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    value="" placeholder="" required />
+                                    placeholder="" required />
                                 </div>
                                 <div class="w-full">
                                   <label for="lastname"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">สกุล</label>
-                                  <input type="text" name="lastname" id="lastname"
+                                  <input type="text" name="lastname" id="lastname" v-model="tourmember.memberTH_Lname"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    value="" placeholder="" required />
+                                    placeholder="" required />
                                 </div>
                               </div>
                               <div class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5">
                                 <div class="w-full">
                                   <label for="firstname2"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ชื่อภาษาอังกฤษ</label>
-                                  <input type="text" name="firstname2" id="firstname2"
+                                  <input type="text" name="firstname2" id="firstname2" v-model="tourmember.memberENG_Fname"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    value="" placeholder="" required />
+                                    placeholder="" required />
                                 </div>
                                 <div class="w-full">
                                   <label for="Lastname2"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">นามสกุลภาษาอังกฤษ</label>
-                                  <input type="text" name="Lastname2" id="Lastname2"
+                                  <input type="text" name="Lastname2" id="Lastname2" v-model="tourmember.memberENG_Lname"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    value="" placeholder="" required />
+                                    placeholder="" required />
                                 </div>
                               </div>
                               <div class="grid gap-4 mb-4 sm:grid-cols-4 sm:gap-6 sm:mb-5">
                                 <div class="sm:col-span-2">
                                   <label for="nationality"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">สัญชาติ</label>
-                                  <input type="text" name="nationality" id="nationality"
+                                  <input type="text" name="nationality" id="nationality" v-model="tourmember.nationality"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    value="" placeholder="" required />
+                                    placeholder="" required />
                                 </div>
                                 <div>
                                   <label for="gender"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">เพศ</label>
-                                  <select id="gender"
+                                  <select id="gender" v-model="tourmember.gender"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                                     <option selected></option>
                                     <option value="ชาย">ชาย</option>
@@ -836,7 +836,7 @@
                                   </select>
                                 </div>
                                 <div class="w-full">
-                                  <label for="birthdate"
+                                  <label for="birthdate" 
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">วัน เดือน ปี
                                     เกิด</label>
                                   <div class="w-full relative">
@@ -849,7 +849,7 @@
                                           clip-rule="evenodd"></path>
                                       </svg>
                                     </div>
-                                    <input datepicker datepicker-autohide type="text"
+                                    <input datepicker datepicker-autohide type="text" v-model="tourmember.birthdate"
                                       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                       placeholder="เลือกวันเกิด" />
                                   </div>
@@ -859,22 +859,22 @@
                                 <div class="w-full">
                                   <label for="identification"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">หมายเลขบัตรประชาชน</label>
-                                  <input type="text" name="identification" id="identification"
+                                  <input type="text" name="identification" id="identification" v-model="tourmember.identification"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    value="" placeholder="" required />
+                                     placeholder="" required />
                                 </div>
 
                                 <div class="w-full">
                                   <label for="phone"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">เบอร์โทรศัพท์</label>
-                                  <input type="text" name="phone" id="phone"
+                                  <input type="text" name="phone" id="phone" v-model="tourmember.phone"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    value="" placeholder="" required />
+                                     placeholder="" required />
                                 </div>
                                 <div class="sm:col-span-2">
                                   <label for="category"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ประเภทเตียง</label>
-                                  <select id="category"
+                                  <select id="category" v-model="tourmember.bedtype"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                                     <option selected></option>
                                     <option value="ชาย">เดี่ยว</option>
@@ -886,16 +886,16 @@
                                 <div class="w-full">
                                   <label for="passport"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">หมายเลขพาสปอร์ต</label>
-                                  <input type="text" name="passport" id="passport"
+                                  <input type="text" name="passport" id="passport" v-model="tourmember.passport"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    value="" placeholder="" required />
+                                     placeholder="" required />
                                 </div>
                                 <div class="w-full">
                                   <label for="check"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ตรวจลงตราเลขที่</label>
-                                  <input type="text" name="check" id="check"
+                                  <input type="text" name="check" id="check" v-model="tourmember.check"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    value="" placeholder="" required />
+                                     placeholder="" required />
                                 </div>
 
                                 <div class="w-full">
@@ -911,7 +911,7 @@
                                             clip-rule="evenodd"></path>
                                         </svg>
                                       </div>
-                                      <input name="start" type="text"
+                                      <input name="start" type="text" v-model="tourmember.start"
                                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                         placeholder="เลือกวันที่" />
                                     </div>
@@ -930,7 +930,7 @@
                                             clip-rule="evenodd"></path>
                                         </svg>
                                       </div>
-                                      <input name="end" type="text"
+                                      <input name="end" type="text" v-model="tourmember.end"
                                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                         placeholder="เลือกวันที่" />
                                     </div>
@@ -941,21 +941,21 @@
                                 <div>
                                   <label for="brand"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ที่อยู่ตามบัตรประชาชน</label>
-                                  <input type="text" name="passport" id="passport"
+                                  <input type="text" name="passport" id="passport" v-model="tourmember.brand"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    value="" required />
+                                     required />
                                 </div>
                                 <div class="w-full">
                                   <label for="brand"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">หมายเหตุ</label>
-                                  <input type="text" name="check" id="check"
+                                  <input type="text" name="check" id="check" v-model="tourmember.note"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    value="" placeholder="" required />
+                                     placeholder="" required />
                                 </div>
                               </div>
                             </form>
                             <form class="space-y-6 flex justify-center" action="#">
-                              <button type="submit"
+                              <button type="submit" @click="sendtour"
                                 class="w-50 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                 เพิ่ม
                               </button>
@@ -1073,6 +1073,34 @@
   import { useDatatour } from '/stores/tour';
 
   const store = useDatatour();
+
+  const  tourmember = {
+    memberTH_Fname: '',
+    memberTH_Lname: '',
+    memberENG_Fname: '',
+    memberENG_Lname: '',
+    nationality:'',
+    gender:'',
+    birthdate:'',
+    identification:'',
+    phone:'',
+    bedtype:'',
+    passport:'',
+    check:'',
+    start:'',
+    end:'',
+    brand:'',
+    note:'',
+  }
+
+  function sendtour(){
+    store.additem(tourmember);
+  }
+
+  function check(){
+    sendtour();
+    console.log(tourmember);
+  }
 
   const { tourfiltered } = storeToRefs(store);
 
