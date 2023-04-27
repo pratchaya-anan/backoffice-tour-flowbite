@@ -35,8 +35,6 @@
                                     </button>
                                 </form>
                             </div>
-
-
                             <div
                                 class="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
                                 <button type="button" data-modal-target="addestimate" data-modal-toggle="addestimate"
@@ -62,12 +60,12 @@
                                         <tr>
                                             <th scope="col" class="px-6 py-3">
                                                 #
-                                            </th>
-                                            <th scope="col" class="px-6 py-3">
-                                                ชื่อผู้เคลียร์
-                                            </th>
+                                            </th>                                           
                                             <th scope="col" class="px-6 py-3">
                                                 ชื่อผู้ขอเบิก
+                                            </th>
+                                            <th scope="col" class="px-6 py-3">
+                                                วันที่เบิก
                                             </th>
                                             <th scope="col" class="px-6 py-3">
                                                 วัตถุประสงค์
@@ -81,83 +79,31 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr
+                                        <tr v-for="(datadis, indexd) in data" :key="indexd"
                                             class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                             <th scope="row"
                                                 class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                1
-                                            </th>
+                                                {{ indexd + 1 }}
+                                            </th>                                            
                                             <td class="px-6 py-4">
-                                                ดวงดี ศรีสุข
+                                                {{ datadis.name }}
                                             </td>
                                             <td class="px-6 py-4">
-                                                แตงโม โอ้โอ
+                                                {{ datadis.date }}
                                             </td>
                                             <td class="px-6 py-4">
-                                                1000
+                                                {{ datadis.objective }}
                                             </td>
                                             <td class="px-6 py-4">
-                                                750
+                                                {{ datadis.money }}
                                             </td>
                                             <td class="px-6 py-4 text-right">
                                                 <a href="#"
                                                     class="font-medium text-blue-600 dark:text-blue-500 hover:underline">ใบเบิกเงินสดย่อย</a>
-                                                <NuxtLink to="/addestimate"
-                                                    class="ml-3 font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                                                    ใบเคลียร์</NuxtLink>
-                                            </td>
-                                        </tr>
-                                        <tr
-                                            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                            <th scope="row"
-                                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                2
-                                            </th>
-                                            <td class="px-6 py-4">
-                                                ดวงดี ศรีสุข
-                                            </td>
-                                            <td class="px-6 py-4">
-                                                แตงโม โอ้โอ
-                                            </td>
-                                            <td class="px-6 py-4">
-                                                500
-                                            </td>
-                                            <td class="px-6 py-4">
-                                                1000
-                                            </td>
-                                            <td class="px-6 py-4 text-right">
-                                                <a href="#"
-                                                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">ใบเบิกเงินสดย่อย</a>
-                                                <NuxtLink to="/addestimate"
-                                                    class="ml-3 font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                                                    ใบเคลียร์</NuxtLink>
-                                            </td>
-                                        </tr>
-                                        <tr
-                                            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                            <th scope="row"
-                                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                3
-                                            </th>
-                                            <td class="px-6 py-4">
-                                                นาดี สุขใจ
-                                            </td>
-                                            <td class="px-6 py-4">
-                                                แตงโม โอ้โอ
-                                            </td>
-                                            <td class="px-6 py-4">
-                                                500
-                                            </td>
-                                            <td class="px-6 py-4">
-                                                500
-                                            </td>
-                                            <td class="px-6 py-4 text-right">
-                                                <a href="#"
-                                                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">ใบเบิกเงินสดย่อย</a>
-                                                <NuxtLink to="/addestimate"
-                                                    class="ml-3 font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                                                    ใบเคลียร์</NuxtLink>
 
+                                                <a @click="setid(datadis.tourid)"
+                                                    class="ml-3 font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                                                    ใบเคลียร์</a>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -421,5 +367,20 @@
             </div>
         </div>
 
-</section></template>
+    </section>
+</template>
+<script setup lang="ts">
+import { storeToRefs } from 'pinia';
+import { disbursement } from '~~/stores/disbursement'
+
+const store = disbursement()
+const { datarequisition: data} = storeToRefs(store);
+
+function setid(id: string) {
+    // console.log("Idtour= "+id)
+    store.settourid(id);
+    useRouter().push('/addestimate');
+}
+//console.log("use "+datatour)
+</script>
   
