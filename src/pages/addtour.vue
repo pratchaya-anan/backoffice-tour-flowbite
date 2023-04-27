@@ -66,7 +66,7 @@
               <div class="mb-2">
                 <label for="default-input"
                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ชื่อทริปทัวร์</label>
-                <input type="text" id="default-input"
+                <input type="text" id="default-input" v-model="tourdata.tourname"
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
               </div>
             </div>
@@ -74,26 +74,26 @@
               <div class="mb-2">
                 <label for="default-input"
                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ชื่อโปรแกรมทัวร์</label>
-                <input type="text" id="default-input"
+                <input type="text" id="default-input" v-model="tourdata.programname"
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
               </div>
             </div>
             <div>
               <label for="default-input"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">จำนวนวัน</label>
-              <input type="number" id="default-input"
+              <input type="number" id="default-input" v-model="tourdata.day"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
             </div>
             <div>
               <label for="default-input"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">จำนวนคืน</label>
-              <input type="number" id="default-input"
+              <input type="number" id="default-input" v-model="tourdata.night"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
             </div>
             <div>
               <label for="default-input"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">วันเริ่มต้น</label>
-              <div class="relative w-full">
+              <div class="relative w-full"> 
                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                   <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
                     viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -102,7 +102,7 @@
                       clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <input datepicker type="text"
+                <input datepicker type="text" v-model="tourdata.datestart"
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="เลือกวัน" />
               </div>
@@ -120,7 +120,7 @@
                   </svg>
                 </div>
 
-                <input datepicker type="text"
+                <input datepicker type="text" v-model="tourdata.dateend"
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="เลือกวัน" />
               </div>
@@ -128,32 +128,32 @@
             <div>
               <label for="small-input"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ราคาต่อหน่วย</label>
-              <input type="number" id="small-input"
+              <input type="number" id="small-input" v-model="tourdata.priceunit"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
             </div>
             <div>
               <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ภาษี (0% 7%
                 9%)</label>
-              <select id="category"
+              <select id="category" v-model="tourdata.tax"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                <option select="">0%</option>
-                <option value="TV">7%</option>
-                <option value="PC">9%</option>
+                <option select="0">0%</option>
+                <option value="7">7%</option>
+                <option value="9">9%</option>
               </select>
             </div>
           </div>
           
           <div class="grid gap-4 mb-4 sm:grid-cols-2"></div>
 
-          <div class="flex justify-end">
-            <NuxtLink to="/addguide"
-              class="mt-3 px-10 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex">
+          <div @click="check" class="flex justify-end">
+            <!-- <NuxtLink to="/addguide"
+              class="mt-3 px-10 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex"> -->
               ถัดไป
               <svg class="h-5 w-auto" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
               </svg>
-            </NuxtLink>
+            <!-- </NuxtLink> -->
           </div>
         </form>
       </div>
@@ -162,6 +162,34 @@
 </template>
 
 <script setup lg="ts">
-import { datanametour } from '~~/stores/addtour';
+  import { storeToRefs } from 'pinia';
+  import { useDatatour } from '/stores/tour'
+
+  const store = useDatatour();
+
+  const tourdata = {
+    tourname: '',
+    programname: '',
+    datestart: '',
+    dateend: '',
+    day: 0,
+    night: 0,
+    go: '',
+    back: '',
+    summember: 0,
+    state: 1,
+    priceunit: 0,
+    tax: 0
+    
+  }
+
+  function sendtour(){
+    store.additem(tourdata);
+  }
+
+  function check(){
+    sendtour();
+    console.log(tourdata);
+  }
 
 </script>

@@ -112,15 +112,15 @@
 </template>
 
 <script setup lg="ts">
-import { storeToRefs } from 'pinia';
-import { useDatatour } from '/stores/tour'
+  import { storeToRefs } from 'pinia';
+  import { useDatatour } from '/stores/tour'
 
-const store = useDatatour();
-const { datatour } = storeToRefs(store);
+  const store = useDatatour();
+  const { datatour } = storeToRefs(store);
 
-function setid(id) {
-  store.settourid(id);
-  useRouter().push('/tourdata');
-}
+  function setid(id) {
+    store.settourid(id);
+    useRouter().push('/tourdata');
+  }
 
 </script>

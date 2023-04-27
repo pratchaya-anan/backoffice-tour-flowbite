@@ -71,7 +71,12 @@ export const useDatatour = defineStore('tour', () => {
       ],
       vehicle: [
         {
-
+          name: "รถทัวร์นิลผกา 1",
+          type: "ไป",
+        },
+        {
+          name: "พิกุล 2",
+          type: "ไปกลับ",
         }
       ]
     },
@@ -110,5 +115,10 @@ export const useDatatour = defineStore('tour', () => {
     tourid.value = idtour;
   }
 
-  return { tourid, datatour, tourfiltered, settourid }
+  function additem(item: any) {
+    datatour.value.push(item);
+    console.log(datatour.value);
+  }
+
+  return { tourid, datatour, tourfiltered, settourid, additem }
 })

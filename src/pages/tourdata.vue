@@ -358,11 +358,9 @@
                 <h5 class="mb-2 text-lg font-semibold tracking-tight text-gray-900 dark:text-white">
                   ข้อมูลโรงแรม
                 </h5>
-                <div class="grid grid-cols-3 gap-2">
-                  <div class="col-span-2">โรงแรมริเวอร์แคว กาญจนบุรี</div>
-                  <div>จำนวนห้องพัก: 45</div>
-                  <div class="col-span-2">โรงแรมเอเชีย ชะอำ</div>
-                  <div>จำนวนห้องพัก: 45</div>
+                <div v-for="(hotel, indexh) in tourfiltered.hotel" key="indexh" class="grid grid-cols-3 gap-2">
+                  <div class="col-span-2">โรงแรม{{ hotel.name }}</div>
+                  <div>จำนวนห้องพัก: {{ hotel.sumroom }}</div>
                 </div>
               </div>
               <div class="grid grid-cols-3"></div>
@@ -373,11 +371,9 @@
                   ข้อมูลไกด์
                 </h5>
               </div>
-              <div class="grid grid-cols-2 gap-2">
-                <div>นายขวัญชัย บูรณฤกษ์</div>
-                <div>0833076329</div>
-                <div>นายพิษณุ บุญลี</div>
-                <div>0632452369</div>
+              <div v-for="(guide, indexg) in tourfiltered.guide" key="indexg" class="grid grid-cols-2 gap-2">
+                <div>{{ guide.name }}</div>
+                <div>{{ guide.phone }}</div>
               </div>
             </div>
             <div class="border-l-1 px-3">
@@ -386,11 +382,15 @@
                   ข้อมูลพาหนะ
                 </h5>
               </div>
-              <div class="grid grid-cols-2 gap-2">
-                <div>พาหนะขาไป :</div>
-                <div>รถทัวร์นิลผกา 1-พิกุล 2</div>
+              <div class="grid grid-cols-3 gap-2">
+                <div>พาหนะขาไป : </div>
+                <div class="flex col-span-2">
+                  <p v-for="go in vehigo">{{ go.name }}</p>
+                </div>
                 <div>พาหนะขากลับ :</div>
-                <div>รถทัวร์นิลผกา 1-พิกุล 2</div>
+                <div class="flex col-span-2">
+                  <p v-for="back in vehiback">{{ back.name }}</p>
+                </div>
               </div>
             </div>
           </div>
@@ -1069,11 +1069,16 @@
 </template>
 
 <script setup lg="ts">
-import { storeToRefs } from 'pinia';
-import { useDatatour } from '/stores/tour';
+  import { storeToRefs } from 'pinia';
+  import { useDatatour } from '/stores/tour';
 
-const store = useDatatour();
+  const store = useDatatour();
 
-const { tourfiltered } = storeToRefs(store);
+  const { tourfiltered } = storeToRefs(store);
 
+  console.log(tourfiltered.value.vehicle)
+  const vehigo = computed(() => tourfiltered.value.vehicle.filter(item => item.type == "ไป" || item.type == "ไปกลับ"));
+  console.log(vehigo.value);
+  const vehiback = computed(() => tourfiltered.value.vehicle.filter(item => item.type == "กลับ" || item.type == "ไปกลับ"));
+  console.log(vehiback.value);
 </script>
