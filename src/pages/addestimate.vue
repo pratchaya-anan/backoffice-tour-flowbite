@@ -382,8 +382,6 @@ const dataFiter = computed(() => data.value.find(item =>item.tourid == gtourid.v
 // console.log('data'+ JSON.stringify(data))
 // console.log('datafiter'+ JSON.stringify(dataFiter))
 
-
-
 function setid(id: string) {
     // console.log("Idtour= "+id)
     store.settourid(id);
