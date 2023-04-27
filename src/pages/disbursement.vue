@@ -370,10 +370,11 @@
     </section>
 </template>
 <script setup lang="ts">
+import { storeToRefs } from 'pinia';
 import { disbursement } from '~~/stores/disbursement'
 
 const store = disbursement()
-const data = store.datarequisition
+const { datarequisition: data} = storeToRefs(store);
 
 function setid(id: string) {
     // console.log("Idtour= "+id)

@@ -117,10 +117,7 @@ import { useDatatour } from '~~/stores/tour'
 const store = useDatatour()
 const datatour = store.datatour
 
-function setid(id) {
-  // console.log("Idtour= "+id)
-  store.settourid(id);
-}
+
 
 console.log("use "+datatour)
 </script>

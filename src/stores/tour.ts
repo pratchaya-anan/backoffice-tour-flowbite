@@ -48,7 +48,7 @@ export const useDatatour= defineStore('tour', () => {
   function settourid(idtour: string) {
     tourid.value = idtour;
     console.log(tourid.value)
-  }
+  }  
 
   return { tourid, datatour }
 })

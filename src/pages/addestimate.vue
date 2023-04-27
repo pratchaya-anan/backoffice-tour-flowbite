@@ -362,20 +362,17 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>w2w22w
 </template>
 <script setup lang="ts">
 import { storeToRefs } from 'pinia';
 import { disbursement } from '~~/stores/disbursement'
 
 const store = disbursement()
-// const data = store.datarequisition;
-// const gtourid = store.tourid;
+
 const { datarequisition: data, tourid: gtourid } = storeToRefs(store);
 
 //// DIRECT
-// const { datarequisition, tourid } = storeToRefs(store);
-
 const dataFiter = computed(() => data.value.find(item =>item.tourid == gtourid.value ));
 
 // console.log('id'+gtourid)
@@ -385,10 +382,8 @@ const dataFiter = computed(() => data.value.find(item =>item.tourid == gtourid.v
 
 
 function setid(id: string) {
-    // console.log("Idtour= "+id)
     store.settourid(id);
     useRouter().push('/addestimate');
 }
-//console.log("use "+datatour)
 </script>
   
