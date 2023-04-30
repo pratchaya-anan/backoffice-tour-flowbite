@@ -391,3 +391,20 @@
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { onMounted } from "vue";
+import { initFlowbite } from "flowbite/lib/esm/components";
+import { storeToRefs } from 'pinia';
+import { useDatatour } from '../stores/tour'
+
+const store = useDatatour();
+const { datatour } = storeToRefs(store);
+
+// initialize components based on data attribute selectors
+onMounted(() => {
+  initFlowbite();
+});
+
+
+</script>

@@ -1071,6 +1071,13 @@
 <script setup lg="ts">
   import { storeToRefs } from 'pinia';
   import { useDatatour } from '/stores/tour';
+  import { onMounted } from "vue";
+  import { initFlowbite } from "flowbite/lib/esm/components";
+
+  // initialize components based on data attribute selectors
+  onMounted(() => {
+    initFlowbite();
+  });
 
   const store = useDatatour();
 

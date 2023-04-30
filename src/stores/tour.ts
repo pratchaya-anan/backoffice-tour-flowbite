@@ -115,10 +115,17 @@ export const useDatatour = defineStore('tour', () => {
     tourid.value = idtour;
   }
 
-  function additem(item: any) {
+  //New tour
+  function addtour(item: any) {
     datatour.value.push(item);
     console.log(datatour.value);
+    console.log(tourid.value);
   }
 
-  return { tourid, datatour, tourfiltered, settourid, additem }
+  //Add guide to tour
+  function addguid(item: any) {
+      
+  }
+
+  return { tourid, datatour, tourfiltered, settourid, addtour }
 })
