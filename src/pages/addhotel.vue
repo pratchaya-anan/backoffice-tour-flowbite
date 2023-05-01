@@ -728,3 +728,17 @@
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { onMounted } from "vue";
+import { initFlowbite } from "flowbite/lib/esm/components";
+import { storeToRefs } from 'pinia';
+import { useDatatour } from '../stores/tour'
+
+const store = useDatatour();
+const { dataguide } = storeToRefs(store);
+
+onMounted(() => {
+  initFlowbite();
+});
+</script>

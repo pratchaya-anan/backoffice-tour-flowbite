@@ -175,21 +175,19 @@
     tourid: new Date().getTime()  ,
     tourname: '',
     programname: '',
-    datestart: '',
-    dateend: '',
     day: 0,
     night: 0,
+    datestart: '',
+    dateend: '',
     go: '',
     back: '',
+    priceunit: 0,
+    vat: 0,
     summember: 0,
     state: 1,
-    priceunit: 0,
-    tax: 0
   }
 
   function sendtour(){
-    // console.log(tourdata.tourid);
-    store.settourid(tourdata.tourid.toString());
     store.addtour(tourdata);
   }
 

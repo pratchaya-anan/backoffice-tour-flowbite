@@ -47,7 +47,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(data, index) in datatour" :key="index" @click="setid(data.tourid)"
+            <tr v-for="(data, index) in tourdata" :key="index" @click="setid(data.tourid)"
               class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
               <td class="font-bold px-6 py-4">
                 {{ data.tourname }}
@@ -77,11 +77,11 @@
                 {{ data.summember }}
               </td>
               <td class="flex justify-center px-6 py-4">
-                <span v-if="data.state == t1"
+                <span v-if="data.state == 1"
                   class="bg-gray-200 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">กำลังรอ</span>
-                <span v-if="data.state == t2"
+                <span v-if="data.state == 2"
                   class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">พร้อม</span>
-                <span v-if="data.state == t3"
+                <span v-if="data.state == 3"
                   class="bg-green-100 text-green-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">เสร็จสิ้น</span>
               </td>
             </tr>
@@ -97,16 +97,16 @@ import { storeToRefs } from 'pinia';
 import { useDatatour } from '../stores/tour'
 
 const store = useDatatour();
-const { datatour } = storeToRefs(store);
+const { tourdata } = storeToRefs(store);
 
-// function setid(id) {
-//   store.settourid(id);
-//   useRouter().push('/tourdata');
-// }
-
-const setid = (id) => {
+function setid(id: string) {
   store.settourid(id);
   useRouter().push('/tourdata');
 }
+
+// const setid = (id) => {
+//   store.settourid(id);
+//   useRouter().push('/tourdata');
+// }
 
 </script>
