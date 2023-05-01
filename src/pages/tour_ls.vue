@@ -41,7 +41,7 @@
                 เที่ยวบินหรือพาหนะอื่นขากลับ
               </th>
               <th scope="col" class="px-6 py-3">จำนวนลูกทัวร์</th>
-              <th scope="col" class="px-6 py-3">สถานะ</th>
+              <th scope="col" class="px-6 py-3"><center>สถานะ</center></th>
             </tr>
           </thead>
           <tbody>
@@ -91,15 +91,15 @@
 </template>
 
 <script setup lg="ts">
-import { storeToRefs } from 'pinia';
-import { useDatatour } from '/stores/tour'
+  import { storeToRefs } from 'pinia';
+  import { useDatatour } from '/stores/tour'
 
 const store = useDatatour();
 const { datatour } = storeToRefs(store);
 
-function setid(id) {
-  store.settourid(id);
-  useRouter().push('/tourdata');
-}
+  function setid(id) {
+    store.settourid(id);
+    useRouter().push('/tourdata');
+  }
 
 </script>
