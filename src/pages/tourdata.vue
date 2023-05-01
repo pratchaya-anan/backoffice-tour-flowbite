@@ -145,7 +145,7 @@
                         </li>
                         <li>
                           <a
-                            href="/disbursement"
+                            href="/disbursement-management"
                             class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                             >จัดการใบเบิกค่าใช้จ่าย</a
                           >
@@ -192,7 +192,7 @@
                         </li>
                         <li>
                           <a
-                            href="#"
+                            href="/quotation-management"
                             class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                             >จัดการใบเสนอราคา</a
                           >
@@ -1707,7 +1707,7 @@
                                 type="submit"
                                 class="w-50 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                               >
-                                เพิ่ม
+                                บันทึก
                               </button>
                             </form>
                           </div>
