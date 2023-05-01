@@ -146,6 +146,7 @@
       </div>
     </div>
 
+
     <!-- Table Guide -->
     <div id="addguide" data-modal-backdrop="addguide" tabindex="-1" aria-hidden="true"
       class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
@@ -153,8 +154,11 @@
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
           <!-- Modal header -->
-          <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
+          <div
+            class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
+          >
             <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+              เพิ่มไกด์
               เพิ่มไกด์
             </h3>
             <button type="button"
@@ -311,8 +315,13 @@
 <script setup lang="ts">
 import { onMounted } from "vue";
 import { initFlowbite } from "flowbite/lib/esm/components";
-import { storeToRefs } from 'pinia';
-import { useDatatour } from '../stores/tour'
+import { storeToRefs } from "pinia";
+import { useDatatour } from "../stores/tour";
+import { dataGuide } from "../stores/all-guide";
+
+const store1 = dataGuide();
+const store2 = useDatatour();
+const { dataguide } = storeToRefs(store1);
 
 const store = useDatatour();
 const { guidedata } = storeToRefs(store);

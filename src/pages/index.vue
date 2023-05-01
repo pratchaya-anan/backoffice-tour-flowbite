@@ -1,6 +1,4 @@
-<template>
-  <h1>Hello, World!</h1>
-</template>
+<template></template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
@@ -8,7 +6,7 @@ import { defineComponent } from "vue";
 export default defineComponent({
   methods: {
     to_tour() {
-      this.$router.push("/tour_ls");
+      this.$router.push("/tour_ls1");
     },
   },
   mounted() {
