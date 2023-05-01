@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
+
 export const disbursement = defineStore("datadisbursement", () => {
   const tourid = ref("1");
-
   const datarequisition = ref([
     {
       tourid: "1",
@@ -51,10 +51,22 @@ export const disbursement = defineStore("datadisbursement", () => {
       money: 9000,
     },
   ]);
+  
+  
+  
+ const dataFiter = computed(() => datarequisition.value.find(item =>item.tourid == tourid.value ));
 
   function settourid(idtour: string) {
     tourid.value = idtour;
     console.log(tourid.value);
   }
-  return { tourid, datarequisition, settourid };
+
+  function additems(dataclear:any) {
+    // datarequisition.value.push(dataclear) ;
+    console.log(dataclear);
+    
+  }
+  
+
+  return { tourid, datarequisition,settourid,dataFiter,additems  };
 });

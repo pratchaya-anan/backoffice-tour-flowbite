@@ -37,7 +37,7 @@
                                 class="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
                                 <button type="button" data-modal-target="addestimate" data-modal-toggle="addestimate"
                                     class="flex items-center justify-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
-                                    <svg class="h-5 w-5 inline-flex items-center" fill="none" stroke="currentColor"
+                                    <svg class="h-5 w-5 inline-flex items-center mr-2" fill="none" stroke="currentColor"
                                         stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                                         aria-hidden="true">
                                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -76,7 +76,7 @@
                                             </th>
                                         </tr>
                                     </thead>
-                                    <tbody >
+                                    <tbody>
                                         <tr v-for="(datadis, indexd) in dataFiter.clear" :key="indexd"
                                             class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                             <th scope="row"
@@ -87,20 +87,20 @@
                                                 {{ datadis.namecle }}
                                             </td>
                                             <td class="px-6 py-4">
-                                                {{datadis.details }}
+                                                {{ datadis.details }}
                                             </td>
                                             <td class="px-6 py-4">
-                                                {{datadis.money1 }}
+                                                {{ datadis.money1 }}
                                             </td>
                                             <td class="px-6 py-4">
-                                                {{datadis.money}}
+                                                {{ datadis.money }}
                                             </td>
                                             <td class="px-6 py-4 text-right">
                                                 <a href="#"
                                                     class="font-medium text-red-600 dark:text-blue-500 hover:underline font-bold font-bold">ลบ</a>
                                             </td>
                                         </tr>
-                                        
+
                                     </tbody>
                                 </table>
                             </div>
@@ -202,62 +202,43 @@
 
                         </div>
 
-                        <div class="grid gap-4 mb-4 mt-3 sm:grid-cols-4">
-                            <!-- <div>
-                                        <label for="price"
-                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">อ้างอิงถึงเลขที่ใบขอเคลียร์</label>
-
-                                        <input type="text" id="disabled-input-2" aria-label="disabled input 2"
-                                            class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                            value="368572871" disabled readonly>
-
-                                    </div><div></div> -->
+                        <div class="grid gap-4 mb-4 mt-3 sm:grid-cols-4">                           
                             <div>
                                 <label for="name"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ชื่อผู้ขอเบิก</label>
-                                <input type="text" name="name" id="name"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ชื่อผู้ขอเบิก{{
+                                        insertclear.namecle }}</label>
+                                <input type="text" v-model="insertclear.namecle"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                             </div>
                             <div>
                                 <label for="brand"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">แผนก</label>
-                                <input type="text" name="brand" id="brand"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">แผนก{{
+                                        insertclear.namecle }}</label>
+                                <input type="text" v-model="insertclear.department"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                             </div>
                             <div class="">
                                 <label for="price"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">วันที่ต้องการใช้เงิน</label>
-                                <input type="text" name="price" id="price"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">รายละเอียดโครงการ/กิจกรรม</label>
+                                <input type="text" v-model="insertclear.details"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                             </div>
                             <div class="">
                                 <label for="name"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">วันที่ใบเสร็จ</label>
-
-                                <div class="relative  ">
-                                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400"
-                                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd"
-                                                d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                                clip-rule="evenodd"></path>
-                                        </svg>
-                                    </div>
-                                    <input datepicker datepicker-autohide type="text"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                        placeholder="เลือกวันที่">
-                                </div>
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ผู้อนุมัติ
+                                    (แบบอิเล็กทอรนิกส์)</label>
+                                <input type="text" v-model="insertclear.licensor"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                             </div>
 
                         </div>
                         <hr class="h-px my-5 bg-gray-200 border-0 dark:bg-gray-700">
 
                         <diV class="text-lg">รายการที่ขอเบิก</diV>
-                        <div class="grid gap-4 mb-4 mt-3 sm:grid-cols-3">
+                        <div class="grid gap-4 mb-4 mt-3 sm:grid-cols-4">
                             <div>
                                 <label for="name"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ราคา</label>
-
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">วันที่ใบเสร็จ</label>
                                 <div class="relative  ">
                                     <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                                         <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400"
@@ -267,7 +248,7 @@
                                                 clip-rule="evenodd"></path>
                                         </svg>
                                     </div>
-                                    <input datepicker datepicker-autohide type="text"
+                                    <input datepicker datepicker-autohide type="text" v-model="insertclear.date"
                                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                         placeholder="เลือกวันที่">
                                 </div>
@@ -275,33 +256,52 @@
                             </div>
                             <div>
                                 <label for="brand"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ประเภทค่าใช้จ่าย</label>
-                                <input type="text" name="brand" id="brand"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">รายละเอียดค่าใช้จ่าย</label>
+                                <input type="text" v-model="insertclear.expense_details"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                             </div>
                             <div>
                                 <label for="price"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">จำนวน</label>
-                                <input type="text" name="price" id="price"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ยอดสุทธิ</label>
+                                <input type="text" v-model="insertclear.net_balance"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                             </div>
+                            <div>
+                                <label for="price"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">รายการ</label>
+                                <select id="countries" v-model="insertclear.list"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                    <option selected>Choose a country</option>
+                                    <option value="US">United States</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="flex justify-between">
-                            <div class="w-full md:w-4/5">
+                        <div class="grid gap-4 mb-4 mt-3 sm:grid-cols-2">
+                            <div>
+                                <label for="price"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">เลขที่ใบเสร็จ</label>
+                                <input type="text" v-model="insertclear.receipt_number"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                            </div>
+                            <div>
                                 <label for="price"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">เลขประจำตัวผู้เสียภาษี</label>
-                                <input type="text" name="price" id="price"
+                                <input type="text" v-model="insertclear.tax_number"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                             </div>
-                            <div class="ml-3">
-                                <div class="inline-flex items-center mt-7 w-full">
-                                    <button type="submit"
+                        </div>
+                        <div class="flex justify-end">
+                            <div>
+                                <div class="inline-flex items-center">
+                                    <div type="" @click="adddata"
                                         class="px-8 text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                                         เพิ่มรายการ
-                                    </button>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
+
                         <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700">
 
                         <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-5">
@@ -310,19 +310,19 @@
                                     class="text-xs text-gray-700 uppercase bg-primary-100 dark:bg-gray-700 dark:text-gray-400">
                                     <tr>
                                         <th scope="col" class="px-6 py-3">
-                                            ลำดับ
+                                            {{ index }}
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            วันที่ใบเสร็จ
                                         </th>
                                         <th scope="col" class="px-6 py-3">
                                             รายละเอียดค่าใช้จ่าย
                                         </th>
                                         <th scope="col" class="px-6 py-3">
-                                            ราคา
+                                            เลขที่ใบเสร็จ
                                         </th>
                                         <th scope="col" class="px-6 py-3">
-                                            ประเถทค่าใช้จ่าย
-                                        </th>
-                                        <th scope="col" class="px-6 py-3">
-                                            จำนวน
+                                            เลขประจำตัวผู้เสียภาษี
                                         </th>
                                         <th scope="col" class="px-6 py-3">
                                             ยอดสุทธิ
@@ -330,28 +330,46 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class=" bg-gray-50 border-b dark:bg-gray-900 dark:border-gray-700 ">
-                                        <td :colspan="6" class="text-center px-6 py-3">
-                                            ไม่มีข้อมูล
-                                        </td>
+                                    <tr v-for="(datal, indexd) in data" :key="indexd">
+                                        <th scope="col" class="px-6 py-3">
+                                            ลำดับ
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            {{ datal.date }}
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            {{ datal.expense_details }}
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            {{ datal.receipt_number }}
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            {{ datal.tax_number }}
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            {{ datal.net_balance }}
+                                        </th>
                                     </tr>
-
-
-
                                 </tbody>
                             </table>
                         </div>
+                        <div class="flex justify-end mt-3">
+                            <p class="ml-3">ยอดเงินประมาณการ</p>
+                            <p class="bg-gray-100 px-2  text-green-500 ml-3">750</p>
+
+                            <p class="ml-3">ยอดสุทธิ</p>
+                            <p class="bg-gray-100 px-2  text-green-500 ml-3">750</p>
+
+                            <p class="ml-3">ยอดเงินเบิกเพิ่ม </p>
+                            <p class="bg-gray-100 px-2  text-green-500 ml-3">0</p>
+                            <p class="ml-3">ยอดเงินส่งคืน </p>
+                            <p class="bg-gray-100 px-2  text-green-500 ml-3">0</p>
+                        </div>
 
                         <div class="flex justify-end space-x-4 mt-5 ">
-                            <button type="button"
-                                class="px-8 py-2.5 text-gray-600 inline-flex items-center hover:text-white border border-gray-400 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
-                                <svg class="mr-1 -ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                                ยกเลิก
+                            <button type="reset"
+                                class="px-8 py-2.5 text-gray-600 inline-flex items-center border border-gray-400 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">                               
+                                ล้าง
                             </button>
                             <button type="submit"
                                 class="px-10 py-2.5 text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
@@ -362,26 +380,50 @@
                 </div>
             </div>
         </div>
-    </section>w2w22w
+    </section>
 </template>
-<script setup lang="ts">
+<script setup lg="ts">
 import { storeToRefs } from 'pinia';
 import { disbursement } from '~~/stores/disbursement'
+import { onMounted } from "vue";
+import { initFlowbite } from "flowbite/lib/esm/components";
 
-const store = disbursement()
+// initialize components based on data attribute selectors
+onMounted(() => {
+  initFlowbite();
+});
 
-const { datarequisition: data, tourid: gtourid } = storeToRefs(store);
+const store = disbursement();
+const { dataFiter } = storeToRefs(store);
 
-//// DIRECT
-const dataFiter = computed(() => data.value.find(item =>item.tourid == gtourid.value ));
 
-// console.log('id'+gtourid)
-// console.log('data'+ JSON.stringify(data))
-// console.log('datafiter'+ JSON.stringify(dataFiter))
+// function setid(id) {
+//     store.settourid(id);
+//     useRouter().push('/addestimate');
+// }
+// insertData
+const insertclear=( {
+    numid: '',
+    namecle: '',
+    department: '',
+    details: '',
+    licensor: '',
+    date: '',
+    expense_details: '',
+    net_balance: '',
+    list: '',
+    receipt_number: '',
+    tax_number: '',
+    
+})
+const data =ref([]);
 
-function setid(id: string) {
-    store.settourid(id);
-    useRouter().push('/addestimate');
+function adddata() {
+     data.value.push(insertclear);
+     console.log(insertclear);
+    console.log(data.value);
+    // store.additmesclear(insertclear.value);
 }
+
 </script>
   

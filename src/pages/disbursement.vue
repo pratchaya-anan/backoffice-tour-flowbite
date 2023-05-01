@@ -39,20 +39,16 @@
                                 class="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
                                 <button type="button" data-modal-target="addestimate" data-modal-toggle="addestimate"
                                     class="flex items-center justify-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
-                                    <svg class="h-5 w-5 mr-2 inline-flex items-center" fill="none" stroke="currentColor"
-                                        stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                                        aria-hidden="true">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m6.75 12l-3-3m0 0l-3 3m3-3v6m-1.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z">
-                                        </path>
+                                    <svg class="h-5 w-5 mr-1" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"></path>
                                     </svg>
-                                    ออกใบเคลียร์
+                                    สร้างใบเบิกเงิน
                                 </button>
 
                             </div>
                         </div>
                         <div class="mt-3 overflow-x-auto">
-
                             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                                 <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                                     <thead
@@ -60,7 +56,7 @@
                                         <tr>
                                             <th scope="col" class="px-6 py-3">
                                                 #
-                                            </th>                                           
+                                            </th>
                                             <th scope="col" class="px-6 py-3">
                                                 ชื่อผู้ขอเบิก
                                             </th>
@@ -79,12 +75,12 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr v-for="(datadis, indexd) in data" :key="indexd"
+                                        <tr v-for="(datadis, indexd) in datarequisition" :key="indexd"
                                             class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                             <th scope="row"
                                                 class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                 {{ indexd + 1 }}
-                                            </th>                                            
+                                            </th>
                                             <td class="px-6 py-4">
                                                 {{ datadis.name }}
                                             </td>
@@ -179,7 +175,7 @@
                     <div
                         class="flex justify-between items-center pb-4 mb-4 rounded-t border-b sm:mb-5 dark:border-gray-600">
                         <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                            แบบฟอร์มประมาณการเบิกเงินสดย่อย | เที่ยวเกาะ เลาะรัก
+                            แบบฟอร์มประมาณการเบิกเงินสดย่อย |...
                         </h3>
                         <button type="button"
                             class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
@@ -207,31 +203,22 @@
                         </div>
 
                         <div class="grid gap-4 mb-4 mt-3 sm:grid-cols-4">
-                            <!-- <div>
-                                        <label for="price"
-                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">อ้างอิงถึงเลขที่ใบขอเคลียร์</label>
-
-                                        <input type="text" id="disabled-input-2" aria-label="disabled input 2"
-                                            class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                            value="368572871" disabled readonly>
-
-                                    </div><div></div> -->
                             <div>
-                                <label for="name"
+                                <label for="name" 
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ชื่อผู้ขอเบิก</label>
-                                <input type="text" name="name" id="name"
+                                <input type="text" v-model="insertclear.name"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                             </div>
                             <div>
-                                <label for="brand"
+                                <label for="brand" 
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">แผนก</label>
-                                <input type="text" name="brand" id="brand"
+                                <input type="text" v-model="insertclear.department"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                             </div>
                             <div class="">
                                 <label for="price"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">วันที่ต้องการใช้เงิน</label>
-                                <input type="text" name="price" id="price"
+                                <input type="text" v-model="insertclear.date_money"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                             </div>
                             <div class="">
@@ -247,7 +234,7 @@
                                                 clip-rule="evenodd"></path>
                                         </svg>
                                     </div>
-                                    <input datepicker datepicker-autohide type="text"
+                                    <input datepicker datepicker-autohide type="text"  v-model="insertclear.receipt_date"
                                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                         placeholder="เลือกวันที่">
                                 </div>
@@ -261,32 +248,21 @@
                             <div>
                                 <label for="name"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ราคา</label>
+                                <input type="text" v-model="insertclear.price"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
 
-                                <div class="relative  ">
-                                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400"
-                                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd"
-                                                d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                                clip-rule="evenodd"></path>
-                                        </svg>
-                                    </div>
-                                    <input datepicker datepicker-autohide type="text"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                        placeholder="เลือกวันที่">
-                                </div>
 
                             </div>
                             <div>
                                 <label for="brand"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ประเภทค่าใช้จ่าย</label>
-                                <input type="text" name="brand" id="brand"
+                                <input type="text" v-model="insertclear.expense_type "
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                             </div>
                             <div>
                                 <label for="price"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">จำนวน</label>
-                                <input type="text" name="price" id="price"
+                                <input type="text" v-model="insertclear.quantity"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                             </div>
                         </div>
@@ -294,7 +270,7 @@
                             <div class="w-full md:w-4/5">
                                 <label for="price"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">เลขประจำตัวผู้เสียภาษี</label>
-                                <input type="text" name="price" id="price"
+                                <input type="text" v-model="insertclear.taxpayer"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                             </div>
                             <div class="ml-3">
@@ -339,23 +315,15 @@
                                             ไม่มีข้อมูล
                                         </td>
                                     </tr>
-
-
-
                                 </tbody>
                             </table>
                         </div>
 
                         <div class="flex justify-end space-x-4 mt-5 ">
-                            <button type="button"
-                                class="px-8 py-2.5 text-gray-600 inline-flex items-center hover:text-white border border-gray-400 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
-                                <svg class="mr-1 -ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                                ยกเลิก
+                            <button type="reset" 
+                                class="px-8 py-2.5 text-gray-600 inline-flex items-center border border-gray-400 hover:bg-gray-200  focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                                
+                                ล้าง
                             </button>
                             <button type="submit"
                                 class="px-10 py-2.5 text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
@@ -369,18 +337,44 @@
 
     </section>
 </template>
-<script setup lang="ts">
+<script setup lg="ts">
 import { storeToRefs } from 'pinia';
 import { disbursement } from '~~/stores/disbursement'
+import { onMounted } from "vue";
+import { initFlowbite } from "flowbite/lib/esm/components";
 
-const store = disbursement()
-const { datarequisition: data} = storeToRefs(store);
+// initialize components based on data attribute selectors
+onMounted(() => {
+  initFlowbite();
+});
 
-function setid(id: string) {
-    // console.log("Idtour= "+id)
-    store.settourid(id);
-    useRouter().push('/addestimate');
+const store = disbursement();
+const { dataFiter } = storeToRefs(store);
+
+
+// function setid(id) {
+//     store.settourid(id);
+//     useRouter().push('/addestimate');
+// }
+// insertData
+const insertclear=( {
+    name: '',
+    department: '',
+    date_money: '',
+    price:'',
+    receipt_date: '',
+    expense_type: '',
+    quantity: '',
+    taxpayer : '',
+    
+})
+const data =ref([]);
+
+function adddata() {
+     data.value.push(insertclear);
+     console.log(insertclear);
+    console.log(data.value);
+    // store.additmesclear(insertclear.value);
 }
-//console.log("use "+datatour)
 </script>
   
