@@ -10,7 +10,7 @@
                     </div>
                     <!-- Start coding here -->
                     <div class="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden px-5 ">
-                        <div class="flex flex-col md:flex-row items-center justify-between md:space-y-0 md:space-x-4 p-">
+                        <div class="flex flex-col md:flex-row  justify-between md:space-y-0 md:space-x-4 p-">
                             <div class="w-full md:w-1/2">
                                 <form class="flex items-center">
                                     <label for="simple-search" class="sr-only">Search</label>
