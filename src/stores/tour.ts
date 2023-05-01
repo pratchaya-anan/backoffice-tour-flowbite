@@ -118,6 +118,7 @@ export const useDatatour = defineStore('tour', () => {
   function additem(item: any) {
     datatour.value.push(item); 
     console.log(datatour.value);
+    console.log(tourid.value);
   }
 
   

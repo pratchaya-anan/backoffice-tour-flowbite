@@ -4,6 +4,7 @@
       <!-- ข้อมูลทัวร์ -->
       <div class="block w-full p-6 bg-white border border-gray-200 rounded-lg shadow">
         <ol class="flex justify-center items-center w-full space-y-4 sm:flex sm:space-x-8 sm:space-y-0">
+          <!-- Step 1 -->
           <li class="flex items-center text-blue-600 dark:text-blue-500 space-x-2.5">
             <span
               class="flex items-center justify-center w-8 h-8 text-white bg-blue-600 rounded-full shrink-0 dark:border-blue-500">
@@ -17,6 +18,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path>
             </svg>
           </li>
+          <!-- Step 2 -->
           <li class="flex items-center text-gray-500 dark:text-gray-400 space-x-2.5">
             <span
               class="flex items-center justify-center w-8 h-8 border border-gray-500 rounded-full shrink-0 dark:border-gray-400">
@@ -30,6 +32,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path>
             </svg>
           </li>
+          <!-- Step 3 -->
           <li class="flex items-center text-gray-500 dark:text-gray-400 space-x-2.5">
             <span
               class="flex items-center justify-center w-8 h-8 border border-gray-500 rounded-full shrink-0 dark:border-gray-400">
@@ -43,6 +46,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path>
             </svg>
           </li>
+          <!-- Step 4 -->
           <li class="flex items-center text-gray-500 dark:text-gray-400 space-x-2.5">
             <span
               class="flex items-center justify-center w-8 h-8 border border-gray-500 rounded-full shrink-0 dark:border-gray-400">
@@ -145,15 +149,15 @@
           
           <div class="grid gap-4 mb-4 sm:grid-cols-2"></div>
 
-          <div @click="check" class="flex justify-end">
-            <!-- <NuxtLink to="/addguide"
-              class="mt-3 px-10 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex"> -->
+          <div @click="sendtour" class="flex justify-end">
+            <NuxtLink to="/addguide"
+              class="mt-3 px-10 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex">
               ถัดไป
               <svg class="h-5 w-auto" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
               </svg>
-            <!-- </NuxtLink> -->
+            </NuxtLink>
           </div>
         </form>
       </div>
@@ -161,13 +165,14 @@
   </section>
 </template>
 
-<script setup lg="ts">
+<script setup lang="ts">
   import { storeToRefs } from 'pinia';
-  import { useDatatour } from '/stores/tour'
+  import { useDatatour } from '../stores/tour'
 
   const store = useDatatour();
 
   const tourdata = {
+    tourid: new Date().getTime()  ,
     tourname: '',
     programname: '',
     datestart: '',
@@ -180,16 +185,12 @@
     state: 1,
     priceunit: 0,
     tax: 0
-    
   }
 
   function sendtour(){
-    store.additem(tourdata);
-  }
-
-  function check(){
-    sendtour();
-    console.log(tourdata);
+    // console.log(tourdata.tourid);
+    store.settourid(tourdata.tourid.toString());
+    store.addtour(tourdata);
   }
 
 </script>
