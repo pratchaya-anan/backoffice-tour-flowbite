@@ -14,6 +14,7 @@ export const useDatatour = defineStore('tour', () => {
       priceunit: 5000,
       vat: 0,
       summember: 5,
+      maxmember: 10,
       state: 1,
       member: [
         { idmember: "m1", bedtype: "คู่" },
@@ -27,7 +28,6 @@ export const useDatatour = defineStore('tour', () => {
       guide: [
         { guide_id: "g1" },
         { guide_id: "g2" },
-        
       ],
       vehicle: [
         { vehicle_id: "v1" },
@@ -44,7 +44,8 @@ export const useDatatour = defineStore('tour', () => {
       night: 4,
       go: "นครชัยแอร์",
       back: "AirAsia",
-      summember: 5,
+      summember: 4,
+      maxmember: 10,
       state: 2,
       member: [],
     },
@@ -58,7 +59,8 @@ export const useDatatour = defineStore('tour', () => {
       night: 4,
       go: "นครชัยแอร์",
       back: "AirAsia",
-      summember: 5,
+      summember: 3,
+      maxmember: 10,
       state: 3,
       member: [],
     },
@@ -72,6 +74,7 @@ export const useDatatour = defineStore('tour', () => {
       passport: "A251368",
       nationa: "ไทย",
       gender: "ชาย",
+      comment: "",
     },
     {
       idmember: "m2",
@@ -81,6 +84,7 @@ export const useDatatour = defineStore('tour', () => {
       passport: "A251368",
       nationa: "ไทย",
       gender: "ชาย",
+      comment: "",
     },
     {
       idmember: "m1",
@@ -90,50 +94,57 @@ export const useDatatour = defineStore('tour', () => {
       passport: "A251368",
       nationa: "ไทย",
       gender: "ชาย",
+      comment: "",
     },
   ]);
-  const hoteldata = ref([
+  const hoteldata = ref([ 
     { 
       hotel_id: "h1",
       name: "ริเวอร์แคว กาญจนบุรี",
+      comment: "",
     },
     { 
       hotel_id: "h2",
       name: "เอเชีย ชะอำ",
+      comment: "",
     }
   ]);
   const guidedata = ref([
     {
-      guide_id: "g1",
-      name: "นายขวัญชัย บูรณฤกษ์",
-      phone: "0833076329"
-    },
-    {
-      guide_id: "g2",
-      name: "นายพิษณุ บุญลี",
-      phone: "0632452369"
-    },
-  ]);
-  const guide_data = ref([
-    {
       guideid: "g1",
-      guidename: "ปลาดาว",
-      phone: "0840000000",
+      guidename: "นายขวัญชัย บูรณฤกษ์",
+      phone: "0833076329",
+      comment: "",
     },
     {
       guideid: "g2",
+      guidename: "นายพิษณุ บุญลี",
+      phone: "0632452369",
+      comment: "",
+    },
+    {
+      guideid: "g3",
+      guidename: "ปลาดาว",
+      phone: "0840000000",
+      comment: "",
+    },
+    {
+      guideid: "g4",
       guidename: "อลิสโซ",
       phone: "0848230000",
+      comment: "",
     },
   ]);
   const vehicledata = ref([
     {
       vehicle_id: "v1",
       name: "รถทัวร์นิลผกา 1",
+      comment: "",
     },
     {
       vehicle_id: "v2",
       name: "พิกุล 2",
+      comment: "",
     }
   ])
 
@@ -152,9 +163,20 @@ export const useDatatour = defineStore('tour', () => {
   }
 
   //Add guide to tour
-  function addguid(item: any) {
-      
+  function addguide(item: any) {
+    item.value.forEach((element: any) => {
+      // console.log(element)
+      tourfiltered.value.guide.push({guide_id: element});      
+    });
+    console.log("Tourfil2",tourfiltered.value)
+    console.log("Tour",tourdata.value)
   }
 
-  return { tourid, tourdata, guidedata, tourfiltered, settourid, addtour }
+  function newguide(item: any) {
+    // console.log(item);
+    guidedata.value.push(item);
+    // console.log(guidedata.value);
+  }
+
+  return { tourid, tourdata, guidedata, tourfiltered, settourid, addtour, addguide, newguide }
 })

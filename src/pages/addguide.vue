@@ -108,7 +108,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="(data, index) in dataguide" key="index"
+                <tr v-for="(data, index) in datafil" key="index"
                   class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
                   <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     {{ data.guidename }}
@@ -133,7 +133,7 @@
               </svg>
               ย้อนกลับ
             </NuxtLink>
-            <NuxtLink to="/addhotel"
+            <NuxtLink to="/addhotel" @click="setguideselect"
               class="ml- mt-6 px-10 py-2.5 inline-flex text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
               ถัดไป
               <svg class="h-5 w-auto" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
@@ -223,11 +223,11 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr v-for="(data, index) in dataguide" key="index"
+                  <tr v-for="(data, index) in guidedata" key="index"
                     class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                     <td class="w-4 p-4">
                       <div class="flex items-center">
-                        <input id="checkbox-table-search-1" type="checkbox" :value="data.guideid" v-model="guideselect"
+                        <input id={{index}} type="checkbox" :value="data.guideid" v-model="guideselect"
                           class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                         <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
                       </div>
@@ -245,6 +245,7 @@
                   </tr>
                 </tbody>
               </table>
+              <div @click="addnew" >???</div>
             </div>
           </div>
 
@@ -287,13 +288,13 @@
             <form class="space-y-6" action="#">
               <div>
                 <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ชื่อไกด์</label>
-                <input type="text" name="name" id="name"
+                <input type="text" name="name" id="name" v-model="newguidedata.guidename"
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                   required>
               </div>
               <div>
                 <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">เบอร์โทร</label>
-                <input type="text" name="phone" id="phone"
+                <input type="text" name="phone" id="phone" v-model="newguidedata.phone"
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                   required>
               </div>
@@ -301,7 +302,7 @@
           </div>
           <!-- Modal footer -->
           <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
-            <button data-modal-hide="newguide" type="button"
+            <button data-modal-hide="newguide" type="button" @click="createguide"
               class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">เพิ่ม</button>
             <button data-modal-hide="newguide" type="button"
               class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">ยกเลิก</button>
@@ -317,24 +318,38 @@ import { onMounted } from "vue";
 import { initFlowbite } from "flowbite/lib/esm/components";
 import { storeToRefs } from "pinia";
 import { useDatatour } from "../stores/tour";
-import { dataGuide } from "../stores/all-guide";
+// import { dataGuide } from "../stores/all-guide";
 
-const store1 = dataGuide();
-const store2 = useDatatour();
-const { dataguide } = storeToRefs(store1);
+// const store1 = dataGuide();
+// const store2 = useDatatour();
+// const { dataguide } = storeToRefs(store1);
 
 const store = useDatatour();
 const { guidedata } = storeToRefs(store);
-const guideselect: any[] = [];
+const guideselect: any = ref([]);
+const datafil = computed(() => guidedata.value.filter(item => (Object.values(guideselect.value)).includes(item.guideid)));
+const newguidedata = ref({
+  guideid: new Date().getTime(),
+  guidename: "",
+  phone: "",
+  comment: "",
+})
 
-computed: {
-  guideselect: {
-    console.log("",guideselect);
-  }
+function addnew(){
+  console.log(guideselect.value);
+  console.log("fil",typeof(datafil.value));
+}
+
+function setguideselect() {
+  store.addguide(guideselect)
+}
+
+function createguide() {
+  store.newguide(newguidedata.value)
 }
 
 // initialize components based on data attribute selectors
 onMounted(() => {
   initFlowbite();
-});                                         
+});
 </script>

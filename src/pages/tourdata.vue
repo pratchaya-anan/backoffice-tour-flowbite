@@ -1907,7 +1907,7 @@ const store = useDatatour();
 
 const { tourfiltered } = storeToRefs(store);
 
-console.log(tourfiltered.value.vehicle);
+console.log(tourfiltered.value);
 const vehigo = computed(() =>
   tourfiltered.value.vehicle.filter(
     (item) => item.type == "ไป" || item.type == "ไปกลับ"

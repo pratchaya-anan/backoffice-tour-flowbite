@@ -185,6 +185,10 @@
     vat: 0,
     summember: 0,
     state: 1,
+    member: [],
+    guide: [],
+    hotel: [],
+    vehicle: [],
   }
 
   function sendtour(){
