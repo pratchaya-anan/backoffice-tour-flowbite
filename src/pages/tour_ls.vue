@@ -66,7 +66,7 @@
                 เที่ยวบินหรือพาหนะอื่นขากลับ
               </th>
               <th scope="col" class="px-6 py-3">จำนวนลูกทัวร์</th>
-              <th scope="col" class="px-6 py-3"><center>สถานะ</center></th>
+              <th scope="col" class="px-6 py-3">สถานะ</th>
             </tr>
           </thead>
           <tbody>

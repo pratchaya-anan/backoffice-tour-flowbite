@@ -1094,13 +1094,13 @@
   }
 
   function sendtour(){
-    store.additem(tourmember);
+    store.additem(datatour.value)
   }
 
-  function check(){
-    sendtour();
-    console.log(tourmember);
-  }
+  // function check(){
+  //   sendtour();
+  //   console.log(tourmember);
+  // }
 
   const { tourfiltered } = storeToRefs(store);
 
