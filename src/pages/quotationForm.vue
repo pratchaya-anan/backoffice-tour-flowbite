@@ -427,17 +427,19 @@
             </thead>
             <tbody>
               <tr v-for="(data, index) in quotation.product" key="index"
-              class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+                class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                  {{index+1}}
+                  {{ index + 1 }}
                 </th>
                 <td class="px-6 py-4">{{ data.product_code }}</td>
                 <td class="px-6 py-4">{{ data.product_list }}</td>
                 <td class="px-6 py-4">{{ data.quantity }}</td>
                 <td class="px-6 py-4">{{ data.unit_price }}</td>
                 <td class="px-6 py-4">{{ data.product_discount }}</td>
-                <td class="px-6 py-4">{{ (data.unit_price*data.quantity)/100*data.tax }}</td>
-                <td class="px-6 py-4">{{ (data.unit_price*data.quantity)+((data.unit_price*data.quantity)/100*data.tax)-data.product_discount }}</td>
+                <td class="px-6 py-4">{{ (data.unit_price * data.quantity) / 100 * data.tax }}</td>
+                <td class="px-6 py-4">{{
+                  (data.unit_price * data.quantity) + ((data.unit_price * data.quantity) / 100 * data.tax) - data.product_discount }}
+                </td>
                 <td class="px-6 py-4">
                   <svg href="#" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
@@ -455,7 +457,7 @@
           class="mt-6 p-6 pb-0 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <div class="grid grid-cols-2 gap-4 lg:grid-cols-7 lg:gap-6">
             <div class="col-span-1">
-              <label for="text" 
+              <label for="text"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">กำหนดยืนราคา(วัน)</label>
               <input type="number" id="text" v-model="quotation.set_pricedate"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
@@ -530,6 +532,7 @@ const quotation = ref({
   set_pricedate: "",
   deposit: "",
 })
+
 const product = {
   product_code: "",
   product_list: "",
@@ -540,10 +543,10 @@ const product = {
 }
 
 function addProduct() {
-  quotation.value.product.push({ 
-    product_code: product.product_code, 
-    product_list: product.product_list, 
-    quantity: product.quantity, 
+  quotation.value.product.push({
+    product_code: product.product_code,
+    product_list: product.product_list,
+    quantity: product.quantity,
     unit_price: product.unit_price,
     product_discount: product.product_discount,
     tax: product.tax,
