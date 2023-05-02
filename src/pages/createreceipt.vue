@@ -40,7 +40,7 @@
                       <h3
                         class="text-xl font-medium text-gray-900 dark:text-white"
                       >
-                        Extra Large modal
+                        เลือกใบกำกับภาษี
                       </h3>
                       <button
                         type="button"
