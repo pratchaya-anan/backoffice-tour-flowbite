@@ -8,7 +8,7 @@ export const useDatatour = defineStore('tour', () => {
       tourname: "เกาะเสม็ด เสร็จบางราย",
       programname: "เกาะเสม็ด เสร็จบางราย",
       day: 5,
-      night:  4,
+      night: 4,
       datestart: "16/04/2566",
       dateend: "20/04/2566",
       priceunit: 5000,
@@ -69,12 +69,21 @@ export const useDatatour = defineStore('tour', () => {
     {
       idmember: "m1",
       name: "มะยม ขมจัง",
-      nameeng: "Mayom Khomjung",
+      namel: "",
+      nameengf: "Mayom Khomjung",
+      nameengl: "",
       idencard: "1245865475854",
       passport: "A251368",
       nationa: "ไทย",
+      phone: "",
+      dob: "",
       gender: "ชาย",
+      stampnumber: "",
+      dateofissue: "",
+      dateofexpiry: "",
+      address: "",
       comment: "",
+      bedtype: "",
     },
     {
       idmember: "m2",
@@ -97,13 +106,13 @@ export const useDatatour = defineStore('tour', () => {
       comment: "",
     },
   ]);
-  const hoteldata = ref([ 
-    { 
+  const hoteldata = ref([
+    {
       hotel_id: "h1",
       name: "ริเวอร์แคว กาญจนบุรี",
       comment: "",
     },
-    { 
+    {
       hotel_id: "h2",
       name: "เอเชีย ชะอำ",
       comment: "",
@@ -152,24 +161,30 @@ export const useDatatour = defineStore('tour', () => {
 
   function settourid(idtour: string) {
     tourid.value = idtour;
-    console.log("IdTour",tourid.value);
+    console.log("IdTour", tourid.value);
+  }
+
+  function newmember(item: any) {
+    console.log("1",item);
+    memberdata.value.push(item);
+    console.log("2",memberdata.value);
   }
 
   //New tour
   function addtour(item: any) {
     tourdata.value.push(item);
     settourid(item.tourid.toString());
-    console.log("DataTour",tourdata.value)
+    console.log("DataTour", tourdata.value)
   }
 
   //Add guide to tour
   function addguide(item: any) {
     item.value.forEach((element: any) => {
       // console.log(element)
-      tourfiltered.value.guide.push({guide_id: element});      
+      tourfiltered.value.guide.push({ guide_id: element });
     });
-    console.log("Tourfil2",tourfiltered.value)
-    console.log("Tour",tourdata.value)
+    console.log("Tourfil2", tourfiltered.value)
+    console.log("Tour", tourdata.value)
   }
 
   function newguide(item: any) {
@@ -178,5 +193,5 @@ export const useDatatour = defineStore('tour', () => {
     // console.log(guidedata.value);
   }
 
-  return { tourid, tourdata, guidedata, tourfiltered, settourid, addtour, addguide, newguide }
+  return { tourid, tourdata, guidedata, tourfiltered, memberdata, settourid, addtour, addguide, newguide, newmember }
 })
