@@ -184,13 +184,13 @@
               <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                   <tr>
-                    <th scope="col" class="p-4">
+                    <!-- <th scope="col" class="p-4">
                       <div class="flex items-center">
                         <input id="checkbox-all-search" type="checkbox"
                           class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                         <label for="checkbox-all-search" class="sr-only">checkbox</label>
                       </div>
-                    </th>
+                    </th> -->
                     <th scope="col" class="px-6 py-3">
                       ชื่อโรงแรม
                     </th>
@@ -203,61 +203,23 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr id="updateProductButton" data-modal-toggle="updateProductModal"
+                  <tr v-for="(data, indexh) in hoteldata" key="indexh" id="updateProductButton" data-modal-toggle="updateProductModal"
                     class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                    <td class="w-4 p-4">
+                    <!-- <td class="w-4 p-4">
                       <div class="flex items-center">
                         <input id="checkbox-table-search-1" type="checkbox"
                           class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                         <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
                       </div>
-                    </td>
+                    </td> -->
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      โรงแรมวิภาวรรณ
+                      {{ data.name }}
                     </th>
                     <td class="px-6 py-4">
                       16/05/66
                     </td>
                     <td class="px-6 py-4">
                       18/05/66
-                    </td>
-                  </tr>
-                  <tr
-                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                    <td class="w-4 p-4">
-                      <div class="flex items-center">
-                        <input id="checkbox-table-search-2" type="checkbox"
-                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                        <label for="checkbox-table-search-2" class="sr-only">checkbox</label>
-                      </div>
-                    </td>
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      MT Hotel
-                    </th>
-                    <td class="px-6 py-4">
-                      19/05/66
-                    </td>
-                    <td class="px-6 py-4">
-                      21/05/66
-                    </td>
-                  </tr>
-                  <tr
-                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                    <td class="w-4 p-4">
-                      <div class="flex items-center">
-                        <input id="checkbox-table-search-3" type="checkbox"
-                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                        <label for="checkbox-table-search-3" class="sr-only">checkbox</label>
-                      </div>
-                    </td>
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      BBMTโรงแรม
-                    </th>
-                    <td class="px-6 py-4">
-                      19/05/66
-                    </td>
-                    <td class="px-6 py-4">
-                      21/05/66
                     </td>
                   </tr>
                 </tbody>
@@ -513,6 +475,19 @@
 <script setup lang="ts">
 import { onMounted } from "vue";
 import { initFlowbite } from "flowbite/lib/esm/components";
+import { storeToRefs } from "pinia";
+import { useDatatour } from "../stores/tour";
+
+const store = useDatatour();
+const { hoteldata } = storeToRefs(store);
+const hotelselect: any = ref([]);
+const newhoteldata = ref({
+  hotelid: new Date().getTime(),
+  hotelname: "",
+  checkin: "",
+  checkout: "",
+  sumroom: 0,
+})
 
 // initialize components based on data attribute selectors
 onMounted(() => {
