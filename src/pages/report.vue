@@ -1,14 +1,15 @@
 <template>
-  <div class="mx-auto max-w-screen-xl">
-    <section class="">
-      <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-5">
-        <div>
-          <h1
-            class="my-2 mx-6 text-4xl font-bold text-gray-900 dark:text-white"
-          >
-            รายงาน
-          </h1>
-        </div>
+  <section class="h-min-175 bg-gray-100 dark:bg-gray-900 p-3 sm:p-5">
+    <div class="mx-auto max-w-screen-xl">
+      <div
+        class="relative overflow-x-auto shadow-md sm:rounded-lg mt-5 bg-white"
+      >
+        <h1
+          class="my-2 mx-6 text-4xl font-bold text-gray-900 bg-white dark:text-white"
+        >
+          รายงาน
+        </h1>
+        <hr />
         <table class="w-full text-sm text-left dark:text-gray-400">
           <caption
             class="p-4 text-base text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800"
@@ -120,7 +121,7 @@
               </div>
               <div class="flex justify-around p-2">
                 <div class="flex">
-                  <div class="border-r-1 pr-2">
+                  <div class="border-r-1">
                     รายรับ
                     <sheet class="px-2 py-1 text-green-700">897,548</sheet>
                   </div>
@@ -162,6 +163,7 @@
                 <sheet class="px-2 py-1 text-green-700">897,548</sheet>
               </td>
               <td class="px-6 py-4">-</td>
+              <td>-</td>
             </tr>
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
               <td
@@ -175,10 +177,11 @@
               <td class="px-6 py-4">
                 <sheet class="px-2 py-1 text-red-700">245,784</sheet>
               </td>
+              <td>-</td>
             </tr>
           </tbody>
         </table>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </template>
