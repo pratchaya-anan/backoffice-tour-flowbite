@@ -167,7 +167,7 @@
                     placeholder="ค้นหาไกด์">
                 </div>
               </div>
-              <button type="button" data-modal-target="newaddhothel" data-modal-toggle="newaddhothel"
+              <button type="button" data-modal-target="newaddhothel" data-modal-toggle="newaddhothel" data-modal-hide="addhotel"
                 class="flex items-center justify-center px-4 py-2 text-sm font-medium text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
                 <svg class="h-3.5 w-3.5 mr-2" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
                   aria-hidden="true">
@@ -203,7 +203,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr v-for="(data, indexh) in hoteldata" key="indexh" id="updateProductButton" data-modal-toggle="updateProductModal"
+                  <tr v-for="(data, indexh) in hoteldata" key="indexh" data-modal-hide="addhotel" data-modal-toggle="updateProductModal"
                     class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                     <!-- <td class="w-4 p-4">
                       <div class="flex items-center">
@@ -252,7 +252,7 @@
             </h3>
             <button type="button"
               class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
-              data-modal-toggle="newaddhothel">
+              data-modal-hide="newaddhothel" data-modal-toggle="addhotel"> 
               <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
@@ -270,7 +270,7 @@
               required>
           </div>
           <div v class="flex justify-end items-center space-x-4">
-            <button type="submit" data-modal-toggle="newaddhothel"
+            <button type="submit" data-modal-hide="newaddhothel" data-modal-toggle="addhotel"
               class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
               บันทึก
             </button>
@@ -293,7 +293,7 @@
             </h3>
             <button type="button"
               class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
-              data-modal-toggle="updateProductModal">
+              data-modal-toggle="addhotel" data-modal-hide="updateProductModal">
               <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
@@ -480,14 +480,25 @@ import { useDatatour } from "../stores/tour";
 
 const store = useDatatour();
 const { hoteldata } = storeToRefs(store);
+const datafil = computed(() => hoteldata.value.find(item => item.tourid == tourid.value));
 const hotelselect: any = ref([]);
-const newhoteldata = ref({
-  hotelid: new Date().getTime(),
+const addhoteldata = ref({
   hotelname: "",
   checkin: "",
   checkout: "",
   sumroom: 0,
 })
+const newhoteldata = ref({
+  hotelname: "",
+  checkin: "",
+  checkout: "",
+  sumroom: 0,
+  comment: "",
+})
+
+function addhotel(){
+  
+}
 
 // initialize components based on data attribute selectors
 onMounted(() => {
