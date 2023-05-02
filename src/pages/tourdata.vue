@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-gray-100 dark:bg-gray-900 p-3 sm:p-5 min-h-175">
+  <section class="dark:bg-gray-900 p-3 sm:p-5">
     <div class="mx-auto max-w-screen-xl">
       <div>
         <div class="grid grid-cols-2">
@@ -660,7 +660,7 @@
 
       <!-- ตารางลูกทัวร์ -->
       <div
-        class="mt-5 relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg"
+        class="mt-6 block max-w-full p-2 pb-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       >
         <div
           class="flex-row items-center justify-between p-4 space-y-3 sm:flex sm:space-y-0 sm:space-x-4"
@@ -739,7 +739,7 @@
               aria-hidden="true"
               class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
             >
-              <div class="relative w-full max-w-2xl max-h-full">
+              <div class="relative w-full max-w-6xl max-h-full">
                 <!-- Modal content -->
                 <div
                   class="relative bg-white rounded-lg shadow dark:bg-gray-700"

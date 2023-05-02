@@ -178,5 +178,5 @@ export const useDatatour = defineStore('tour', () => {
     // console.log(guidedata.value);
   }
 
-  return { tourid, tourdata, guidedata, tourfiltered, settourid, addtour, addguide, newguide }
+  return { tourid, tourdata, guidedata, hoteldata, tourfiltered, settourid, addtour, addguide, newguide }
 })

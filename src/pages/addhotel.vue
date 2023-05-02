@@ -167,7 +167,7 @@
                     placeholder="ค้นหาไกด์">
                 </div>
               </div>
-              <button type="button" data-modal-target="newaddhothel" data-modal-toggle="newaddhothel"
+              <button type="button" data-modal-target="newaddhothel" data-modal-toggle="newaddhothel" data-modal-hide="addhotel"
                 class="flex items-center justify-center px-4 py-2 text-sm font-medium text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
                 <svg class="h-3.5 w-3.5 mr-2" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
                   aria-hidden="true">
@@ -184,13 +184,13 @@
               <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                   <tr>
-                    <th scope="col" class="p-4">
+                    <!-- <th scope="col" class="p-4">
                       <div class="flex items-center">
                         <input id="checkbox-all-search" type="checkbox"
                           class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                         <label for="checkbox-all-search" class="sr-only">checkbox</label>
                       </div>
-                    </th>
+                    </th> -->
                     <th scope="col" class="px-6 py-3">
                       ชื่อโรงแรม
                     </th>
@@ -203,61 +203,23 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr id="updateProductButton" data-modal-toggle="updateProductModal"
+                  <tr v-for="(data, indexh) in hoteldata" key="indexh" data-modal-hide="addhotel" data-modal-toggle="updateProductModal"
                     class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                    <td class="w-4 p-4">
+                    <!-- <td class="w-4 p-4">
                       <div class="flex items-center">
                         <input id="checkbox-table-search-1" type="checkbox"
                           class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                         <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
                       </div>
-                    </td>
+                    </td> -->
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      โรงแรมวิภาวรรณ
+                      {{ data.name }}
                     </th>
                     <td class="px-6 py-4">
                       16/05/66
                     </td>
                     <td class="px-6 py-4">
                       18/05/66
-                    </td>
-                  </tr>
-                  <tr
-                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                    <td class="w-4 p-4">
-                      <div class="flex items-center">
-                        <input id="checkbox-table-search-2" type="checkbox"
-                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                        <label for="checkbox-table-search-2" class="sr-only">checkbox</label>
-                      </div>
-                    </td>
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      MT Hotel
-                    </th>
-                    <td class="px-6 py-4">
-                      19/05/66
-                    </td>
-                    <td class="px-6 py-4">
-                      21/05/66
-                    </td>
-                  </tr>
-                  <tr
-                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                    <td class="w-4 p-4">
-                      <div class="flex items-center">
-                        <input id="checkbox-table-search-3" type="checkbox"
-                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                        <label for="checkbox-table-search-3" class="sr-only">checkbox</label>
-                      </div>
-                    </td>
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      BBMTโรงแรม
-                    </th>
-                    <td class="px-6 py-4">
-                      19/05/66
-                    </td>
-                    <td class="px-6 py-4">
-                      21/05/66
                     </td>
                   </tr>
                 </tbody>
@@ -290,7 +252,7 @@
             </h3>
             <button type="button"
               class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
-              data-modal-toggle="newaddhothel">
+              data-modal-hide="newaddhothel" data-modal-toggle="addhotel"> 
               <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
@@ -308,7 +270,7 @@
               required>
           </div>
           <div v class="flex justify-end items-center space-x-4">
-            <button type="submit" data-modal-toggle="newaddhothel"
+            <button type="submit" data-modal-hide="newaddhothel" data-modal-toggle="addhotel"
               class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
               บันทึก
             </button>
@@ -331,7 +293,7 @@
             </h3>
             <button type="button"
               class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
-              data-modal-toggle="updateProductModal">
+              data-modal-toggle="addhotel" data-modal-hide="updateProductModal">
               <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
@@ -513,6 +475,30 @@
 <script setup lang="ts">
 import { onMounted } from "vue";
 import { initFlowbite } from "flowbite/lib/esm/components";
+import { storeToRefs } from "pinia";
+import { useDatatour } from "../stores/tour";
+
+const store = useDatatour();
+const { hoteldata } = storeToRefs(store);
+const datafil = computed(() => hoteldata.value.find(item => item.tourid == tourid.value));
+const hotelselect: any = ref([]);
+const addhoteldata = ref({
+  hotelname: "",
+  checkin: "",
+  checkout: "",
+  sumroom: 0,
+})
+const newhoteldata = ref({
+  hotelname: "",
+  checkin: "",
+  checkout: "",
+  sumroom: 0,
+  comment: "",
+})
+
+function addhotel(){
+  
+}
 
 // initialize components based on data attribute selectors
 onMounted(() => {
