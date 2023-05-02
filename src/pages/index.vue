@@ -6,7 +6,7 @@ import { defineComponent } from "vue";
 export default defineComponent({
   methods: {
     to_tour() {
-      this.$router.push("/tour_ls1");
+      this.$router.push("/tour_ls");
     },
   },
   mounted() {

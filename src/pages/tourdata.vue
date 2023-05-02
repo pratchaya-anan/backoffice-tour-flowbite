@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-gray-100 dark:bg-gray-900 p-3 sm:p-5 min-h-175">
+  <section class="dark:bg-gray-900 p-3 sm:p-5">
     <div class="mx-auto max-w-screen-xl">
       <div>
         <div class="grid grid-cols-2">
@@ -254,7 +254,10 @@
                     เขียนคอมเมนต์ทัวร์
                     <div class="tooltip-arrow" data-popper-arrow></div>
                   </div>
-                  <NuxtLink href="/edit-tour" type="button" data-tooltip-target="tooltip-edittour"
+                  <NuxtLink
+                    href="/edittour"
+                    type="button"
+                    data-tooltip-target="tooltip-edittour"
                     data-tooltip-placement="top"
                     class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-gray-900 bg-white rounded-full border border-gray-200 dark:border-gray-600 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
@@ -403,8 +406,12 @@
       </div>
 
       <!-- ตารางลูกทัวร์ -->
-      <div class="mt-5 relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
-        <div class="flex-row items-center justify-between p-4 space-y-3 sm:flex sm:space-y-0 sm:space-x-4">
+      <div
+        class="mt-6 block max-w-full p-2 pb-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      >
+        <div
+          class="flex-row items-center justify-between p-4 space-y-3 sm:flex sm:space-y-0 sm:space-x-4"
+        >
           <div class="w-full md:w-1/2">
             <form class="flex items-center">
               <label for="simple-search" class="sr-only">Search</label>
@@ -442,9 +449,13 @@
             </NuxtLink>
 
             <!-- Main modal -->
-            <div id="authentication-modal" tabindex="-1" aria-hidden="true"
-              class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
-              <div class="relative w-full max-w-2xl max-h-full">
+            <div
+              id="authentication-modal"
+              tabindex="-1"
+              aria-hidden="true"
+              class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+            >
+              <div class="relative w-full max-w-6xl max-h-full">
                 <!-- Modal content -->
                 <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
                   <button type="button"
@@ -461,6 +472,7 @@
                     <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">
                       เพิ่มลูกทัวร์
                     </h3>
+                    <hr class="my-5" />
                     <form action="#">
                       <div class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5">
                         <div class="w-full">
@@ -644,9 +656,13 @@
         </div>
 
         <div>
-          <div class="mt-2 relative overflow-x-auto shadow-md sm:rounded-lg">
-            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-              <thead class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-400">
+          <div class="mt-2 relative overflow-x-auto border sm:rounded-lg">
+            <table
+              class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
+            >
+              <thead
+                class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-400"
+              >
                 <tr>
                   <th scope="col" class="px-6 py-3">ลำดับ</th>
                   <th scope="col" class="px-6 py-3">ชื่อ-นามสกุล</th>
@@ -786,9 +802,12 @@
                             </svg>
                           </button>
                           <div class="px-6 py-6 lg:px-8">
-                            <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">
-                              แก้ไขลูกทัวร์
+                            <h3
+                              class="mb-4 text-xl font-medium text-gray-900 dark:text-white"
+                            >
+                              แก้ไขข้อมูลลูกทัวร์
                             </h3>
+                            <hr class="my-5" />
                             <form action="#">
                               <div class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5">
                                 <div class="w-full">

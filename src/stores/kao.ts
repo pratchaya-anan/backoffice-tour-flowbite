@@ -39,4 +39,4 @@ export const kao = defineStore('useKao', () => {
     
 
     return { id, data, additem };
-})
+}) 

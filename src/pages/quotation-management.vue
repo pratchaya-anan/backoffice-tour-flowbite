@@ -1,5 +1,5 @@
 <template>
-  <section class="h-min-175 bg-gray-100 dark:bg-gray-900 p-3 sm:p-5">
+  <section class="p-3 sm:p-5">
     <div class="mx-auto max-w-screen-xl">
       <div class="grid grid-cols-2"></div>
       <!-- crad -->
@@ -131,8 +131,7 @@
                           >ใบเสนอราคา</a
                         >
 
-                        <a
-                          @click="setid(datadis.tourid)"
+                        <a                          
                           class="ml-3 font-medium text-blue-600 dark:text-blue-500 hover:underline"
                         >
                           ใบแจ้งหนี้/ใบกำกับภาษี</a

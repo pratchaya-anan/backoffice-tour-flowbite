@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-gray-100 dark:bg-gray-900 p-3 sm:p-5">
+  <section class="p-3 sm:p-5">
     <div class="mx-auto max-w-screen-lg">
       <div
         class="min-h-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
@@ -24,6 +24,7 @@
                 type="text"
                 name="namecustomer"
                 id="namecustomer"
+                v-model="quotation.customer_name"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 required
               />
@@ -38,6 +39,7 @@
                 type="text"
                 name="namecontact"
                 id="namecontact"
+                v-model="quotation.contact_name"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 required
               />
@@ -52,6 +54,7 @@
                 type="text"
                 name="taxid"
                 id="taxid"
+                v-model="quotation.tax_number"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 required
               />
@@ -66,6 +69,7 @@
                 type="text"
                 name="taxid"
                 id="taxid"
+                v-model="quotation.customer_code"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 required
               />
@@ -80,6 +84,7 @@
                 type="text"
                 name="address"
                 id="address"
+                v-model="quotation.address"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 required
               />
@@ -106,6 +111,7 @@
               <input
                 datepicker
                 type="text"
+                v-model="quotation.confirm_date"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="ยืนยันราคาภายในวันที่"
               />
@@ -132,6 +138,7 @@
               <input
                 datepicker
                 type="text"
+                v-model="quotation.send_date"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="วันที่ส่งของ"
               />
@@ -146,6 +153,7 @@
                 type="text"
                 name="ustomerid"
                 id="ustomerid"
+                v-model="quotation.faction"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 required
               />
@@ -160,6 +168,7 @@
                 type="text"
                 name="ustomerid"
                 id="ustomerid"
+                v-model="quotation.phone"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 required
               />
@@ -174,6 +183,7 @@
                 type="text"
                 name="ustomerid"
                 id="ustomerid"
+                v-model="quotation.email"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 required
               />
@@ -455,6 +465,7 @@
                 type="text"
                 name="namecustomer"
                 id="namecustomer"
+                v-model="product.product_code"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 required
               />
@@ -469,6 +480,7 @@
                 type="number"
                 name="namecontact"
                 id="namecontact"
+                v-model="product.quantity"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 required
               />
@@ -483,6 +495,7 @@
                 type="number"
                 name="taxid"
                 id="taxid"
+                v-model="product.unit_price"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 required
               />
@@ -497,6 +510,7 @@
                 type="number"
                 name="address"
                 id="address"
+                v-model="product.product_discount"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 required
               />
@@ -512,12 +526,13 @@
                 >
                 <select
                   id="countries"
+                  v-model="product.tax"
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 >
                   <!-- <option selected>Choose a country</option> -->
-                  <option value="US">0%</option>
-                  <option value="CA">7%</option>
-                  <option value="FR">9%</option>
+                  <option value="0">0%</option>
+                  <option value="7">7%</option>
+                  <option value="9 ">9%</option>
                 </select>
               </div>
 
@@ -531,6 +546,7 @@
                   type="text"
                   name="address"
                   id="address"
+                  v-model="product.product_list"
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                   required
                 />
@@ -538,6 +554,7 @@
 
               <button
                 type="button"
+                @click="addProduct"
                 class="col-span-1 lg:col-span-1 w-full mt-7 px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
                 เพิ่มข้อมูล
@@ -566,21 +583,31 @@
             </thead>
             <tbody>
               <tr
+                v-for="(data, index) in quotation.product"
+                key="index"
                 class="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
               >
                 <th
                   scope="row"
                   class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
-                  1
+                  {{ index + 1 }}
                 </th>
-                <td class="px-6 py-4">Q-4693120596</td>
-                <td class="px-6 py-4">อุบล</td>
-                <td class="px-6 py-4">1</td>
-                <td class="px-6 py-4">10,000.00</td>
-                <td class="px-6 py-4">0</td>
-                <td class="px-6 py-4">10,000.00</td>
-                <td class="px-6 py-4">10,700.00</td>
+                <td class="px-6 py-4">{{ data.product_code }}</td>
+                <td class="px-6 py-4">{{ data.product_list }}</td>
+                <td class="px-6 py-4">{{ data.quantity }}</td>
+                <td class="px-6 py-4">{{ data.unit_price }}</td>
+                <td class="px-6 py-4">{{ data.product_discount }}</td>
+                <td class="px-6 py-4">
+                  {{ ((data.unit_price * data.quantity) / 100) * data.tax }}
+                </td>
+                <td class="px-6 py-4">
+                  {{
+                    data.unit_price * data.quantity +
+                    ((data.unit_price * data.quantity) / 100) * data.tax -
+                    data.product_discount
+                  }}
+                </td>
                 <td class="px-6 py-4">
                   <svg
                     href="#"
@@ -616,6 +643,7 @@
               <input
                 type="number"
                 id="text"
+                v-model="quotation.set_pricedate"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               />
             </div>
@@ -628,6 +656,7 @@
               <input
                 type="number"
                 id="text"
+                v-model="quotation.deposit"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               />
             </div>
@@ -709,35 +738,74 @@
           </div>
         </div>
         <div class="flex justify-end">
-          <NuxtLink
-            to="/paper/quotation_paper"
+          <button
+            type="button"
+            @click="addQuotation"
             class="mt-3 px-18 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             สร้างใบเสนอราคา
-          </NuxtLink>
+          </button>
         </div>
       </div>
     </div>
   </section>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-// import Datepicker from 'flowbite-datepicker/Datepicker';
+<script setup lg="ts">
+import { quotationForm } from "/stores/quotationForm";
+const store = quotationForm();
 
-// const datepickerEl = document.getElementById('datepickerId');
-// new Datepicker(datepickerEl, {
-//     // options
-// });
-if (process.client) {
-  if (
-    localStorage.getItem("color-theme") === "dark" ||
-    (!("color-theme" in localStorage) &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches)
-  ) {
-    document.documentElement.classList.add("dark");
-  } else {
-    document.documentElement.classList.remove("dark");
-  }
+const quotation = ref({
+  customer_name: "",
+  contact_name: "",
+  tax_number: "",
+  customer_code: "",
+  address: "",
+  confirm_date: "",
+  send_date: "",
+  faction: "",
+  phone: "",
+  email: "",
+  product: [],
+  set_pricedate: "",
+  deposit: "",
+});
+const product = {
+  product_code: "",
+  product_list: "",
+  quantity: "",
+  unit_price: "",
+  product_discount: "",
+  tax: "",
+};
+
+function addProduct() {
+  quotation.value.product.push({
+    product_code: product.product_code,
+    product_list: product.product_list,
+    quantity: product.quantity,
+    unit_price: product.unit_price,
+    product_discount: product.product_discount,
+    tax: product.tax,
+  });
+  console.log(quotation.value);
 }
+
+function addQuotation() {
+  store.additem(quotation.value);
+  console.log(quotation.value);
+}
+
+//ปิด dark mode
+// if (process.client) {
+//   if (
+//     localStorage.getItem("color-theme") === "dark" ||
+//     (!("color-theme" in localStorage) &&
+//       window.matchMedia("(prefers-color-scheme: dark)").matches)
+//   ) {
+//     document.documentElement.classList.add("dark");
+//   } else {
+//     document.documentElement.classList.remove("dark");
+//   }
+// }
 </script>
