@@ -3,12 +3,12 @@ import { defineStore } from 'pinia'
 export const estimate = defineStore('useEstimate', () => {
     const data = ref([
         {
-            id: 0,
+            id: 1,
             name: "",
             department: "",
             date: "",
             objectives: "",
-            details: [{}],
+            details: [],
         }
     ])
     function additem(item: {
@@ -26,6 +26,7 @@ export const estimate = defineStore('useEstimate', () => {
             department: item.department,
             date: item.date,
             objectives: item.objectives,
+            details: item.details,
         }
         data.value.push(newItem)
         console.log(data.value)
