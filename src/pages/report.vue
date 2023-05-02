@@ -1,5 +1,5 @@
 <template>
-  <section class="h-min-175 bg-gray-100 dark:bg-gray-900 p-3 sm:p-5">
+  <section class="p-3 sm:p-5">
     <div class="mx-auto max-w-screen-xl">
       <div
         class="relative overflow-x-auto shadow-md sm:rounded-lg mt-5 bg-white"
