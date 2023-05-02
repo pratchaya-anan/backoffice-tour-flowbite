@@ -54,5 +54,6 @@ export default defineConfig({
     TypographyPlugin as Plugin,
     AspectRatioPlugin as Plugin,
     FlowbiteWindi as Plugin,
+    require('flowbite/plugin-windicss'),
   ] as Plugin[],
 })
