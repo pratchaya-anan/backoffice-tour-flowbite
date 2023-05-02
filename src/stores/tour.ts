@@ -22,8 +22,8 @@ export const useDatatour = defineStore('tour', () => {
         { idmember: "m3", bedtype: "คู่" },
       ],
       hotel: [
-        { hotel_id: "h1", sumroom: 45 },
-        { hotel_id: "h2", sumroom: 45 },
+        { hotel_id: "h1", checkin:"2/05/2566", checkout:"4/05/2566", sumroom: 45 },
+        { hotel_id: "h2", checkin:"2/05/2566", checkout:"4/05/2566", sumroom: 45 },
       ],
       guide: [
         { guide_id: "g1" },
@@ -178,5 +178,20 @@ export const useDatatour = defineStore('tour', () => {
     // console.log(guidedata.value);
   }
 
-  return { tourid, tourdata, guidedata, hoteldata, tourfiltered, settourid, addtour, addguide, newguide }
+  function addhotel(item: any) {
+    item.value.forEach((element: any) => {
+      // console.log(element)
+      tourfiltered.value.guide.push({guide_id: element});      
+    });
+    console.log("Tourfil2",tourfiltered.value)
+    console.log("Tour",tourdata.value)
+  }
+
+  function newhotel(item: any) {
+    console.log(item);
+    hoteldata.value.push(item);
+    console.log(hoteldata.value);
+  }
+
+  return { tourid, tourdata, guidedata, hoteldata, tourfiltered, settourid, addtour, addguide, newguide, addhotel, newhotel }
 })

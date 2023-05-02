@@ -86,14 +86,14 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr
+                  <tr v-for="data in hotelshow"
                     class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      จำปา
+                      {{ data.name}}
                     </th>
-                    <td class="px-6 py-4">3</td>
-                    <td class="px-6 py-4">12/05/23</td>
-                    <td class="px-6 py-4">15/05/23</td>
+                    <td class="px-6 py-4">{{ data.sumroom }}</td>
+                    <td class="px-6 py-4">{{ data.checkin }}</td>
+                    <td class="px-6 py-4">{{ data.checkout }}</td>
                     <td class="flex px-6 py-4">
                       <p class="mr-5 font-medium text-blue-600 dark:text-blue-500 hover:underline"
                         data-modal-target="edithotel" data-modal-toggle="edithotel">แก้ไข</p>
@@ -131,7 +131,7 @@
     <!-- Main Modal -->
     <div id="addhotel" data-modal-backdrop="addhotel" tabindex="-1" aria-hidden="true"
       class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
-      <div class="relative w-full max-w-6xl max-h-full">
+      <div class="relative w-full max-w-2xl max-h-full">
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
           <!-- Modal header -->
@@ -195,15 +195,12 @@
                       ชื่อโรงแรม
                     </th>
                     <th scope="col" class="px-6 py-3">
-                      เช็คอิน
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                      เช็คเอ้าท์
+                      คอมเมนต์
                     </th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr v-for="(data, indexh) in hoteldata" key="indexh" data-modal-hide="addhotel" data-modal-toggle="updateProductModal"
+                  <tr v-for="(data, indexh) in hoteldata" key="indexh" data-modal-hide="addhotel" data-modal-toggle="updateProductModal" @click="setid(data.hotel_id)"
                     class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                     <!-- <td class="w-4 p-4">
                       <div class="flex items-center">
@@ -215,11 +212,11 @@
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                       {{ data.name }}
                     </th>
-                    <td class="px-6 py-4">
-                      16/05/66
+                    <td v-if="data.comment" class="px-6 py-4">
+                      {{ data.comment }}
                     </td>
                     <td class="px-6 py-4">
-                      18/05/66
+                      ไม่มีคอมเมนต์
                     </td>
                   </tr>
                 </tbody>
@@ -265,12 +262,12 @@
           <!-- Modal body -->
           <div class="mb-6">
             <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ชื่อโรงแรม</label>
-            <input type="email" id="email"
+            <input type="email" id="email" v-model="namehotel"
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               required>
           </div>
           <div v class="flex justify-end items-center space-x-4">
-            <button type="submit" data-modal-hide="newaddhothel" data-modal-toggle="addhotel"
+            <button type="button" data-modal-hide="newaddhothel" data-modal-toggle="addhotel" @click="newhotel"
               class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
               บันทึก
             </button>
@@ -317,7 +314,7 @@
                         clip-rule="evenodd"></path>
                     </svg>
                   </div>
-                  <input name="start" type="text"
+                  <input name="start" type="text" v-model="addhoteldata.checkin"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="เช็คอิน">
                 </div>
@@ -331,20 +328,20 @@
                         clip-rule="evenodd"></path>
                     </svg>
                   </div>
-                  <input name="end" type="text"
+                  <input name="end" type="text" v-model="addhoteldata.checkout"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="เช็คเอ้าท์">
                 </div>
               </div>
               <div>
                 <label>ห้องพัก</label>
-                <input name="end" type="text"
+                <input name="end" type="number" v-model="addhoteldata.sumroom"
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full  p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="จำนวนห้อง">
               </div>
             </div>
             <div class="flex justify-end items-center space-x-4 ">
-              <button type="submit" data-modal-toggle="updateProductModal"
+              <button type="button" data-modal-toggle="updateProductModal" @click="addhotel()"
                 class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                 ตกลง
               </button>
@@ -423,7 +420,7 @@
               </div>
             </div>
             <div class="flex justify-end items-center space-x-4 ">
-              <button type="submit" data-modal-toggle="updateProductModal"
+              <button type="button" data-modal-toggle="updateProductModal"
                 class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                 ตกลง
               </button>
@@ -480,24 +477,32 @@ import { useDatatour } from "../stores/tour";
 
 const store = useDatatour();
 const { hoteldata } = storeToRefs(store);
-const datafil = computed(() => hoteldata.value.find(item => item.tourid == tourid.value));
 const hotelselect: any = ref([]);
+const hotelshow: any = ref([]);
+let setidhotel = "";
+const namehotel = ref("");
 const addhoteldata = ref({
   hotelname: "",
   checkin: "",
   checkout: "",
   sumroom: 0,
 })
-const newhoteldata = ref({
-  hotelname: "",
-  checkin: "",
-  checkout: "",
-  sumroom: 0,
-  comment: "",
-})
+
+function setid(id: string){
+  setidhotel = id;
+  console.log("IDhotel", setidhotel);
+}
 
 function addhotel(){
-  
+  const datafil = computed(() => hoteldata.value.find(item => item.hotel_id == setidhotel));
+  hotelshow.value.push({name: datafil.value.name, checkin: addhoteldata.value.checkin, checkout: addhoteldata.value.checkout, sumroom: addhoteldata.value.sumroom})
+  hotelselect.value.push({idmember: setidhotel, checkin: addhoteldata.value.checkin, checkout: addhoteldata.value.checkout, sumroom: addhoteldata.value.sumroom})
+  console.log("DataSelect", hotelselect.value);
+  store.addhotel(hotelselect.value);
+}
+
+function newhotel(){
+  store.newhotel({hotel_id: new Date().getTime(), name: namehotel.value, comment: ""})
 }
 
 // initialize components based on data attribute selectors
@@ -505,4 +510,3 @@ onMounted(() => {
   initFlowbite();
 });
 </script>
-
