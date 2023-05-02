@@ -1,42 +1,15 @@
 <template>
-  <section class="h-min-160 bg-gray-100 dark:bg-gray-900">
+  <section class="h-min-175 bg-gray-100 dark:bg-gray-900">
     <div class="mx-auto max-w-screen-2xl px-4 lg:px-12 p-6">
       <!-- Start coding here -->
       <h5 class="text-3xl font-bold text-gray-900 dark:text-white ml-2">
         รายการทัวร์
       </h5>
-      <form>
-        <button type="button"
-          class="mt-5 inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-          กำลังรอ
-          <span
-            class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full">
-            2
-          </span>
-        </button>
-
-        <button type="button"
-          class="ml-3 inline-flex items-center px-7 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-          พร้อม
-          <span
-            class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full">
-            2
-          </span>
-        </button>
-
-        <button type="button"
-          class="ml-3 inline-flex items-center px-8 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-          เสร็จ
-          <span
-            class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full">
-            2
-          </span>
-        </button>
-
-        <div class="flex justify-between mt-3">
-          <label for="search-dropdown" class="mb-3 text-sm font-medium text-gray-900 sr-only dark:text-white">Your
-            Email</label>
-          <button id="dropdown-button" data-dropdown-toggle="dropdown"
+      <div class="flex justify-between mt-3">
+        <div class="flex">
+          <button
+            id="dropdown-button"
+            data-dropdown-toggle="dropdown"
             class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600"
             type="button">
             สถานะ
@@ -76,32 +49,79 @@
               </li>
             </ul>
           </div>
-          <div class="relative w-314">
-            <input type="search" id="search-dropdown"
-              class="block p-2.5 w-95 z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
-              placeholder="ค้นหาทัวร์,วันที่,ชื่อทัวร์" required />
+          <div class="relative">
+            <input
+              type="search"
+              id="search-dropdown"
+              class="block p-3 w-95 z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
+              placeholder="ค้นหา ทัวร์, วันที่, ชื่อทัวร์"
+              required
+            />
           </div>
 
-          <div>
-            <NuxtLink to="/addtour">
-              <button type="button"
-                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 mt-1">
-                สร้างทัวร์
-              </button>
-            </NuxtLink>
+          <div class="flex">
+            <div
+              class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-gray-800"
+            >
+              กำลังรอ
+              <p
+                class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full"
+              >
+                2
+              </p>
+            </div>
+
+            <div
+              class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-gray-800"
+            >
+              พร้อม
+              <p
+                class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full"
+              >
+                2
+              </p>
+            </div>
+
+            <div
+              class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-gray-800"
+            >
+              จบทริป
+              <p
+                class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full"
+              >
+                2
+              </p>
+            </div>
           </div>
         </div>
-      </form>
+
+        <NuxtLink
+          to="/addtour"
+          type="button"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 mt-1"
+        >
+          สร้างทัวร์
+        </NuxtLink>
+      </div>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-2 mt-3">
         <a href="/tourdata" v-for="(data, indexd) in tourdata" :key="indexd" @click="setid(data.idtour)"
           class="grid grid-cols-2 md:grid-cols-2 gap-1 block max-w-full p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
           <div>
-            <span v-if="data.state == 1"
-              class="bg-gray-200 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">กำลังรอ</span>
-            <span v-if="data.state == 2"
-              class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">พร้อม</span>
-            <span v-if="data.state == 3"
-              class="bg-green-100 text-green-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">เสร็จสิ้น</span>
+            <span
+              v-if="data.state == 1"
+              class="bg-gray-200 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300"
+              >กำลังรอ</span
+            >
+            <span
+              v-if="data.state == 2"
+              class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300"
+              >พร้อม</span
+            >
+            <span
+              v-if="data.state == 3"
+              class="bg-green-100 text-green-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300"
+              >จบทริป</span
+            >
           </div>
           <div class="flex mt-0.5 ml-40">
             <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
