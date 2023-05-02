@@ -103,7 +103,7 @@
                 placeholder=" " />
             </div>
             <div class="mt-7">
-              <button type="button" @click="add"
+              <button type="button" @click="addDataDetail"
                 class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 w-full">
                 เพิ่มรายการ
               </button>
@@ -115,29 +115,30 @@
               <thead class="text-xs text-gray-700 uppercase bg-primary-100 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
                   <th scope="col" class="px-2 py-3">ลำดับ</th>
-                  <th scope="col" class="px-10 py-3">รายละเอียดค่าใช้จ่าย</th>
-                  <th scope="col" class="px-6 py-3">ราคา</th>
-                  <th scope="col" class="px-3 py-3">ประเภทค่าใช้จ่าย</th>
+                  <th scope="col" class="px-10 py-3">ประเภทค่าใช้จ่าย</th>
+                  <th scope="col" class="px-6 py-3">รายละเอียดค่าใช้จ่าย</th>
+                  <th scope="col" class="px-3 py-3">ราคา</th>
                   <th scope="col" class="px-6 py-3">จำนวน</th>
                   <th scope="col" class="px-6 py-3">ยอดสุทธิ</th>
                 </tr>
               </thead>
               <tbody>
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                  v-for="(data, index) in addEstimate.details" key="index">
                   <th scope="row" class="px-2 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    1
+                    {{ index+1 }}
                   </th>
-                  <td class="px-10 py-4">ใช้ในทางไปที่อุบล</td>
-                  <td class="px-6 py-4">30000</td>
-                  <td class="px-3 py-4">ค่าน้ำมัน</td>
-                  <td class="px-6 py-4">20</td>
-                  <td class="px-6 py-4">600000</td>
+                  <td class="px-10 py-4">{{ data.type }}</td>
+                  <td class="px-6 py-4">{{ data.detail }}</td>
+                  <td class="px-3 py-4">{{ data.price }}</td>
+                  <td class="px-6 py-4">{{ data.quantity }}</td>
+                  <td class="px-6 py-4">{{ data.price * data.quantity }}</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <div class="flex justify-end">
-            <button type="button" @click="add"
+            <button type="button" @click="addDataEstimate"
               class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 mt-2">
               สร้างใบประมาณการ
             </button>
@@ -153,7 +154,6 @@ import { estimate } from '/stores/estimate'
 
 const store = estimate();
 const addEstimate = ref({
-  id: 1,
   name: "",
   department: "",
   date: "",
@@ -168,8 +168,14 @@ const dataDetail = {
   detail: "",
 }
 
-function add() {
-  addEstimate.value.details.push({type: dataDetail.type, price: dataDetail.price, quantity: dataDetail.quantity, detail: dataDetail.detail});
+function addDataDetail() {
+  addEstimate.value.details.push({ type: dataDetail.type, price: dataDetail.price, quantity: dataDetail.quantity, detail: dataDetail.detail });
+  console.log(addEstimate.value);
+}
+
+function addDataEstimate() {
+  store.additem(addEstimate.value)
+  // addEstimate.value.push({ name: addEstimate.name, department: addEstimate.department, objectives: addEstimate.objectives });
   console.log(addEstimate.value);
 }
 
