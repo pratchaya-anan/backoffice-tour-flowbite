@@ -420,7 +420,7 @@
                     <div class="tooltip-arrow" data-popper-arrow></div>
                   </div>
                   <NuxtLink
-                    href="/edit-tour"
+                    href="/edittour"
                     type="button"
                     data-tooltip-target="tooltip-edittour"
                     data-tooltip-placement="top"
@@ -769,6 +769,7 @@
                     >
                       เพิ่มลูกทัวร์
                     </h3>
+                    <hr class="my-5" />
                     <form action="#">
                       <div
                         class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5"
@@ -1120,7 +1121,7 @@
         </div>
 
         <div>
-          <div class="mt-2 relative overflow-x-auto shadow-md sm:rounded-lg">
+          <div class="mt-2 relative overflow-x-auto border sm:rounded-lg">
             <table
               class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
             >
@@ -1356,8 +1357,9 @@
                             <h3
                               class="mb-4 text-xl font-medium text-gray-900 dark:text-white"
                             >
-                              เพิ่มลูกทัวร์
+                              แก้ไขข้อมูลลูกทัวร์
                             </h3>
+                            <hr class="my-5" />
                             <form action="#">
                               <div
                                 class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5"

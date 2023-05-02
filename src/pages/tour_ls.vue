@@ -2,127 +2,132 @@
   <section>
     <div class="mx-auto max-w-screen-2xl px-4 lg:px-12 p-6">
       <!-- Start coding here -->
-      <h5 class="text-3xl font-bold text-gray-900 dark:text-white ml-2">
-        รายการทัวร์
-      </h5>
-      <div class="flex justify-between mt-3">
-        <div class="flex">
-          <button
-            id="dropdown-button"
-            data-dropdown-toggle="dropdown"
-            class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600"
-            type="button"
-          >
-            สถานะ
-            <svg
-              aria-hidden="true"
-              class="w-4 h-4 ml-1"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </button>
-          <div
-            id="dropdown"
-            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-          >
-            <ul
-              class="py-2 text-sm text-gray-700 dark:text-gray-200"
-              aria-labelledby="dropdown-button"
-            >
-              <li>
-                <button
-                  type="button"
-                  class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >
-                  ทั้งหมด
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >
-                  รอคน
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >
-                  พร้อม
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >
-                  เสร็จ
-                </button>
-              </li>
-            </ul>
-          </div>
-          <div class="relative">
-            <input
-              type="search"
-              id="search-dropdown"
-              class="block p-3 w-95 z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
-              placeholder="ค้นหา ทัวร์, วันที่, ชื่อทัวร์"
-              required
-            />
-          </div>
-
+      <div
+        class="block p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      >
+        <h5 class="text-3xl font-bold text-gray-900 dark:text-white ml-2">
+          รายการทัวร์
+        </h5>
+        <hr class="my-5" />
+        <div class="flex justify-between mt-3">
           <div class="flex">
-            <div
-              class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-gray-800"
+            <button
+              id="dropdown-button"
+              data-dropdown-toggle="dropdown"
+              class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600"
+              type="button"
             >
-              กำลังรอ
-              <p
-                class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full"
+              สถานะ
+              <svg
+                aria-hidden="true"
+                class="w-4 h-4 ml-1"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                1
-              </p>
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+            <div
+              id="dropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="dropdown-button"
+              >
+                <li>
+                  <button
+                    type="button"
+                    class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >
+                    ทั้งหมด
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >
+                    รอคน
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >
+                    พร้อม
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >
+                    เสร็จ
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="relative">
+              <input
+                type="search"
+                id="search-dropdown"
+                class="block p-3 w-95 z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
+                placeholder="ค้นหา ทัวร์, วันที่, ชื่อทัวร์"
+                required
+              />
             </div>
 
-            <div
-              class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-gray-800"
-            >
-              พร้อม
-              <p
-                class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full"
+            <div class="flex">
+              <div
+                class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-gray-800"
               >
-                2
-              </p>
-            </div>
+                กำลังรอ
+                <p
+                  class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full"
+                >
+                  1
+                </p>
+              </div>
 
-            <div
-              class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-gray-800"
-            >
-              จบทริป
-              <p
-                class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full"
+              <div
+                class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-gray-800"
               >
-                2
-              </p>
+                พร้อม
+                <p
+                  class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full"
+                >
+                  2
+                </p>
+              </div>
+
+              <div
+                class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-gray-800"
+              >
+                จบทริป
+                <p
+                  class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full"
+                >
+                  2
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <NuxtLink
-          to="/addtour"
-          type="button"
-          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 mt-1"
-        >
-          สร้างทัวร์
-        </NuxtLink>
+          <NuxtLink
+            to="/addtour"
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 mt-1"
+          >
+            สร้างทัวร์
+          </NuxtLink>
+        </div>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-2 mt-3">
         <a
