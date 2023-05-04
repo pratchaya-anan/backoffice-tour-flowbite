@@ -64,6 +64,21 @@ export const useDatatour = defineStore('tour', () => {
       state: 3,
       member: [],
     },
+    {
+      tourid: "t3",
+      tourname: "เกาะเสม็ด ยังไม่เสร็จ",
+      programname: "เกาะเสม็ด ยังไม่เสร็จ",
+      datestart: "16/04/2566",
+      dateend: "20/04/2566",
+      day: 5,
+      night: 4,
+      go: "นครชัยแอร์",
+      back: "AirAsia",
+      summember: 3,
+      maxmember: 10,
+      state: 3,
+      member: [],
+    },
   ]);
   const memberdata = ref([
     {
@@ -159,39 +174,48 @@ export const useDatatour = defineStore('tour', () => {
   function addtour(item: any) {
     tourdata.value.push(item);
     settourid(item.tourid.toString());
-    console.log("DataTour",tourdata.value)
+    console.log("Tour",tourdata.value)
   }
 
   //Add guide to tour
   function addguide(item: any) {
+    console.log(item.value);
     item.value.forEach((element: any) => {
-      // console.log(element)
       tourfiltered.value.guide.push({guide_id: element});      
     });
-    console.log("Tourfil2",tourfiltered.value)
-    console.log("Tour",tourdata.value)
+    // console.log("Tourfil",tourfiltered.value)
+    console.log("TourGuide",tourdata.value)
   }
 
   function newguide(item: any) {
-    // console.log(item);
-    guidedata.value.push(item);
-    // console.log(guidedata.value);
+    guidedata.value.push(item.value);
   }
 
   function addhotel(item: any) {
+    console.log("???",item.value);
     item.value.forEach((element: any) => {
-      // console.log(element)
-      tourfiltered.value.guide.push({guide_id: element});      
+      tourfiltered.value.hotel.push({hotel_id: element.hotel_id, checkin: element.checkin, checkout: element.checkout, sumroom: element.sumroom});      
     });
-    console.log("Tourfil2",tourfiltered.value)
-    console.log("Tour",tourdata.value)
+    // console.log("Tourfil",tourfiltered.value)
+    console.log("TourHotel",tourdata.value)
   }
 
   function newhotel(item: any) {
-    console.log(item);
     hoteldata.value.push(item);
-    console.log(hoteldata.value);
+  }
+  
+  function addvehicle(item: any) {
+    console.log("???",item.value);
+    item.value.forEach((element: any) => {
+      // console.log(element)
+      // tourfiltered.value.vehicle.push({hotel_id: element.hotel_id, checkin: element.checkin, checkout: element.checkout, sumroom: element.sumroom});      
+    });
+    // console.log("Tourfil",tourfiltered.value)
+    console.log("TourHotel",tourdata.value)
   }
 
-  return { tourid, tourdata, guidedata, hoteldata, tourfiltered, settourid, addtour, addguide, newguide, addhotel, newhotel }
+  function newvehicle(item: any) {
+    vehicledata.value.push(item);
+  }
+  return { tourid, tourdata, tourfiltered, guidedata, hoteldata, vehicledata, settourid, addtour, addguide, newguide, addhotel, newhotel, addvehicle, newvehicle }
 })

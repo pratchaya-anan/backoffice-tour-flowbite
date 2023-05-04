@@ -307,7 +307,7 @@
                     d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
                   />
                 </svg>
-                เพิ่มพาหนะ////
+                เพิ่มพาหนะ
               </button>
             </div>
 
@@ -764,6 +764,12 @@
 <script setup lang="ts">
 import { onMounted } from "vue";
 import { initFlowbite } from "flowbite/lib/esm/components";
+import { storeToRefs } from "pinia";
+import { useDatatour } from "../stores/tour";
+
+const store = useDatatour();
+const { vehicledata } = storeToRefs(store);
+const vehicleselect: any = ref([]);
 
 // initialize components based on data attribute selectors
 onMounted(() => {

@@ -158,7 +158,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr v-for="data in hotelshow"
+                  <tr v-for="data in hotelselect"
                     class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                       {{ data.name}}
@@ -176,8 +176,6 @@
                       </p>
                       <p
                         class="font-medium text-red-600 dark:text-red-500 hover:underline"
-                        data-modal-target="deletetour"
-                        data-modal-toggle="deletetour"
                       >
                         ลบ
                       </p>
@@ -210,7 +208,7 @@
               ย้อนกลับ
             </NuxtLink>
             <NuxtLink
-              to="/addvehicle"
+              to="/addvehicle" @click="addhotel"
               class="ml- mt-6 px-10 py-2.5 inline-flex text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
               ถัดไป
@@ -384,13 +382,6 @@
             >
               ยกเลิก
             </button>
-            <button
-              data-modal-hide="addhotel"
-              type="button"
-              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              บันทึก
-            </button>
           </div>
         </div>
       </div>
@@ -553,7 +544,7 @@
               </div>
             </div>
             <div class="flex justify-end items-center space-x-4 ">
-              <button type="button" data-modal-toggle="updateProductModal" @click="addhotel()"
+              <button type="button" data-modal-toggle="updateProductModal" @click="sethotel()"
                 class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                 ตกลง
               </button>
@@ -689,7 +680,7 @@
     </div>
 
     <!-- delet  -->
-    <div
+    <!-- <div
       id="deletetour"
       tabindex="-1"
       class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
@@ -753,7 +744,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </section>
 </template>
 <script setup lang="ts">
@@ -765,7 +756,7 @@ import { useDatatour } from "../stores/tour";
 const store = useDatatour();
 const { hoteldata } = storeToRefs(store);
 const hotelselect: any = ref([]);
-const hotelshow: any = ref([]);
+// const hotelshow: any = ref([]);
 let setidhotel = "";
 const namehotel = ref("");
 const addhoteldata = ref({
@@ -777,21 +768,24 @@ const addhoteldata = ref({
 
 function setid(id: string){
   setidhotel = id;
-  console.log("IDhotel", setidhotel);
+  // console.log("IDhotel", setidhotel);
 }
 
-function addhotel(){
+function sethotel() {
   const datafil = computed(() => hoteldata.value.find(item => item.hotel_id == setidhotel));
-  hotelshow.value.push({name: datafil.value.name, checkin: addhoteldata.value.checkin, checkout: addhoteldata.value.checkout, sumroom: addhoteldata.value.sumroom})
-  hotelselect.value.push({idmember: setidhotel, checkin: addhoteldata.value.checkin, checkout: addhoteldata.value.checkout, sumroom: addhoteldata.value.sumroom})
-  console.log("DataSelect", hotelselect.value);
-  store.addhotel(hotelselect.value);
+  // hotelshow.value.push({name: datafil.value.name, checkin: addhoteldata.value.checkin, checkout: addhoteldata.value.checkout, sumroom: addhoteldata.value.sumroom})
+  hotelselect.value.push({hotel_id: setidhotel,name: datafil.value.name, checkin: addhoteldata.value.checkin, checkout: addhoteldata.value.checkout, sumroom: addhoteldata.value.sumroom})
 }
 
-function newhotel(){
+
+function addhotel() {
+  console.log("HotelSelect", hotelselect.value);
+  store.addhotel(hotelselect);
+}
+
+function newhotel() {
   store.newhotel({hotel_id: new Date().getTime(), name: namehotel.value, comment: ""})
 }
-
 // initialize components based on data attribute selectors
 onMounted(() => {
   initFlowbite();
