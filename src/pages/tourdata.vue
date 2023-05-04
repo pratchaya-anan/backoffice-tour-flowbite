@@ -594,7 +594,7 @@
               <div>
                 จำนวน: {{ tourfiltered.day }} วัน {{ tourfiltered.night }} คืน
               </div>
-              <div>จำนวนลูกทัวร์: {{ tourfiltered.summember }} คน</div>
+              <div>จำนวนลูกทัวร์: {{ tourfiltered.amountmember }} คน</div>
               <div>หมายเหตุ: สบายตัวมากๆเลยนะ ถ้าไปอีกรอบ จะหาตัวท็อป</div>
             </div>
           </div>
@@ -613,7 +613,7 @@
                   class="grid grid-cols-3 gap-2"
                 >
                   <div class="col-span-2">โรงแรม{{ hotel.name }}</div>
-                  <div>จำนวนห้องพัก: {{ hotel.sumroom }}</div>
+                  <div>จำนวนห้องพัก: {{ hotel.amountroom }}</div>
                 </div>
               </div>
               <div class="grid grid-cols-3"></div>

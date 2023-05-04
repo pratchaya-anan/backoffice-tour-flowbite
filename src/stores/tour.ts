@@ -22,16 +22,16 @@ export const useDatatour = defineStore('tour', () => {
         { idmember: "m3", bedtype: "คู่" },
       ],
       hotel: [
-        { hotel_id: "h1", checkin:"2/05/2566", checkout:"4/05/2566", sumroom: 45 },
-        { hotel_id: "h2", checkin:"2/05/2566", checkout:"4/05/2566", sumroom: 45 },
+        { hotel_id: "h1", checkin:"2/05/2566", checkout:"4/05/2566", amountroom: 45 },
+        { hotel_id: "h2", checkin:"2/05/2566", checkout:"4/05/2566", amountroom: 45 },
       ],
       guide: [
         { guide_id: "g1" },
         { guide_id: "g2" },
       ],
       vehicle: [
-        { vehicle_id: "v1" },
-        { vehicle_id: "v2" },
+        { vehicle_id: "v1", vehicle_type: "ขาไป", date: "3/05/2566", amountvehicle: 2},
+        { vehicle_id: "v2", vehicle_type: "ขากลับ", date: "4/05/2566", amountvehicle: 2 },
       ]
     },
     {
@@ -74,7 +74,7 @@ export const useDatatour = defineStore('tour', () => {
       night: 4,
       go: "นครชัยแอร์",
       back: "AirAsia",
-      summember: 3,
+      amountmember: 3,
       maxmember: 10,
       state: 3,
       member: [],
@@ -192,9 +192,8 @@ export const useDatatour = defineStore('tour', () => {
   }
 
   function addhotel(item: any) {
-    console.log("???",item.value);
     item.value.forEach((element: any) => {
-      tourfiltered.value.hotel.push({hotel_id: element.hotel_id, checkin: element.checkin, checkout: element.checkout, sumroom: element.sumroom});      
+      tourfiltered.value.hotel.push({hotel_id: element.hotel_id, checkin: element.checkin, checkout: element.checkout, amountroom: element.amountroom});      
     });
     // console.log("Tourfil",tourfiltered.value)
     console.log("TourHotel",tourdata.value)
@@ -208,10 +207,10 @@ export const useDatatour = defineStore('tour', () => {
     console.log("???",item.value);
     item.value.forEach((element: any) => {
       // console.log(element)
-      // tourfiltered.value.vehicle.push({hotel_id: element.hotel_id, checkin: element.checkin, checkout: element.checkout, sumroom: element.sumroom});      
+      tourfiltered.value.vehicle.push({vehicle_id: element.vehicle_id, vehicle_type: element.vehicle_type, date: element.date,  amountvehicle: element.amountvehicle, });      
     });
     // console.log("Tourfil",tourfiltered.value)
-    console.log("TourHotel",tourdata.value)
+    console.log("TourVehicle",tourdata.value)
   }
 
   function newvehicle(item: any) {
