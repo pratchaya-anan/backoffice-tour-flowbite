@@ -84,7 +84,8 @@
                         ยังไม่เสร็จ {{ datadis.money }}
                       </td>
                       <td class="px-6 py-4 text-right">
-                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">ใบเสนอราคา</a>
+                        <a @click="click(datadis.id)"
+                          class="font-medium text-blue-600 dark:text-blue-500 hover:underline">ใบเสนอราคา</a>
 
                         <a @click="setid(datadis.tourid)"
                           class="ml-3 font-medium text-blue-600 dark:text-blue-500 hover:underline">
@@ -163,6 +164,11 @@ import { quotationForm } from '/stores/quotationForm';
 
 const store = quotationForm();
 const { data } = storeToRefs(store);
+
+function click(id) {
+  store.setid(id);
+  useRouter().push('/paper/quotation_paper');
+}
 
 // function setid(id: string) {
 //   // console.log("Idtour= "+id)

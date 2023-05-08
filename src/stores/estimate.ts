@@ -1,6 +1,9 @@
 import { defineStore } from 'pinia'
 
 export const estimate = defineStore('useEstimate', () => {
+
+    const id = ref(0)
+
     const dataestimate = ref([
         {
             id: 0,
@@ -11,6 +14,15 @@ export const estimate = defineStore('useEstimate', () => {
             details: [],
         }
     ])
+
+    const idfiltered = computed(() => dataestimate.value.find(item => item.id == id.value));
+
+    function setid(idtour: number) {
+        id.value = idtour;
+        console.log("ID:", id.value);
+        console.log("ID:", idfiltered.value);
+    }
+
     function additem(item: {
         name: string,
         department: string,
@@ -31,5 +43,6 @@ export const estimate = defineStore('useEstimate', () => {
         dataestimate.value.push(newItem)
         console.log(dataestimate.value)
     }
-    return { dataestimate, additem }
+
+    return { dataestimate, setid, idfiltered, additem }
 })

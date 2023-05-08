@@ -27,33 +27,33 @@
         <div class="col-span-2">
           <div class="grid grid-cols-3">
             <div class="col-span-1 font-bold">ชื่อลูกค้า:</div>
-            <div class="col-span-2">ศศิศ วิรัตน์จินดา</div>
+            <div class="col-span-2">{{ idfiltered.customer_name }}</div>
             <div class="col-span-1 font-bold">ชื่อผู้ติดต่อ:</div>
-            <div class="col-span-2">มะนาว หวานจังเลย</div>
+            <div class="col-span-2">{{ idfiltered.contact_name }}</div>
             <div class="col-span-1 font-bold">ที่อยู่:</div>
             <div class="col-span-2">
-              111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100
+              {{ idfiltered.address }}
             </div>
             <div class="col-span-1 font-bold">ID TAX:</div>
-            <div class="col-span-2">4585695214526</div>
+            <div class="col-span-2">{{ idfiltered.tax_number }}</div>
             <div class="col-span-1 font-bold">โทร:</div>
-            <div class="col-span-2">0254875858</div>
+            <div class="col-span-2">{{ idfiltered.phone }}</div>
             <div class="col-span-1 font-bold">Email:</div>
-            <div class="col-span-2">somchai@gmail.com</div>
+            <div class="col-span-2">{{ idfiltered.email }}</div>
           </div>
         </div>
         <div class="border-l px-5">
           <div class="grid grid-cols-3">
             <div class="col-span-1 font-bold">รหัสลูกค้า:</div>
-            <div class="col-span-2 text-right">C-58015259</div>
+            <div class="col-span-2 text-right"></div>
             <div class="col-span-1 font-bold">ผู้เสนอขาย:</div>
-            <div class="col-span-2 text-right">สมชัย ใจเกินร้อย</div>
+            <div class="col-span-2 text-right">{{ idfiltered.email }}</div>
             <div class="col-span-1 font-bold">ฝ่าย:</div>
-            <div class="col-span-2 text-right">การตลาด</div>
+            <div class="col-span-2 text-right">{{ idfiltered.faction }}</div>
             <div class="col-span-2 font-bold">ยืนยันราคาภายใน:</div>
-            <div class="col-span-1 text-right">31/03/2566</div>
+            <div class="col-span-1 text-right">{{ idfiltered.confirm_date }}</div>
             <div class="col-span-1 font-bold">วันส่งของ:</div>
-            <div class="col-span-2 text-right">02/04/2566</div>
+            <div class="col-span-2 text-right">{{ idfiltered.send_date }}</div>
           </div>
         </div>
       </div>
@@ -69,15 +69,15 @@
             <th>ภาษี</th>
             <th>จำนวนเงิน</th>
           </tr>
-          <tr class="h-10 text-xs">
-            <td>1</td>
-            <td>Q-4636653086</td>
-            <td>เที่ยวเกาะ เลาะรัก</td>
-            <td>10</td>
-            <td>5600</td>
-            <td>0</td>
-            <td>7%</td>
-            <td>59920</td>
+          <tr class="h-10 text-xs" v-for="(data, index) in idfiltered.product" :key="index">
+            <td>{{ index+1 }}</td>
+            <td>{{ data.product_code }}</td>
+            <td>{{ data.product_list }}</td>
+            <td>{{ data.quantity }}</td>
+            <td>{{ data.unit_price }}</td>
+            <td>{{ data.product_discount }}</td>
+            <td>{{ data.product_discount }}</td>
+            <td>{{ data.tax }}</td>
           </tr>
         </table>
       </div>
@@ -143,3 +143,11 @@
   </section>
   <!-- <div class="flex bg-gray-900"></div> -->
 </template>
+<script setup lg="ts">
+import { storeToRefs } from "pinia";
+import { quotationForm } from '/stores/quotationForm';
+
+const store = quotationForm();
+const { idfiltered } = storeToRefs(store);
+
+</script>

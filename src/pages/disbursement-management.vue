@@ -66,8 +66,7 @@
                     </tr>
                   </thead>
                   <tbody v-for="(data, indexd) in dataestimate " :key="indexd">
-                    <tr 
-                    v-if="data.id > 0"
+                    <tr v-if="data.id > 0"
                       class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                       <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                         {{ indexd }}
@@ -82,11 +81,11 @@
                         {{ data.objectives }}
                       </td>
                       <td class="px-6 py-4">
-                        ยังไม่เสร็จ 
+                        ยังไม่เสร็จ
                         <!-- {{ data.details }} -->
                       </td>
                       <td class="px-6 py-4 text-right">
-                        <a href="#"
+                        <a @click="click(data.id)"
                           class="font-medium text-blue-600 dark:text-blue-500 hover:underline">ใบเบิกเงินสดย่อย</a>
 
                         <a @click="setid(datadis.tourid)"
@@ -172,6 +171,7 @@ import { estimate } from '/stores/estimate';
 
 const store = estimate();
 const { dataestimate } = storeToRefs(store);
+// const { tourfiltered } = storeToRefs(store);
 
 const addEstimate = ref({
   name: "",
@@ -188,13 +188,18 @@ const dataDetail = {
   detail: "",
 }
 
+function click(id) {
+  store.setid(id);
+  useRouter().push('/paper/disbursement_paper');
+}
+
 function addDataDetail() {
   addEstimate.value.details.push({ type: dataDetail.type, price: dataDetail.price, quantity: dataDetail.quantity, detail: dataDetail.detail });
   console.log(addEstimate.value);
 }
 
 function addDataEstimate() {
-  store.additem(addEstimate.value)
+  store.additem(addEstimate.value);
   console.log(addEstimate.value);
 }
 </script>

@@ -29,11 +29,11 @@
         <div class="col-span-1">
           <div class="grid grid-cols-3">
             <div class="col-span-1 font-bold">ชื่อผู้ขอเบิก:</div>
-            <div class="col-span-2 ">ศศิศ วิรัตน์จินดา</div>
+            <div class="col-span-2 ">{{ idfiltered.name }}</div>
             <div class="col-span-1 font-bold">แผนก:</div>
-            <div class="col-span-2 ">อาหาร</div>
+            <div class="col-span-2 ">{{ idfiltered.department }}</div>
             <div class="col-span-1 font-bold">วัตถุประสงค์การยืมเงินทดลองจ่าย:</div>
-            <div class="col-span-2 ">ค่าใช้จ่ายภายในทริป อบต โพนงาม</div>
+            <div class="col-span-2 ">{{ idfiltered.objectives }}</div>
           </div>
         </div>
 
@@ -41,7 +41,7 @@
         <div class="border-l px-5">
           <div class="grid grid-cols-2">
             <div class="col-span-1 font-bold">วันที่ต้องการใช้เงิน:</div>
-            <div class="col-span-1 text-right">29/03/2566</div>
+            <div class="col-span-1 text-right">{{ idfiltered.date }}</div>
             <div class="col-span-1 font-bold">โครงการ:</div>
             <div class="col-span-1 text-right">องค์การบริหารส่วนตำบลโพนงาม</div>
           </div>
@@ -59,21 +59,13 @@
             <th>จำนวน</th>
             <th>ยอดสุทธิ</th>
           </tr>
-          <tr class="h-10 text-xs">
-            <td>1</td>
-            <td>ค่ายานพาหนะ</td>
-            <td>ค่าเช่าเหมายานพาหนะท้องถิ่น</td>
-            <td>52000</td>
-            <td>1</td>
-            <td>52000</td>
-          </tr>
-          <tr class="h-10 text-xs">
-            <td>1</td>
-            <td>อื่น</td>
-            <td>ค่าเช่าเหมายานพาหนะท้องถิ่น</td>
-            <td>52000</td>
-            <td>1</td>
-            <td>52000</td>
+          <tr class="h-10 text-xs" v-for="(data, indexd) in idfiltered.details " :key="indexd">
+            <td>{{ indexd+1 }}</td>
+            <td>{{ data.detail }}</td>
+            <td>{{ data.type }}</td>
+            <td>{{ data.price }}</td>
+            <td>{{ data.quantity }}</td>
+            <td>{{ data.price*data.quantity }}</td>
           </tr>
         </table>
       </div>
@@ -86,8 +78,9 @@
             <div class="font-black">ห้าหมื่นเก้าพันเก้าร้อยยี่สิบบาทถ้วน</div>
           </div>
           <div class="font-black">ผู้อนุมัติ (แบบอิเล็กทอรนิกส์):</div>
-          <div class="text-xs"> 
-            ข้าพเจ้าขอรับรองว่ารายการที่กล่าวมาข้างต้นเป็นความจริง พร้อมหลักฐานการจ่าย/แผนประกอบการที่ส่งมา รวมทั้งจำนวนเงินที่ขอเบิกถูกต้องตามระเบียบบริษัททุกประการ
+          <div class="text-xs">
+            ข้าพเจ้าขอรับรองว่ารายการที่กล่าวมาข้างต้นเป็นความจริง พร้อมหลักฐานการจ่าย/แผนประกอบการที่ส่งมา
+            รวมทั้งจำนวนเงินที่ขอเบิกถูกต้องตามระเบียบบริษัททุกประการ
           </div>
         </div>
 
@@ -121,3 +114,11 @@
   </section>
   <!-- <div class="flex bg-gray-900"></div> -->
 </template>
+<script setup lg="ts">
+import { storeToRefs } from "pinia";
+import { estimate } from '/stores/estimate';
+
+const store = estimate();
+const { idfiltered } = storeToRefs(store);
+
+</script>
