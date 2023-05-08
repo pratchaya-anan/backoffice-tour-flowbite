@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-gray-100 dark:bg-gray-900 p-3 sm:p-5 min-h-175">
+  <section class="dark:bg-gray-900 p-3 sm:p-5">
     <div class="mx-auto max-w-screen-xl">
       <div>
         <div class="grid grid-cols-2">
@@ -254,7 +254,10 @@
                     เขียนคอมเมนต์ทัวร์
                     <div class="tooltip-arrow" data-popper-arrow></div>
                   </div>
-                  <NuxtLink href="/edit-tour" type="button" data-tooltip-target="tooltip-edittour"
+                  <NuxtLink
+                    href="/edittour"
+                    type="button"
+                    data-tooltip-target="tooltip-edittour"
                     data-tooltip-placement="top"
                     class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-gray-900 bg-white rounded-full border border-gray-200 dark:border-gray-600 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
@@ -352,7 +355,7 @@
               <div>
                 จำนวน: {{ tourfiltered.day }} วัน {{ tourfiltered.night }} คืน
               </div>
-              <div>จำนวนลูกทัวร์: {{ tourfiltered.summember }} คน</div>
+              <div>จำนวนลูกทัวร์: {{ tourfiltered.amountmember }} คน</div>
               <div>หมายเหตุ: สบายตัวมากๆเลยนะ ถ้าไปอีกรอบ จะหาตัวท็อป</div>
             </div>
           </div>
@@ -365,7 +368,7 @@
                 </h5>
                 <div v-for="(hotel, indexh) in tourfiltered.hotel" key="indexh" class="grid grid-cols-3 gap-2">
                   <div class="col-span-2">โรงแรม{{ hotel.name }}</div>
-                  <div>จำนวนห้องพัก: {{ hotel.sumroom }}</div>
+                  <div>จำนวนห้องพัก: {{ hotel.amountroom }}</div>
                 </div>
               </div>
               <div class="grid grid-cols-3"></div>
@@ -403,8 +406,12 @@
       </div>
 
       <!-- ตารางลูกทัวร์ -->
-      <div class="mt-5 relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
-        <div class="flex-row items-center justify-between p-4 space-y-3 sm:flex sm:space-y-0 sm:space-x-4">
+      <div
+        class="mt-6 block max-w-full p-2 pb-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      >
+        <div
+          class="flex-row items-center justify-between p-4 space-y-3 sm:flex sm:space-y-0 sm:space-x-4"
+        >
           <div class="w-full md:w-1/2">
             <form class="flex items-center">
               <label for="simple-search" class="sr-only">Search</label>
@@ -442,9 +449,13 @@
             </NuxtLink>
 
             <!-- Main modal -->
-            <div id="authentication-modal" tabindex="-1" aria-hidden="true"
-              class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
-              <div class="relative w-full max-w-2xl max-h-full">
+            <div
+              id="authentication-modal"
+              tabindex="-1"
+              aria-hidden="true"
+              class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+            >
+              <div class="relative w-full max-w-6xl max-h-full">
                 <!-- Modal content -->
                 <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
                   <button type="button"
@@ -461,51 +472,52 @@
                     <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">
                       เพิ่มลูกทัวร์
                     </h3>
+                    <hr class="my-5" />
                     <form action="#">
                       <div class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5">
                         <div class="w-full">
                           <label for="firstname"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ชื่อ</label>
-                          <input type="text" name="firstname" id="firstname"
+                          <input type="text" name="firstname" id="firstname" v-model="memberdata.name"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                            value="" placeholder="" required />
+                            placeholder="" required />
                         </div>
                         <div class="w-full">
                           <label for="lastname"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">สกุล</label>
-                          <input type="text" name="lastname" id="lastname"
+                          <input type="text" name="lastname" id="lastname" v-model="memberdata.namel"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                            value="" placeholder="" required />
+                            placeholder="" required />
                         </div>
                       </div>
                       <div class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5">
                         <div class="w-full">
                           <label for="firstname2"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ชื่อภาษาอังกฤษ</label>
-                          <input type="text" name="firstname2" id="firstname2"
+                          <input type="text" name="firstname2" id="firstname2" v-model="memberdata.nameengf"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                            value="" placeholder="" required />
+                            placeholder="" required />
                         </div>
                         <div class="w-full">
                           <label for="Lastname2"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">นามสกุลภาษาอังกฤษ</label>
-                          <input type="text" name="Lastname2" id="Lastname2"
+                          <input type="text" name="Lastname2" id="Lastname2" v-model="memberdata.nameengl"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                            value="" placeholder="" required />
+                            placeholder="" required />
                         </div>
                       </div>
                       <div class="grid gap-4 mb-4 sm:grid-cols-4 sm:gap-6 sm:mb-5">
                         <div class="sm:col-span-2">
                           <label for="nationality"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">สัญชาติ</label>
-                          <input type="text" name="nationality" id="nationality"
+                          <input type="text" name="nationality" id="nationality" v-model="memberdata.nationa"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                            value="" placeholder="" required />
+                            placeholder="" required />
                         </div>
                         <div>
                           <label for="gender"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">เพศ</label>
-                          <select id="gender"
+                          <select id="gender" v-model="memberdata.gender"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                             <option selected></option>
                             <option value="ชาย">ชาย</option>
@@ -525,7 +537,7 @@
                                   clip-rule="evenodd"></path>
                               </svg>
                             </div>
-                            <input datepicker datepicker-autohide type="text"
+                            <input datepicker datepicker-autohide type="text" v-model="memberdata.dob"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="เลือกวันเกิด" />
                           </div>
@@ -535,26 +547,26 @@
                         <div class="w-full">
                           <label for="identification"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">หมายเลขบัตรประชาชน</label>
-                          <input type="text" name="identification" id="identification"
+                          <input type="text" name="identification" id="identification" v-model="memberdata.idencard"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                            value="" placeholder="" required />
+                            placeholder="" required />
                         </div>
 
                         <div class="w-full">
                           <label for="phone"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">เบอร์โทรศัพท์</label>
-                          <input type="text" name="phone" id="phone"
+                          <input type="text" name="phone" id="phone" v-model="memberdata.phone"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                            value="" placeholder="" required />
+                            placeholder="" required />
                         </div>
                         <div class="sm:col-span-2">
                           <label for="category"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ประเภทเตียง</label>
-                          <select id="category"
+                          <select id="category" v-model="memberdata.bedtype"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                             <option selected></option>
-                            <option value="ชาย">เดี่ยว</option>
-                            <option value="หญิง">คู่</option>
+                            <option value="เดี่ยว">เดี่ยว</option>
+                            <option value="คู่">คู่</option>
                           </select>
                         </div>
                       </div>
@@ -562,16 +574,16 @@
                         <div class="w-full">
                           <label for="passport"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">หมายเลขพาสปอร์ต</label>
-                          <input type="text" name="passport" id="passport"
+                          <input type="text" name="passport" id="passport" v-model="memberdata.passport"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                            value="" placeholder="" required />
+                            placeholder="" required />
                         </div>
                         <div class="w-full">
                           <label for="check"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ตรวจลงตราเลขที่</label>
-                          <input type="text" name="check" id="check"
+                          <input type="text" name="check" id="check" v-model="memberdata.stampnumber"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                            value="" placeholder="" required />
+                            placeholder="" required />
                         </div>
 
                         <div class="w-full">
@@ -587,7 +599,7 @@
                                     clip-rule="evenodd"></path>
                                 </svg>
                               </div>
-                              <input name="start" type="text"
+                              <input name="start" type="text" v-model="memberdata.dateofissue"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="เลือกวันที่" />
                             </div>
@@ -606,7 +618,7 @@
                                     clip-rule="evenodd"></path>
                                 </svg>
                               </div>
-                              <input name="end" type="text"
+                              <input name="end" type="text" v-model="memberdata.dateofexpiry"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="เลือกวันที่" />
                             </div>
@@ -617,21 +629,21 @@
                         <div>
                           <label for="brand"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ที่อยู่ตามบัตรประชาชน</label>
-                          <input type="text" name="passport" id="passport"
+                          <input type="text" name="passport" id="passport" v-model="memberdata.address"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                            value="" required />
+                            required />
                         </div>
                         <div class="w-full">
                           <label for="brand"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">หมายเหตุ</label>
-                          <input type="text" name="check" id="check"
+                          <input type="text" name="check" id="check" v-model="memberdata.comment"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                            value="" placeholder="" required />
+                            placeholder="" required />
                         </div>
                       </div>
                     </form>
                     <form class="space-y-6 flex justify-center" action="#">
-                      <button type="submit"
+                      <button type="button" @click="createmember"
                         class="w-50 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         เพิ่ม
                       </button>
@@ -644,9 +656,13 @@
         </div>
 
         <div>
-          <div class="mt-2 relative overflow-x-auto shadow-md sm:rounded-lg">
-            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-              <thead class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-400">
+          <div class="mt-2 relative overflow-x-auto border sm:rounded-lg">
+            <table
+              class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
+            >
+              <thead
+                class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-400"
+              >
                 <tr>
                   <th scope="col" class="px-6 py-3">ลำดับ</th>
                   <th scope="col" class="px-6 py-3">ชื่อ-นามสกุล</th>
@@ -744,27 +760,51 @@
                             <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                               ตรวจลงตราเลขที: 455/55
                             </p>
+
+                          
                             <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                              หมายเหตุ: asddds
+                              หมายเหตุ: ห้องน้ำไม่สะอาด
                             </p>
                           </div>
+                          
                           <!-- Modal footer -->
                           <div
                             class="flex items-center justify-between p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
-                            <div class="flex justify-between">
-                              <div>
-                                <input type="text" id="small-input"
-                                  class="mr-2 w-70 block w-full py-2.5 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                            <div>
+                              <div class="w-50">
+                          <label for="startenddate"
+                            class="block mb-2 text-sm font-medium text-gray-500 dark:text-gray-400">วันที่คอมเมนต์</label>
+                          <div date-rangepicker class="flex items-center">
+                            <div class="w-full relative">
+                              <div class="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none">
+                                <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                                  fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd"
+                                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                    clip-rule="evenodd"></path>
+                                </svg>
                               </div>
+                              <input name="start" type="text"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="เลือกวันที่" />
+                            </div>
+                          </div>
+                        </div>
+                              </div>
+                              <div class="pt-7">
+                                <input type="text" id="small-input"
+                                  class="mr-2 w-50 block w-full py-3 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                              </div>
+                              <div class="pt-7">
                               <button data-modal-hide="staticModal" type="button"
-                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                class="mr-6  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                 คอมเมนต์
                               </button>
-                            </div>
                             <button data-modal-hide="staticModal" type="button"
                               class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">
                               ปิด
                             </button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -786,54 +826,57 @@
                             </svg>
                           </button>
                           <div class="px-6 py-6 lg:px-8">
-                            <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">
-                              เพิ่มลูกทัวร์
+                            <h3
+                              class="mb-4 text-xl font-medium text-gray-900 dark:text-white"
+                            >
+                              แก้ไขข้อมูลลูกทัวร์
                             </h3>
+                            <hr class="my-5" />
                             <form action="#">
                               <div class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5">
                                 <div class="w-full">
                                   <label for="firstname"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ชื่อ</label>
-                                  <input type="text" name="firstname" id="firstname"
+                                  <input type="text" name="firstname" id="firstname" v-model="memberdata.name"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    value="" placeholder="" required />
+                                    placeholder="" required />
                                 </div>
                                 <div class="w-full">
                                   <label for="lastname"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">สกุล</label>
-                                  <input type="text" name="lastname" id="lastname"
+                                  <input type="text" name="lastname" id="lastname" v-model="memberdata.namel"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    value="" placeholder="" required />
+                                    placeholder="" required />
                                 </div>
                               </div>
                               <div class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5">
                                 <div class="w-full">
                                   <label for="firstname2"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ชื่อภาษาอังกฤษ</label>
-                                  <input type="text" name="firstname2" id="firstname2"
+                                  <input type="text" name="firstname2" id="firstname2" v-model="memberdata.nameengf"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    value="" placeholder="" required />
+                                    placeholder="" required />
                                 </div>
                                 <div class="w-full">
                                   <label for="Lastname2"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">นามสกุลภาษาอังกฤษ</label>
-                                  <input type="text" name="Lastname2" id="Lastname2"
+                                  <input type="text" name="Lastname2" id="Lastname2" v-model="memberdata.nameengl"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    value="" placeholder="" required />
+                                    placeholder="" required />
                                 </div>
                               </div>
                               <div class="grid gap-4 mb-4 sm:grid-cols-4 sm:gap-6 sm:mb-5">
                                 <div class="sm:col-span-2">
                                   <label for="nationality"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">สัญชาติ</label>
-                                  <input type="text" name="nationality" id="nationality"
+                                  <input type="text" name="nationality" id="nationality" v-model="memberdata.nationa"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    value="" placeholder="" required />
+                                    placeholder="" required />
                                 </div>
                                 <div>
                                   <label for="gender"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">เพศ</label>
-                                  <select id="gender"
+                                  <select id="gender" v-model="memberdata.gender"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                                     <option selected></option>
                                     <option value="ชาย">ชาย</option>
@@ -855,7 +898,7 @@
                                           clip-rule="evenodd"></path>
                                       </svg>
                                     </div>
-                                    <input datepicker datepicker-autohide type="text"
+                                    <input datepicker datepicker-autohide type="text" v-model="memberdata.dob"
                                       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                       placeholder="เลือกวันเกิด" />
                                   </div>
@@ -866,21 +909,22 @@
                                   <label for="identification"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">หมายเลขบัตรประชาชน</label>
                                   <input type="text" name="identification" id="identification"
+                                    v-model="memberdata.idencard"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    value="" placeholder="" required />
+                                    placeholder="" required />
                                 </div>
 
                                 <div class="w-full">
                                   <label for="phone"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">เบอร์โทรศัพท์</label>
-                                  <input type="text" name="phone" id="phone"
+                                  <input type="text" name="phone" id="phone" v-model="memberdata.phone"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    value="" placeholder="" required />
+                                    placeholder="" required />
                                 </div>
                                 <div class="sm:col-span-2">
                                   <label for="category"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ประเภทเตียง</label>
-                                  <select id="category"
+                                  <select id="category" v-model="memberdata.bedtype"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                                     <option selected></option>
                                     <option value="ชาย">เดี่ยว</option>
@@ -892,16 +936,16 @@
                                 <div class="w-full">
                                   <label for="passport"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">หมายเลขพาสปอร์ต</label>
-                                  <input type="text" name="passport" id="passport"
+                                  <input type="text" name="passport" id="passport" v-model="memberdata.passport"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    value="" placeholder="" required />
+                                    placeholder="" required />
                                 </div>
                                 <div class="w-full">
                                   <label for="check"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ตรวจลงตราเลขที่</label>
-                                  <input type="text" name="check" id="check"
+                                  <input type="text" name="check" id="check" v-model="memberdata.stampnumber"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    value="" placeholder="" required />
+                                    placeholder="" required />
                                 </div>
 
                                 <div class="w-full">
@@ -917,7 +961,7 @@
                                             clip-rule="evenodd"></path>
                                         </svg>
                                       </div>
-                                      <input name="start" type="text"
+                                      <input name="start" type="text" v-model="memberdata.dateofissue"
                                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                         placeholder="เลือกวันที่" />
                                     </div>
@@ -936,7 +980,7 @@
                                             clip-rule="evenodd"></path>
                                         </svg>
                                       </div>
-                                      <input name="end" type="text"
+                                      <input name="end" type="text" v-model="memberdata.dateofexpiry"
                                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                         placeholder="เลือกวันที่" />
                                     </div>
@@ -947,21 +991,21 @@
                                 <div>
                                   <label for="brand"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ที่อยู่ตามบัตรประชาชน</label>
-                                  <input type="text" name="passport" id="passport"
+                                  <input type="text" name="passport" id="passport" v-model="memberdata.address"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    value="" required />
+                                    required />
                                 </div>
                                 <div class="w-full">
                                   <label for="brand"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">หมายเหตุ</label>
-                                  <input type="text" name="check" id="check"
+                                  <input type="text" name="check" id="check" v-model="memberdata.comment"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    value="" placeholder="" required />
+                                    placeholder="" required />
                                 </div>
                               </div>
                             </form>
                             <form class="space-y-6 flex justify-center" action="#">
-                              <button type="submit"
+                              <button type="button" @click="createmember"
                                 class="w-50 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                 บันทึก
                               </button>
@@ -1086,20 +1130,44 @@ onMounted(() => {
 });
 
 const store = useDatatour();
-
 const { tourfiltered } = storeToRefs(store);
 
-console.log(tourfiltered.value);
+const memberdata = ref({
+  idmember: new Date().getTime(),
+  name: "",
+  namel: "",
+  nameengf: "",
+  nameengl: "",
+  nationa: "",
+  gender: "",
+  dob: "",
+  idencard: "",
+  phone: "",
+  bedtype: "",
+  passport: "",
+  stampnumber: "",
+  dateofissue: "",
+  dateofexpiry: "",
+  address: "",
+  comment: "",
+})
+
+function createmember() {
+  console.log("send",memberdata.value)
+  store.newmember(memberdata.value)
+}
+
+// console.log(tourfiltered.value);
 const vehigo = computed(() =>
   tourfiltered.value.vehicle.filter(
     (item) => item.type == "ไป" || item.type == "ไปกลับ"
   )
 );
-console.log(vehigo.value);
+console.log("cargo",vehigo.value);
 const vehiback = computed(() =>
   tourfiltered.value.vehicle.filter(
     (item) => item.type == "กลับ" || item.type == "ไปกลับ"
   )
 );
-console.log(vehiback.value);
+console.log("cargo",vehiback.value);
 </script>

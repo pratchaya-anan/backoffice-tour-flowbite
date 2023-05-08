@@ -1,6 +1,8 @@
 <template>
   <header>
-    <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+    <nav
+      class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800 border-b shadow-md"
+    >
       <div
         class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"
       >
@@ -65,7 +67,7 @@
             <li>
               <a
                 href="/tour_ls"
-                class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
+                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                 aria-current="page"
                 >รายการทัวร์</a
               >
@@ -74,6 +76,7 @@
               <a
                 href="/addtour"
                 class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                aria-current="page"
                 >สร้างทัวร์</a
               >
             </li>
@@ -81,13 +84,15 @@
               <a
                 href="/report"
                 class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                aria-current="page"
                 >รายงาน</a
               >
             </li>
             <li>
               <a
-                href="/add-estimate"
+                href="/createreceipt"
                 class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                aria-current="page"
                 >สร้างใบเสร็จรับเงิน</a
               >
             </li>
