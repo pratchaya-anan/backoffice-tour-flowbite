@@ -1,12 +1,8 @@
 <template>
   <section class="p-3 sm:p-5">
     <div class="mx-auto max-w-screen-lg">
-      <div
-        class="min-h-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-      >
-        <h5
-          class="mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white"
-        >
+      <div class="min-h-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <h5 class="mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
           สร้างใบเสนอราคา
         </h5>
         <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
@@ -15,209 +11,101 @@
         <form action="#">
           <div class="grid gap-4 grid-cols-2 lg:grid-cols-2 lg:gap-6">
             <div class="col-span-1 lg:col-span-1">
-              <label
-                for="namecustomer"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >ชื่อลูกค้า</label
-              >
-              <input
-                type="text"
-                name="namecustomer"
-                id="namecustomer"
-                v-model="quotation.customer_name"
+              <label for="namecustomer"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ชื่อลูกค้า</label>
+              <input type="text" name="namecustomer" id="namecustomer" v-model="quotation.customer_name"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                required
-              />
+                required />
             </div>
             <div class="col-span-1 lg:col-span-1">
-              <label
-                for="namecontact"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >ชื่อผู้ติดต่อ</label
-              >
-              <input
-                type="text"
-                name="namecontact"
-                id="namecontact"
-                v-model="quotation.contact_name"
+              <label for="namecontact"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ชื่อผู้ติดต่อ</label>
+              <input type="text" name="namecontact" id="namecontact" v-model="quotation.contact_name"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                required
-              />
+                required />
             </div>
             <div class="col-span-1 lg:col-span-1">
-              <label
-                for="taxid"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >เลขประจำตัวผู้เสียภาษี</label
-              >
-              <input
-                type="text"
-                name="taxid"
-                id="taxid"
-                v-model="quotation.tax_number"
+              <label for="taxid"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">เลขประจำตัวผู้เสียภาษี</label>
+              <input type="text" name="taxid" id="taxid" v-model="quotation.tax_number"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                required
-              />
+                required />
             </div>
             <div class="col-span-1 lg:col-span-1">
-              <label
-                for="taxid"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >รหัสลูกค้า</label
-              >
-              <input
-                type="text"
-                name="taxid"
-                id="taxid"
-                v-model="quotation.customer_code"
+              <label for="taxid" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">รหัสลูกค้า</label>
+              <input type="text" name="taxid" id="taxid" v-model="quotation.customer_code"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                required
-              />
+                required />
             </div>
             <div class="col-span-1 lg:col-span-2">
-              <label
-                for="address"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >ที่อยู่</label
-              >
-              <input
-                type="text"
-                name="address"
-                id="address"
-                v-model="quotation.address"
+              <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ที่อยู่</label>
+              <input type="text" name="address" id="address" v-model="quotation.address"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                required
-              />
+                required />
             </div>
 
             <div>
-              <label
-                for="address"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >ยืนยันราคาภายในวันที่</label
-              >
+              <label for="address"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ยืนยันราคาภายในวันที่</label>
               <div class="relative flex items-center">
-                <div
-                  class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="w-5 h-5 text-gray-500 dark:text-gray-400"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                  <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
+                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
                       d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                      clip-rule="evenodd"
-                    ></path>
+                      clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <input
-                  datepicker
-                  type="text"
-                  v-model="quotation.confirm_date"
+                <input datepicker type="text" v-model="quotation.confirm_date"
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="เลือกวันที่"
-                />
+                  placeholder="เลือกวันที่" />
               </div>
             </div>
 
             <div>
-              <label
-                for="address"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >วันที่ส่งของ</label
-              >
+              <label for="address"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">วันที่ส่งของ</label>
               <div class="relative flex items-center">
-                <div
-                  class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="w-5 h-5 text-gray-500 dark:text-gray-400"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                  <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
+                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
                       d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                      clip-rule="evenodd"
-                    ></path>
+                      clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <input
-                  datepicker
-                  type="text"
-                  v-model="quotation.send_date"
+                <input datepicker type="text" v-model="quotation.send_date"
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="เลือกวันที่"
-                />
+                  placeholder="เลือกวันที่" />
               </div>
             </div>
 
             <div class="w-full">
-              <label
-                for="customername"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >ผู้เสนอขาย</label
-              >
-              <input
-                type="text"
-                name="ustomerid"
-                id="ustomerid"
-                v-model="quotation.faction"
+              <label for="customername"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ผู้เสนอขาย</label>
+              <input type="text" name="ustomerid" id="ustomerid" v-model="quotation.seller"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                required
-              />
+                required />
             </div>
 
             <div class="w-full">
-              <label
-                for="customerid"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >ฝ่าย</label
-              >
-              <input
-                type="text"
-                name="ustomerid"
-                id="ustomerid"
-                v-model="quotation.faction"
+              <label for="customerid" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ฝ่าย</label>
+              <input type="text" name="ustomerid" id="ustomerid" v-model="quotation.faction"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                required
-              />
+                required />
             </div>
             <div class="w-full">
-              <label
-                for="customerid"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >เบอร์โทรศัพท์</label
-              >
-              <input
-                type="text"
-                name="ustomerid"
-                id="ustomerid"
-                v-model="quotation.phone"
+              <label for="customerid"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">เบอร์โทรศัพท์</label>
+              <input type="text" name="ustomerid" id="ustomerid" v-model="quotation.phone"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                required
-              />
+                required />
             </div>
             <div class="w-full">
-              <label
-                for="customerid"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >เมล</label
-              >
-              <input
-                type="text"
-                name="ustomerid"
-                id="ustomerid"
-                v-model="quotation.email"
+              <label for="customerid" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">เมล</label>
+              <input type="text" name="ustomerid" id="ustomerid" v-model="quotation.email"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                required
-              />
+                required />
             </div>
           </div>
         </form>
@@ -487,79 +375,36 @@
         <form action="#">
           <div class="grid grid-cols-2 gap-4 lg:grid-cols-2 lg:gap-6">
             <div class="col-span-1 lg:col-span-1 w-full">
-              <label
-                for="namecustomer"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >รหัสสินค้า</label
-              >
-              <input
-                type="text"
-                name="namecustomer"
-                id="namecustomer"
-                v-model="product.product_code"
+              <label for="namecustomer"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">รหัสสินค้า</label>
+              <input type="text" name="namecustomer" id="namecustomer" v-model="product.product_code"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                required
-              />
+                required />
             </div>
             <div class="col-span-1 lg:col-span-1 w-full">
-              <label
-                for="namecontact"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >จำนวน</label
-              >
-              <input
-                type="number"
-                name="namecontact"
-                id="namecontact"
-                v-model="product.quantity"
+              <label for="namecontact" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">จำนวน</label>
+              <input type="number" name="namecontact" id="namecontact" v-model="product.quantity"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                required
-              />
+                required />
             </div>
             <div class="col-span-1 lg:col-span-1 w-full">
-              <label
-                for="taxid"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >ราคาต่อหน่วย</label
-              >
-              <input
-                type="number"
-                name="taxid"
-                id="taxid"
-                v-model="product.unit_price"
+              <label for="taxid" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ราคาต่อหน่วย</label>
+              <input type="number" name="taxid" id="taxid" v-model="product.unit_price"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                required
-              />
+                required />
             </div>
             <div class="col-span-1 lg:col-span-1 w-full">
-              <label
-                for="address"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >ส่วนลด</label
-              >
-              <input
-                type="number"
-                name="address"
-                id="address"
-                v-model="product.product_discount"
+              <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ส่วนลด</label>
+              <input type="number" name="address" id="address" v-model="product.product_discount"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                required
-              />
+                required />
             </div>
-            <div
-              class="col-span-2 grid grid-cols-5 gap-4 lg:grid-cols-5 lg:gap-6"
-            >
+            <div class="col-span-2 grid grid-cols-5 gap-4 lg:grid-cols-5 lg:gap-6">
               <div class="col-span-2 lg:col-span-2 w-full">
-                <label
-                  for="countries"
-                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >ภาษี (0% 7% 9%)</label
-                >
-                <select
-                  id="countries"
-                  v-model="product.tax"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                >
+                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ภาษี (0% 7%
+                  9%)</label>
+                <select id="countries" v-model="product.tax"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                   <!-- <option selected>Choose a country</option> -->
                   <option value="0">0%</option>
                   <option value="7">7%</option>
@@ -568,38 +413,23 @@
               </div>
 
               <div class="col-span-2 lg:col-span-2 w-full">
-                <label
-                  for="address"
-                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >รายการสินค้า</label
-                >
-                <input
-                  type="text"
-                  name="address"
-                  id="address"
-                  v-model="product.product_list"
+                <label for="address"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">รายการสินค้า</label>
+                <input type="text" name="address" id="address" v-model="product.product_list"
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                  required
-                />
+                  required />
               </div>
 
-              <button
-                type="button"
-                @click="addProduct"
-                class="col-span-1 lg:col-span-1 w-full mt-7 px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              >
+              <button type="button" @click="addProduct"
+                class="col-span-1 lg:col-span-1 w-full mt-7 px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 เพิ่มข้อมูล
               </button>
             </div>
           </div>
         </form>
         <div class="relative overflow-x-auto mt-6 shadow-md sm:rounded-lg">
-          <table
-            class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
-          >
-            <thead
-              class="text-xs text-gray-700 uppercase bg-primary-100 dark:bg-gray-700 dark:text-gray-400"
-            >
+          <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-primary-100 dark:bg-gray-700 dark:text-gray-400">
               <tr>
                 <th scope="col" class="px-6 py-3">ลำดับ</th>
                 <th scope="col" class="px-6 py-3">รหัสสินค้า</th>
@@ -613,15 +443,9 @@
               </tr>
             </thead>
             <tbody>
-              <tr
-                v-for="(data, index) in quotation.product"
-                key="index"
-                class="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
-              >
-                <th
-                  scope="row"
-                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
+              <tr v-for="(data, index) in quotation.product" key="index"
+                class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                   {{ index + 1 }}
                 </th>
                 <td class="px-6 py-4">{{ data.product_code }}</td>
@@ -640,21 +464,12 @@
                   }}
                 </td>
                 <td class="px-6 py-4">
-                  <svg
-                    href="#"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                    class="w-5 h-5 text-blue-500 hover:text-blue-800 mx-2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"
-                    ></path>
+                  <svg href="#" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                    class="w-5 h-5 text-blue-500 hover:text-blue-800 mx-2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10">
+                    </path>
                   </svg>
                 </td>
               </tr>
@@ -662,118 +477,56 @@
           </table>
         </div>
         <div
-          class="mt-6 p-6 pb-0 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-        >
+          class="mt-6 p-6 pb-0 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <div class="grid grid-cols-2 gap-4 lg:grid-cols-7 lg:gap-6">
             <div class="col-span-1">
-              <label
-                for="text"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >กำหนดยืนราคา(วัน)</label
-              >
-              <input
-                type="number"
-                id="text"
-                v-model="quotation.set_pricedate"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              />
+              <label for="text"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">กำหนดยืนราคา(วัน)</label>
+              <input type="number" id="text" v-model="quotation.set_pricedate"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
             </div>
             <div class="col-span-1">
-              <label
-                for="text"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >ค่ามัดจำ</label
-              >
-              <input
-                type="number"
-                id="text"
-                v-model="quotation.deposit"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              />
+              <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ค่ามัดจำ</label>
+              <input type="number" id="text" v-model="quotation.deposit"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
             </div>
             <div class="col-span-1">
-              <label
-                for="text"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >รวมเงิน</label
-              >
-              <input
-                type="text"
-                id="disabled-input"
-                aria-label="disabled input"
+              <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">รวมเงิน</label>
+              <input type="text" id="disabled-input" aria-label="disabled input"
                 class="mb-6 bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                value="10,700.00"
-                disabled
-              />
+                value="10,700.00" disabled />
             </div>
             <div class="col-span-1">
-              <label
-                for="text"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >ส่วนลดสินค้า</label
-              >
-              <input
-                type="text"
-                id="disabled-input"
-                aria-label="disabled input"
+              <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ส่วนลดสินค้า</label>
+              <input type="text" id="disabled-input" aria-label="disabled input"
                 class="mb-6 bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                value="0.00"
-                disabled
-              />
+                value="0.00" disabled />
             </div>
             <div class="col-span-1">
-              <label
-                for="text"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >ก่อนคำนวนภาษี</label
-              >
-              <input
-                type="text"
-                id="disabled-input"
-                aria-label="disabled input"
+              <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ก่อนคำนวนภาษี</label>
+              <input type="text" id="disabled-input" aria-label="disabled input"
                 class="mb-6 bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                value="10,000.00"
-                disabled
-              />
+                value="10,000.00" disabled />
             </div>
             <div class="col-span-1">
-              <label
-                for="text"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >ภาษีมูลค่าเพิ่ม</label
-              >
-              <input
-                type="text"
-                id="disabled-input"
-                aria-label="disabled input"
+              <label for="text"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ภาษีมูลค่าเพิ่ม</label>
+              <input type="text" id="disabled-input" aria-label="disabled input"
                 class="mb-6 bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                value="700.00"
-                disabled
-              />
+                value="700.00" disabled />
             </div>
             <div class="col-span-1">
-              <label
-                for="text"
-                class="block mb-1 text-sm font-bold text-gray-900 dark:text-white"
-                >จำนวนเงินทั้งสิ้น</label
-              >
-              <input
-                type="text"
-                id="disabled-input"
-                aria-label="disabled input"
+              <label for="text"
+                class="block mb-1 text-sm font-bold text-gray-900 dark:text-white">จำนวนเงินทั้งสิ้น</label>
+              <input type="text" id="disabled-input" aria-label="disabled input"
                 class="mb-6 bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                value="10,700.00"
-                disabled
-              />
+                value="10,700.00" disabled />
             </div>
           </div>
         </div>
         <div class="flex justify-end">
-          <button
-            type="button"
-            @click="addQuotation"
-            class="mt-3 px-18 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
+          <button type="button" @click="addQuotation"
+            class="mt-3 px-18 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             สร้างใบเสนอราคา
           </button>
         </div>
@@ -794,6 +547,7 @@ const quotation = ref({
   address: "",
   confirm_date: "",
   send_date: "",
+  seller: "",
   faction: "",
   phone: "",
   email: "",
