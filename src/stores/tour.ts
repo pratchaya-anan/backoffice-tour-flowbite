@@ -80,6 +80,7 @@ export const useDatatour = defineStore('tour', () => {
       member: [],
     },
   ]);
+
   const memberdata = ref([
     {
       idmember: "m1",
@@ -112,6 +113,7 @@ export const useDatatour = defineStore('tour', () => {
       comment: "",
     },
   ]);
+
   const hoteldata = ref([ 
     { 
       hotel_id: "h1",
@@ -124,6 +126,7 @@ export const useDatatour = defineStore('tour', () => {
       comment: "",
     }
   ]);
+
   const guidedata = ref([
     {
       guideid: "g1",
@@ -150,6 +153,7 @@ export const useDatatour = defineStore('tour', () => {
       comment: "",
     },
   ]);
+
   const vehicledata = ref([
     {
       vehicle_id: "v1",
@@ -216,5 +220,5 @@ export const useDatatour = defineStore('tour', () => {
   function newvehicle(item: any) {
     vehicledata.value.push(item);
   }
-  return { tourid, tourdata, tourfiltered, guidedata, hoteldata, vehicledata, settourid, addtour, addguide, newguide, addhotel, newhotel, addvehicle, newvehicle }
+  return { tourid, tourdata, tourfiltered, memberdata, guidedata, hoteldata, vehicledata, settourid, addtour, addguide, newguide, addhotel, newhotel, addvehicle, newvehicle }
 })
