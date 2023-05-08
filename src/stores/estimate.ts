@@ -1,9 +1,9 @@
 import { defineStore } from 'pinia'
 
 export const estimate = defineStore('useEstimate', () => {
-    const data = ref([
+    const dataestimate = ref([
         {
-            id: 1,
+            id: 0,
             name: "",
             department: "",
             date: "",
@@ -18,7 +18,7 @@ export const estimate = defineStore('useEstimate', () => {
         objectives: string
         details: any,
     }) {
-        const lastId = data.value[data.value.length - 1].id
+        const lastId = dataestimate.value[dataestimate.value.length - 1].id
         const newId = lastId + 1
         const newItem = {
             id: newId,
@@ -28,8 +28,8 @@ export const estimate = defineStore('useEstimate', () => {
             objectives: item.objectives,
             details: item.details,
         }
-        data.value.push(newItem)
-        console.log(data.value)
+        dataestimate.value.push(newItem)
+        console.log(dataestimate.value)
     }
-    return { data, additem }
+    return { dataestimate, additem }
 })

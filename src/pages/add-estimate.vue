@@ -126,7 +126,7 @@
                 <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
                   v-for="(data, index) in addEstimate.details" key="index">
                   <th scope="row" class="px-2 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    {{ index+1 }}
+                    {{ index + 1 }}
                   </th>
                   <td class="px-10 py-4">{{ data.type }}</td>
                   <td class="px-6 py-4">{{ data.detail }}</td>
@@ -175,14 +175,9 @@ function addDataDetail() {
 
 function addDataEstimate() {
   store.additem(addEstimate.value)
-  // addEstimate.value.push({ name: addEstimate.name, department: addEstimate.department, objectives: addEstimate.objectives });
   console.log(addEstimate.value);
+  useRouter().push("/disbursement-management");
 }
-
-// function add() {
-//   store.additem(addEstimate.value)
-//   console.log(addEstimate.value);
-// }
 </script>
 
 <!-- <script lang="ts">

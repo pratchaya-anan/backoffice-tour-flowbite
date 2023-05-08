@@ -555,8 +555,9 @@ function addProduct() {
 }
 
 function addQuotation() {
-  store.additem(quotation.value)
+  store.additem(quotation.value);
   console.log(quotation.value);
+  useRouter().push("/quotation-management");
 }
 
 
