@@ -40,7 +40,7 @@
                       <h3
                         class="text-xl font-medium text-gray-900 dark:text-white"
                       >
-                        Extra Large modal
+                        เลือกใบกำกับภาษี
                       </h3>
                       <button
                         type="button"
@@ -326,7 +326,7 @@
                 </thead>
                 <tbody>
                   <tr
-                    v-for="i in 4"
+                    v-for="i in 3"
                     class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
                   >
                     <th
@@ -369,7 +369,7 @@
 
           <div class="flex justify-end">
             <NuxtLink
-              href=""
+              href="/paper/receipt_paper"
               class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
               ><button>สร้างใบเสร็จรับเงิน</button>
             </NuxtLink>
