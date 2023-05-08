@@ -178,7 +178,7 @@ export const useDatatour = defineStore('tour', () => {
     tourid.value = idtour;
     console.log("IdTour", tourid.value);
   }
-
+//add member
   function newmember(item: any) {
     console.log("1",item);
     memberdata.value.push(item);
