@@ -8,7 +8,7 @@ export const useDatatour = defineStore('tour', () => {
       tourname: "เกาะเสม็ด เสร็จบางราย",
       programname: "เกาะเสม็ด เสร็จบางราย",
       day: 5,
-      night:  4,
+      night: 4,
       datestart: "16/04/2566",
       dateend: "20/04/2566",
       priceunit: 5000,
@@ -85,12 +85,21 @@ export const useDatatour = defineStore('tour', () => {
     {
       idmember: "m1",
       name: "มะยม ขมจัง",
-      nameeng: "Mayom Khomjung",
+      namel: "",
+      nameengf: "Mayom Khomjung",
+      nameengl: "",
       idencard: "1245865475854",
       passport: "A251368",
       nationa: "ไทย",
+      phone: "",
+      dob: "",
       gender: "ชาย",
+      stampnumber: "",
+      dateofissue: "",
+      dateofexpiry: "",
+      address: "",
       comment: "",
+      bedtype: "",
     },
     {
       idmember: "m2",
@@ -120,7 +129,7 @@ export const useDatatour = defineStore('tour', () => {
       name: "ริเวอร์แคว กาญจนบุรี",
       comment: "",
     },
-    { 
+    {
       hotel_id: "h2",
       name: "เอเชีย ชะอำ",
       comment: "",
@@ -171,7 +180,13 @@ export const useDatatour = defineStore('tour', () => {
 
   function settourid(idtour: string) {
     tourid.value = idtour;
-    console.log("IdTour",tourid.value);
+    console.log("IdTour", tourid.value);
+  }
+//add member
+  function newmember(item: any) {
+    console.log("1",item);
+    memberdata.value.push(item);
+    console.log("2",memberdata.value);
   }
 
   //New tour
