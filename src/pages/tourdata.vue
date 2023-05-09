@@ -1130,7 +1130,7 @@ onMounted(() => {
 });
 
 const store = useDatatour();
-const { memberdata } = storeToRefs(store);
+// const { memberdata } = storeToRefs(store);
 
 // computed: {
 //   datamember(idmember) {
