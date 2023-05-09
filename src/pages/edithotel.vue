@@ -1,82 +1,77 @@
 <template>
   <!-- ข้อมูลโรงแรมที่พัก -->
-  <section class="bg-gray-100 dark:bg-gray-900 p-3 sm:p-5 min-h-175">
+  <section class="dark:bg-gray-900 p-3 sm:p-5 min-h-175">
     <div class="max-w-screen-lg mx-auto">
-      <div class="block w-full p-6 bg-white border border-gray-200 rounded-lg shadow ">
-        <ol class="flex justify-center items-center w-full space-y-4 ">
-          <!-- Step 1 -->
-          <NuxtLink to="/edittour" class="pt-4">
-            <div type="button" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
-              <li class="flex items-center text-gray-500 dark:text-gray-400 space-x-2.5">
-                <span
-                  class="flex items-center justify-center w-8 h-8 border border-gray-500 rounded-full shrink-0 dark:border-gray-400">
-                  1
-                </span>
-                <span>
-                  <h3 class="font-medium leading-tight">ข้อมูลทัวร์</h3>
-                </span>
-                <svg aria-hidden="true" class="w-4 h-4 ml-2 sm:ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7">
-                  </path>
-                </svg>
-              </li>
-            </div>
-          </NuxtLink>
-          <!-- Step 2 -->
-          <NuxtLink to="/editguide">
-            <div type="button" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
-              <li class="flex items-center text-gray-500 dark:text-gray-400 space-x-2.5">
-                <span
-                  class="flex items-center justify-center w-8 h-8 border border-gray-500 rounded-full shrink-0 dark:border-gray-400">
-                  2
-                </span>
-                <span>
-                  <h3 class="font-medium leading-tight">ข้อมูลไกด์</h3>
-                </span>
-                <svg aria-hidden="true" class="w-4 h-4 ml-2 sm:ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7">
-                  </path>
-                </svg>
-              </li>
-            </div>
-          </NuxtLink>
-          <!-- Step 3 -->
-          <NuxtLink to="/edithotel">
-            <button type="button" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
-              <li class="flex items-center text-blue-600 dark:text-blue-500 space-x-2.5">
-                <span
-                  class="flex items-center justify-center w-8 h-8 text-white bg-blue-600 rounded-full shrink-0 dark:border-blue-500">
-                  3
-                </span>
-                <span>
-                  <h3 class="font-medium leading-tight">ข้อมูลโรงแรม</h3>
-                </span>
-                <svg aria-hidden="true" class="w-4 h-4 ml-2 sm:ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7">
-                  </path>
-                </svg>
-              </li>
-            </button>
-          </NuxtLink>
-          <!-- Step 4 -->
-          <NuxtLink to="/editvehicle">
-            <button type="button" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-md hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
-              <li class="flex items-center text-gray-500 dark:text-gray-400 space-x-2.5">
-                <span
-                  class="flex items-center justify-center w-8 h-8 border border-gray-500 rounded-full shrink-0 dark:border-gray-400">
-                  4
-                </span>
-                <span>
-                  <h3 class="font-medium leading-tight">ข้อมูลพาหนะ</h3>
-                </span>
-              </li>
-            </button>
-          </NuxtLink>
-        </ol>
-      </div>
+      <ol class="flex justify-end items-center w-full space-y-4">
+        <!-- Step 1 -->
+        <NuxtLink to="/edittour" class="pt-4">
+          <div type="button"
+            class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
+            <li class="flex items-center text-gray-500 dark:text-blue-500 space-x-2.5">
+              <svg fill="none" class="w-6 h-6 ml-2" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10">
+                </path>
+              </svg>
+              <span>
+                <h3 class="font-medium leading-tight">ข้อมูลทัวร์</h3>
+              </span>
+            </li>
+          </div>
+        </NuxtLink>
+        <!-- Step 2 -->
+        <NuxtLink to="/editguide">
+          <div type="button"
+            class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b  border-gray-200 hover:bg-gray-100 hover:text-blue-700  dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
+            <li class="flex items-center text-gray-500 dark:text-gray-400 space-x-2.5">
+              <svg fill="none" class="w-6 h-6 ml-2" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10">
+                </path>
+              </svg>
+              <span>
+                <h3 class="font-medium leading-tight">ข้อมูลไกด์</h3>
+              </span>
+            </li>
+          </div>
+        </NuxtLink>
+        <!-- Step 3 -->
+        <NuxtLink to="/edithotel">
+          <button type="button"
+            class="px-4 py-2 text-sm font-medium text-gray-900 bg-gray-200 border-t border-b  border-gray-200 ">
+            <li class="flex items-center dark:text-gray-400 space-x-2.5">
+              <svg fill="none" class="w-6 h-6 ml-2" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10">
+                </path>
+              </svg>
+              <span>
+                <h3 class="font-medium leading-tight">ข้อมูลโรงแรม</h3>
+              </span>
+            </li>
+          </button>
+        </NuxtLink>
+        <!-- Step 4 -->
+        <NuxtLink to="/editvehicle">
+          <button type="button"
+            class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-md hover:bg-gray-100 hover:text-blue-700  dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
+            <li class="flex items-center text-gray-500 dark:text-gray-400 space-x-2.5">
+              <svg fill="none" class="w-6 h-6 ml-2" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10">
+                </path>
+              </svg>
+              <span>
+                <h3 class="font-medium leading-tight">ข้อมูลพาหนะ</h3>
+              </span>
+            </li>
+          </button>
+        </NuxtLink>
+      </ol>
 
       <div class="mt-3 block w-full p-6 bg-white border border-gray-200 rounded-lg shadow">
         <h5 class="mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -129,10 +124,14 @@
               </table>
             </div>
           </div>
-          <div class="flex justify-end">            
-            <NuxtLink to="/editvehicle"
-              class="ml- mt-6 px-10 py-2.5 inline-flex text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-              บันทึก              
+          <div class="flex justify-end mt-3">            
+            <NuxtLink to="/tourdata"
+              class="mt-3 mr-3 px-8 py-2.5 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 inline-flex">
+              กลับไปหน้าทัวร์
+            </NuxtLink>
+            <NuxtLink to=""
+              class="mt-3 px-10 py-2.5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 inline-flex">
+              บันทึก
             </NuxtLink>
           </div>
         </form>
