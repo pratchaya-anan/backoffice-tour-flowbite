@@ -759,9 +759,7 @@
                             <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                               หมายเหตุ: ห้องน้ำไม่สะอาด
                             </p>
-                          </div>
-                          <!-- คอมเมนต์-->
-                          <div class="p-6 space-y-6">
+                            <!-- คอมเมนต์-->
                             <form class="space-y-6" action="#">
                               <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
                               <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
@@ -801,6 +799,7 @@
                               </div>
                             </form>
                           </div>
+
                           <!-- Modal footer -->
                           <div
                             class="flex justify-end items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
