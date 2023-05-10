@@ -626,6 +626,8 @@
                   class="grid grid-cols-3 gap-2"
                 >
                   <div class="col-span-2">โรงแรม{{ hotel.name }}</div>
+                <div v-for="(hotel, indexh) in tourfiltered.hotel" key="indexh" class="grid grid-cols-3 gap-2">
+                  <div class="col-span-2">โรงแรม: {{ findnameHotel(hotel.hotel_id) }}</div>
                   <div>จำนวนห้องพัก: {{ hotel.amountroom }}</div>
                 </div>
               </div>
@@ -645,6 +647,8 @@
                 class="grid grid-cols-2 gap-2"
               >
                 <div>{{ guide.name }}</div>
+              <div v-for="(guide, indexg) in finddataGuide()" key="indexg" class="grid grid-cols-2 gap-2">
+                <div>{{ guide.guidename }}</div>
                 <div>{{ guide.phone }}</div>
               </div>
             </div>
@@ -658,12 +662,12 @@
               </div>
               <div class="grid grid-cols-3 gap-2">
                 <div>พาหนะขาไป :</div>
-                <div class="flex col-span-2">
-                  <p v-for="go in vehigo">{{ go.name }}</p>
+                <div v-for="go in vehiclecheck('ขาไป')" class="flex col-span-2">
+                  {{ go.name }}
                 </div>
                 <div>พาหนะขากลับ :</div>
-                <div class="flex col-span-2">
-                  <p v-for="back in vehiback">{{ back.name }}</p>
+                <div v-for="go in vehiclecheck('ขากลับ')" class="flex col-span-2">
+                  {{ go.name }}
                 </div>
               </div>
             </div>
@@ -2724,11 +2728,11 @@
   </section>
 </template>
 
-<script setup lg="ts">
-import { storeToRefs } from "pinia";
-import { useDatatour } from "/stores/tour";
+<script setup lang="ts">
 import { onMounted } from "vue";
 import { initFlowbite } from "flowbite/lib/esm/components";
+import { storeToRefs } from "pinia";
+import { useDatatour } from "../stores/tour";
 
 // initialize components based on data attribute selectors
 onMounted(() => {
@@ -2736,15 +2740,7 @@ onMounted(() => {
 });
 
 const store = useDatatour();
-// const { memberdata } = storeToRefs(store);
-
-// computed: {
-//   datamember(idmember) {
-//     return memberdata.value.filter(item => )
-//   }
-// }
-
-const { tourfiltered } = storeToRefs(store);
+const { tourfiltered, hoteldata, guidedata } = storeToRefs(store);
 
 const memberdata = ref({
   idmember: new Date().getTime(),
@@ -2766,22 +2762,39 @@ const memberdata = ref({
   comment: "",
 });
 
-function createmember() {
-  console.log("send", memberdata.value);
-  store.newmember(memberdata.value);
+function findnameHotel( hotel_id: string) {
+  const hotelfil = hoteldata.value.find(item => item.hotel_id == hotel_id);
+  // console.log("hotelfil",hotelfil.name);
+  return hotelfil.name;
 }
 
+function finddataGuide() {
+  // console.log("guide",Object.values(tourfiltered.value.guide))
+  const datafil = tourfiltered.value.guide.map(item2 => item2.guide_id);
+  return guidedata.value.filter(item => datafil.includes(item.guideid));
+}
+
+function vehiclecheck(type: string) {
+  const datavehicle = tourfiltered.value.vehicle.filter(
+    (item) => item.type == type || item.type == "ไปกลับ"
+  );
+  console.log("???",datavehicle)
+  return datavehicle;
+}
 // console.log(tourfiltered.value);
 const vehigo = computed(() =>
   tourfiltered.value.vehicle.filter(
     (item) => item.type == "ไป" || item.type == "ไปกลับ"
   )
 );
-console.log("cargo", vehigo.value);
 const vehiback = computed(() =>
   tourfiltered.value.vehicle.filter(
     (item) => item.type == "กลับ" || item.type == "ไปกลับ"
   )
 );
-console.log("cargo", vehiback.value);
+
+function createmember() {
+  console.log("send", memberdata.value);
+  store.newmember(memberdata.value);
+}
 </script>
