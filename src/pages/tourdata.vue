@@ -1130,6 +1130,14 @@ onMounted(() => {
 });
 
 const store = useDatatour();
+// const { memberdata } = storeToRefs(store);
+
+// computed: {
+//   datamember(idmember) {
+//     return memberdata.value.filter(item => )
+//   }
+// }
+
 const { tourfiltered } = storeToRefs(store);
 
 const memberdata = ref({

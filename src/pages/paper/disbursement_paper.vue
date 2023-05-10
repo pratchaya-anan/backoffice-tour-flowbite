@@ -87,7 +87,7 @@
         <!-- สรุปรายการ(ด้านขวา) -->
         <div class="grid grid-cols-2 p-2">
           <div class="font-bold">รวมสุทธิ</div>
-          <div class="text-right font-bold">72000 บาท</div>
+          <div class="text-right font-bold">{{ totalPrice }}</div>
         </div>
       </div>
 
@@ -120,5 +120,7 @@ import { estimate } from '/stores/estimate';
 
 const store = estimate();
 const { idfiltered } = storeToRefs(store);
+const { totalPrice } = storeToRefs(store);
+
 
 </script>

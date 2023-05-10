@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 
 export const estimate = defineStore('useEstimate', () => {
 
-    const id = ref(0)
+    const id = ref(0);
 
     const dataestimate = ref([
         {
@@ -11,17 +11,36 @@ export const estimate = defineStore('useEstimate', () => {
             department: "",
             date: "",
             objectives: "",
-            details: [],
+            details: [{
+                type: "",
+                price: 0,
+                quantity: 0,
+                detail: "",
+
+            }],
         }
     ])
 
+
     const idfiltered = computed(() => dataestimate.value.find(item => item.id == id.value));
+
+    const totalPrice = computed(() => {
+        if (idfiltered.value) {
+            return idfiltered.value.details.reduce((total, detail) => {
+                return total + (detail.price * detail.quantity);
+            }, 0);
+        } else {
+            return 0;
+        }
+    });
 
     function setid(idtour: number) {
         id.value = idtour;
         console.log("ID:", id.value);
-        console.log("ID:", idfiltered.value);
+        console.log("ID Detail:", idfiltered.value);
     }
+
+
 
     function additem(item: {
         name: string,
@@ -44,5 +63,5 @@ export const estimate = defineStore('useEstimate', () => {
         console.log(dataestimate.value)
     }
 
-    return { dataestimate, setid, idfiltered, additem }
+    return { dataestimate, setid, idfiltered, additem, totalPrice }
 })

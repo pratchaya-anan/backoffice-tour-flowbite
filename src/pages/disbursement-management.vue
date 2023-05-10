@@ -81,8 +81,7 @@
                         {{ data.objectives }}
                       </td>
                       <td class="px-6 py-4">
-                        ยังไม่เสร็จ
-                        <!-- {{ data.details }} -->
+                        {{ a(data.id) }}
                       </td>
                       <td class="px-6 py-4 text-right">
                         <a @click="click(data.id)"
@@ -171,7 +170,8 @@ import { estimate } from '/stores/estimate';
 
 const store = estimate();
 const { dataestimate } = storeToRefs(store);
-// const { tourfiltered } = storeToRefs(store);
+// const { totalPrice } = storeToRefs(store);
+
 
 const addEstimate = ref({
   name: "",
@@ -192,14 +192,13 @@ function click(id) {
   store.setid(id);
   useRouter().push('/paper/disbursement_paper');
 }
-
-function addDataDetail() {
-  addEstimate.value.details.push({ type: dataDetail.type, price: dataDetail.price, quantity: dataDetail.quantity, detail: dataDetail.detail });
-  console.log(addEstimate.value);
-}
-
-function addDataEstimate() {
-  store.additem(addEstimate.value);
-  console.log(addEstimate.value);
+function a(id) {
+  if (id) {
+    return dataestimate.value[id].details.reduce((total, detail) => {
+      return total + (detail.price * detail.quantity);
+    }, 0);
+  } else {
+    return 0;
+  }
 }
 </script>
