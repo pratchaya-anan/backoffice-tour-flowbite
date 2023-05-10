@@ -698,11 +698,6 @@ import { onMounted } from "vue";
 import { initFlowbite } from "flowbite/lib/esm/components";
 import { storeToRefs } from "pinia";
 import { useDatatour } from "../stores/tour";
-// import { dataGuide } from "../stores/all-guide";
-
-// const store1 = dataGuide();
-// const store2 = useDatatour();
-// const { dataguide } = storeToRefs(store1);
 
 const store = useDatatour();
 const { guidedata } = storeToRefs(store);
