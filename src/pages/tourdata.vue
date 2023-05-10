@@ -1260,7 +1260,7 @@
                       aria-hidden="true"
                       class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full"
                     >
-                      <div class="relative w-full h-full max-w-2xl md:h-auto">
+                      <div class="relative w-full h-full max-w-3xl md:h-auto">
                         <!-- Modal content -->
                         <div
                           class="relative bg-white rounded-lg shadow dark:bg-gray-700"
@@ -1272,7 +1272,7 @@
                             <h3
                               class="text-xl font-semibold text-gray-900 dark:text-white"
                             >
-                              รายละเอียดลูกทัวร์ | มะยม ขมจัง
+                              รายละเอียดลูกทัวร์ ลำดับที่: 1
                             </h3>
                             <button
                               type="button"
@@ -1295,35 +1295,70 @@
                           </div>
                           <!-- Modal body -->
                           <div class="p-6 space-y-6 text-left">
-                            <p
-                              class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
-                            >
-                              วันที่ออกพาสปอร์ต: 01/03/2566
-                            </p>
-                            <p
-                              class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
-                            >
-                              วันหมดอายุพาสปอร์ต: 07/04/2570
-                            </p>
-                            <p
-                              class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
-                            >
-                              วันเดือนปีเกิด: 18/10/2538
-                            </p>
-                            <p
-                              class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
-                            >
-                              ตรวจลงตราเลขที: 455/55
-                            </p>
+                            <div class="grid grid-cols-2 gap-4">
+                              <p
+                                class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                              >
+                                ชื่อ-นามสกุล (ภาษาไทย): มะยม ขมจัง
+                              </p>
+                              <p
+                                class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                              >
+                                ชื่อ-นามสกุล (ภาษาอังกฤษ): Mayom Khomjung
+                              </p>
+                              <p
+                                class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                              >
+                                เพศ: ชาย
+                              </p>
+                              <p
+                                class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                              >
+                                วันเดือนปีเกิด: 18/10/2538
+                              </p>
+                              <p
+                                class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                              >
+                                สัญชาติ: ไทย
+                              </p>
+                              <p
+                                class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                              >
+                                หมายเลขบัตรประชาชน: 1-339988672-57-9
+                              </p>
+                              <p
+                                class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                              >
+                                หมายเลขพาสปอร์ต: 1-339988-672
+                              </p>
+                              <p
+                                class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                              >
+                                ตรวจลงตราเลขที: 455/55
+                              </p>
+                              <p
+                                class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                              >
+                                วันที่ออกพาสปอร์ต: 01/03/2566
+                              </p>
+                              <p
+                                class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                              >
+                                วันหมดอายุพาสปอร์ต: 07/04/2570
+                              </p>
+                            </div>
 
+                            <p
+                              class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                            >
+                              ประเภทเตียง: คู่
+                            </p>
                             <p
                               class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
                             >
                               หมายเหตุ: ห้องน้ำไม่สะอาด
                             </p>
-                          </div>
-                          <!-- คอมเมนต์-->
-                          <div class="p-6 space-y-6">
+                            <!-- คอมเมนต์-->
                             <form class="space-y-6" action="#">
                               <hr
                                 class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"
@@ -1392,6 +1427,7 @@
                               </div>
                             </form>
                           </div>
+
                           <!-- Modal footer -->
                           <div
                             class="flex justify-end items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600"
