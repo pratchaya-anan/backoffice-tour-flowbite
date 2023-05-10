@@ -709,7 +709,6 @@ function sethotel() {
   hotelselect.value.push({hotel_id: setidhotel,name: datafil.value.name, checkin: addhoteldata.value.checkin, checkout: addhoteldata.value.checkout, amountroom: addhoteldata.value.amountroom})
 }
 
-
 function addhotel() {
   // console.log("HotelSelect", hotelselect.value);
   store.addhotel(hotelselect);

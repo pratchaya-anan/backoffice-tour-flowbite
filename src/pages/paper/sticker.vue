@@ -3,31 +3,38 @@
     <div
       class="w-[210mm] h-min-[297mm] p-[5mm] my-1 mx-auto border-1 solid rounded bg-white drop-shadow"
     >
-      <div class="grid grid-cols-2">
-        <div v-for="i in 14" class="border text-center">
-          <div class="text-lg font-semibold pt-2">นันทิกาณต์ ศรีชัยมูล</div>
+      <div class="flex flex-wrap">
+        <div
+          v-for="i in 10"
+          class="border grid grid-flow-row items-center text-center w-[3.5in] h-[2.3in]"
+        >
+          <div class="text-2xl font-semibold">นันทิกาณต์ ศรีชัยมูล</div>
           <div class="text-sm text-blue-800">Nunthikan Srechaimoon</div>
           <div
-            class="bg-yellow-200 text-sm h-7 flex justify-center content-center"
+            class="bg-yellow-200 text-sm flex justify-center items-center h-full"
           >
-            กาญจนบุรี-เพชรบุรี
+            กาญจนบุรี-เพชรบุรี <br />
+            ระหว่างวันที่ 1 มกราคม - 15 มกราคม 2566
           </div>
-          <div class="grid grid-cols-6 text-pink-400">
-            <div class="col-span-5 border-r pb-2">
-              <div class="font-semibold">NILPAKA TOUR</div>
+          <div class="grid grid-cols-6 text-pink-400 text-center h-full">
+            <div
+              class="flex flex-col justify-center items-center col-span-5 h-full"
+            >
+              <div class="texl-base font-semibold">NILPAKA TOUR</div>
               <div class="text-sm font-semibold">
-                Jampahom999@hotmail.com | 098-1047644
+                Jampahom999@hotmail.com <br />
+                098-1047644
               </div>
             </div>
-            <div class="font-bold text-2xl flex justify-center items-center">
+            <div
+              class="font-bold text-5xl flex justify-center items-center border-l-2 h-full"
+            >
               {{ i }}
             </div>
           </div>
         </div>
       </div>
-
     </div>
-    
   </section>
   <!-- <div class="flex bg-gray-900"></div> -->
 </template>
