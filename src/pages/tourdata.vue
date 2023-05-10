@@ -392,12 +392,12 @@
               </div>
               <div class="grid grid-cols-3 gap-2">
                 <div>พาหนะขาไป :</div>
-                <div class="flex col-span-2">
-                  <p v-for="go in vehigo">{{ go.name }}</p>
+                <div v-for="go in vehiclecheck('ขาไป')" class="flex col-span-2">
+                  {{ go.name }}
                 </div>
                 <div>พาหนะขากลับ :</div>
-                <div class="flex col-span-2">
-                  <p v-for="back in vehiback">{{ back.name }}</p>
+                <div v-for="go in vehiclecheck('ขากลับ')" class="flex col-span-2">
+                  {{ go.name }}
                 </div>
               </div>
             </div>
@@ -1546,20 +1546,14 @@ function finddataGuide() {
   const datafil = tourfiltered.value.guide.map(item2 => item2.guide_id);
   return guidedata.value.filter(item => datafil.includes(item.guideid));
 }
-function createmember() {
-  console.log("send", memberdata.value);
-  store.newmember(memberdata.value);
-}
 
 function vehiclecheck(type: string) {
   const datavehicle = tourfiltered.value.vehicle.filter(
     (item) => item.type == type || item.type == "ไปกลับ"
   );
-  return tourfiltered.value.vehicle.filter(
-    (item) => item.type == type || item.type == "ไปกลับ"
-  );
+  console.log("???",datavehicle)
+  return datavehicle;
 }
-
 // console.log(tourfiltered.value);
 const vehigo = computed(() =>
   tourfiltered.value.vehicle.filter(
@@ -1571,4 +1565,9 @@ const vehiback = computed(() =>
     (item) => item.type == "กลับ" || item.type == "ไปกลับ"
   )
 );
+
+function createmember() {
+  console.log("send", memberdata.value);
+  store.newmember(memberdata.value);
+}
 </script>
