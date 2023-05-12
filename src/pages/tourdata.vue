@@ -1172,7 +1172,7 @@
                 </tr>
                 <tr
                   v-for="(tour, index) in tourfiltered.member"
-                  key="indexm"
+                  v-bind:key="index"
                   class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
                 >
                   <td class="px-6 py-4">
