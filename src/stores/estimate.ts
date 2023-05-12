@@ -1,16 +1,47 @@
 import { defineStore } from 'pinia'
 
 export const estimate = defineStore('useEstimate', () => {
-    const data = ref([
+
+    const id = ref(0);
+
+    const dataestimate = ref([
         {
-            id: 1,
+            id: 0,
             name: "",
             department: "",
             date: "",
             objectives: "",
-            details: [],
+            details: [{
+                type: "",
+                price: 0,
+                quantity: 0,
+                detail: "",
+
+            }],
         }
     ])
+
+
+    const idfiltered = computed(() => dataestimate.value.find(item => item.id == id.value));
+
+    const totalPrice = computed(() => {
+        if (idfiltered.value) {
+            return idfiltered.value.details.reduce((total, detail) => {
+                return total + (detail.price * detail.quantity);
+            }, 0);
+        } else {
+            return 0;
+        }
+    });
+
+    function setid(idtour: number) {
+        id.value = idtour;
+        console.log("ID:", id.value);
+        console.log("ID Detail:", idfiltered.value);
+    }
+
+
+
     function additem(item: {
         name: string,
         department: string,
@@ -18,7 +49,7 @@ export const estimate = defineStore('useEstimate', () => {
         objectives: string
         details: any,
     }) {
-        const lastId = data.value[data.value.length - 1].id
+        const lastId = dataestimate.value[dataestimate.value.length - 1].id
         const newId = lastId + 1
         const newItem = {
             id: newId,
@@ -28,8 +59,9 @@ export const estimate = defineStore('useEstimate', () => {
             objectives: item.objectives,
             details: item.details,
         }
-        data.value.push(newItem)
-        console.log(data.value)
+        dataestimate.value.push(newItem)
+        console.log(dataestimate.value)
     }
-    return { data, additem }
+
+    return { dataestimate, setid, idfiltered, additem, totalPrice }
 })
