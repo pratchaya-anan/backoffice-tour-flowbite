@@ -16,7 +16,7 @@
               <div class="col-span-3 text-center">GuideOrder</div>
               <div class="font-bold">ใบอนุญาต:</div>
               <div class="col-span-2 text-right">51/00481</div>
-              <div class="font-bold">วันที่:</div>
+              <div class=" font-bold">วันที่:</div>
               <div class="col-span-2 text-right">...................</div>
               <div class="font-bold">ใบสั่งงาน:</div>
               <div class="col-span-2 text-right">...................</div>
@@ -31,8 +31,10 @@
             <div class="grid grid-cols-2">
               <div class="col-span-1 font-bold">กำหนดการเดินทาง: </div>
               <div class="col-span-1 font-bold">21-24 เมษายน 2566</div>
-              <div class="mt-2 col-span-1 font-bold">เดินทางจาก: อำนาญเจริญ</div>
-              <div class="mt-2 col-span-1 font-bold">ถึง: เว้ ดานัง ประเทศเวียดนาม</div>
+              <div class="mt-2 col-span-1 font-bold">เดินทางจาก: </div>
+              <div class="mt-2 col-span-1 font-bold">อำนาญเจริญ</div>
+              <div class="mt-2 col-span-1 font-bold">ถึง:</div>
+              <div class="mt-2 col-span-1 font-bold">เว้ ดานัง ประเทศเวียดนาม</div>
   
             </div>
           </div>
@@ -53,7 +55,7 @@
         <div class="min-h-20 border-b-0 border-black">
           <table class="w-full text-center">
             <tr class="h-8 border-y-1 border-black text-center text-sm">
-              <th class="text-center">จำนวนนักท่องเที่ยว</th>
+              <th>จำนวนนักท่องเที่ยว</th>
               <th>ห้องเดี่ยว</th>
               <th>ห้องคู่</th>
               <th>ห้องนอน 3 รวม</th>
@@ -66,7 +68,7 @@
               <td>1</td>
               <td></td>
             </tr>
-            <tr class="h-10 text-xs">
+            <tr class="h-5 text-xs">
               <td>เด็ก 4</td>
               <td></td>
               <td></td>
@@ -75,56 +77,58 @@
             </tr>
           </table>
         </div>
+
+
         <!-- รายละเอียดข้อตกลง(ด้านซ้าย) -->
         <div class="min-h-50 border-b-0 border-black">
-          <table class="w-full text-center">
-            <tr class="h-8 border-y-1 border-black text-center text-sm">
-              <th>วันเดือนปี</th>
+          <table class="mt-3 w-full ">
+            <tr class="h-8 border-y-1 border-black text-sm text-center">
+              <th class="w-25">วันเดือนปี</th>
               <th>สถานที่ท่องเที่ยว</th>
-              <th class="text-center">โรงแรม</th>
+              <th >โรงแรม</th>
             </tr>
             <tr class="h-10 text-xs border-b-1 border-black">
-              <td>21/4/2566</td>
-              <td>
+              <td class="px-6 py-2">21/4/2566</td>
+              <td class="px-6 py-2">
                 05.00 น. รับคณะที่จุดนัดหมายบ้านหนองผื่อ อ.ชานุมาน อำนาจเจริญ<br>
                 ออกเดินทางไปยังด่าน ตม.มุกดาหารเพื่อเดินทางต่อไปยังด่านลาวบาว<br>
                 12.00 น.รับประทานอาหารเที่ยง หน้าด่านลาวบาว ระหว่างรอเอกสารข้านแดน<br>
                 จากนั้นเดินทางต่อไปยังเมือง เว้-ตานัง /รับประทานอาหารเย็น<br>
                 เที่ยวชมสะพานมังกร / สะพานแห่งความรัก / เข้าที่พัก
               </td>
-              <td>โรงแรม NHU MINH PLAZA</td>
+              <td class="px-6 py-2">โรงแรม NHU MINH PLAZA</td>
             </tr>
 
             <tr class="h-10 text-xs border-b-1 border-black">
-              <td>22/4/2566</td>
-              <td>
+              <td class="px-6 py-2">22/4/2566</td>
+              <td class="px-6 py-2">
                 เช้า รับประทานอาหารเช้าที่โรงแรม / เดินทางไปเมืองฮอยอัน / นั่งเรือกระด้ง<br>
                 เที่ยง รับประทานอาหารเที่ยง / เดินทางขึ้นไปบาน่าฮิลล์<br>
                 บ่าย นั่งกระเช้าลอยฟ้า / สะพานเมืองทอง / สวนดอกไม้<br>
                 เย็น รับประทานอาหารเย็น / เข้าที่พัก
               </td>
-              <td>โรงแรม Mercure Bana hills</td>
+              <td class="px-6 py-2">โรงแรม Mercure Bana hills</td>
             </tr>
             <tr class="h-10 text-xs border-b-1 border-black">
-              <td>23/4/2566</td>
-              <td>
+              <td class="px-6 py-2">23/4/2566</td>
+              <td class="px-6 py-2">
                 เช้า รับประทานอาหารเช้าที่โรงแรม / เดินทางลงจากบาน่าฮิลล์สู่เมืองเว้<br>
                 เที่ยง รับประทานอาหารเที่ยง / ชมพระราชวังได๋โหน๋ย / ตลาดดงบา<br>
                 วัดเทียนมู๋ / ล่องเรือมังกร / รับประทานอาหารเย็น / เข้าที่พัก
               </td>
-              <td>โรงแรม Century hotel</td>
+              <td class="px-6 py-2">โรงแรม Century hotel</td>
             </tr>
             <tr class="h-10 text-xs border-b-1 border-black">
-              <td>24/4/2566</td>
-              <td>
+              <td class="px-6 py-2">24/4/2566</td>
+              <td class="px-6 py-2">
                 เช้า รับประทานอาหารเช้าที่โรงแรม / เดินทางกลับประเทศไทย<br>
                 เดินทางถึงด่านลาวบาว ทำพิธีการข้ามด่าน / รับประทานอาหารเที่ยง<br>
                 เดินทางต่อมายังด่านสะหวันนะเขต / รับประทานอาหารเย็น<br>
                 20.00 น.เดินทางถึงจุดหมายปลายทางโดยสวัสดิภาพ
               </td>
-              <td></td>
+              <td class="px-6 py-2"></td>
             </tr>
-            <tr class="h-10 text-xs">
+            <tr class="h-20 text-xs">
               <td></td>
               <td>ค่าจ้างมัคคุเทศก์.....................................................................................................................................................บาท
               </td>
@@ -149,5 +153,4 @@
         </table>
       </div>
     </section>
-    <!-- <div class="flex bg-gray-900"></div> -->
   </template>
