@@ -35,6 +35,16 @@
               <div class="mt-2 col-span-1 font-bold">อำนาญเจริญ</div>
               <div class="mt-2 col-span-1 font-bold">ถึง:</div>
               <div class="mt-2 col-span-1 font-bold">เว้ ดานัง ประเทศเวียดนาม</div>
+              <div class="mt-2 col-span-1 font-bold">จำนวนนักท่องเที่ยว</div>
+              <div class="mt-2 col-span-1 font-bold">ผู้ใหญ่ 19</div>
+              <div class="mt-2 col-span-1 font-bold">ห้องเดี่ยว</div>
+              <div class="mt-2 col-span-1 font-bold">-</div>
+              <div class="mt-2 col-span-1 font-bold">ห้องคู่</div>
+              <div class="mt-2 col-span-1 font-bold">11</div>
+              <div class="mt-2 col-span-1 font-bold">ห้องนอน 3 รวม</div>
+              <div class="mt-2 col-span-1 font-bold">1</div>
+              <div class="mt-2 col-span-1 font-bold">หมายเหตุ</div>
+              <div class="mt-2 col-span-1 font-bold">-</div>
   
             </div>
           </div>
@@ -47,38 +57,11 @@
               <div class="col-span-2 font-bold">ทะเบียน: </div>
               <div class="col-span-2 font-bold text-right">8989 นครหลวงเวียงจันทร์</div>
               <div class="col-span-2 font-bold">โทร.</div>
+              <div class="col-span-2 font-bold text-right mt-2">....................</div>
             </div>
           </div>
         </div>
   
-        <!-- ตาราง -->
-        <div class="min-h-20 border-b-0 border-black">
-          <table class="w-full text-center">
-            <tr class="h-8 border-y-1 border-black text-center text-sm">
-              <th>จำนวนนักท่องเที่ยว</th>
-              <th>ห้องเดี่ยว</th>
-              <th>ห้องคู่</th>
-              <th>ห้องนอน 3 รวม</th>
-              <th>หมายเหตุ</th>
-            </tr>
-            <tr class="h-10 text-xs">
-              <td>ผู้ใหญ่ 19</td>
-              <td></td>
-              <td>11</td>
-              <td>1</td>
-              <td></td>
-            </tr>
-            <tr class="h-5 text-xs">
-              <td>เด็ก 4</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </table>
-        </div>
-
-
         <!-- รายละเอียดข้อตกลง(ด้านซ้าย) -->
         <div class="min-h-50 border-b-0 border-black">
           <table class="mt-3 w-full ">
@@ -130,19 +113,19 @@
             </tr>
             <tr class="h-20 text-xs">
               <td></td>
-              <td>ค่าจ้างมัคคุเทศก์.....................................................................................................................................................บาท
+              <td>ค่าจ้างมัคคุเทศก์................................................................................................................................บาท
               </td>
               <td></td>
             </tr>
             <tr class="h-10 text-xs">
               <td></td>
-              <td>มัคคุเทศก์ลงนาม..............................................................................................................................................................
+              <td>มัคคุเทศก์ลงนาม..........................................................................................................................................
               </td>
               <td></td>
             </tr>
             </table>
         </div>
-        <table class=" mt-7 ml-10 w-full">
+        <table class="mt-25 ml-10 w-full">
           <tr>
               <td><b>ผู้มีอำนาจลงนาม นางศรีดารา ประเปรียว</b></td>
               <td><b>ตราประทับบริษัท</b>
